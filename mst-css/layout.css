@@ -1,0 +1,34 @@
+body { font-family:Verdana; font-size:14px; margin:0;text-align:center;   }
+#logDiv{
+	float: left;
+	padding:0px;
+	width:170px;height: 82px;
+	background-image: url(../images/logo.gif); 
+	background-repeat: no-repeat;
+	background-color:#0733ac;
+	background-position:left;
+	padding:0px;
+	margin: 0px;
+	text-align:left;
+}  
+#topDiv{
+    float:right;
+	padding:0px;
+	height: 80px;width:1000px;
+	background-image: url(../images/top.gif);
+	background-repeat: no-repeat; 
+} 
+#container {margin:0 ; width:1172px;}
+#header { height:80px; margin-bottom:0px; vertical-align:middle}
+#mainContent { text-align:left;clear:both;}
+#sidebar {
+	width:172px;
+	float: left;
+	background-color: #D9DFF7;
+}
+#content {
+    width:1000px;
+	float:right; 
+	background-color: #FFFFFF;
+}/*因为是固定宽度，采用左右浮动方法可有效避免ie 3像素bug*/
+#footer { clear:both; height:40px; background:#FFF; color:#000; text-align:center; border-top:1px solid #000; font-size:11px; font-family:tahoma;}

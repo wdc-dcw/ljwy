@@ -1,0 +1,28 @@
+﻿.top span{width:2.30rem;}
+body{background-color:#ededed;}
+
+.singer_center{overflow:hidden; padding: .09rem .13rem .07rem .13rem;}
+.singer_center .photo{float:left;line-height:.48rem; }
+.singer_center .photo img{width:.45rem; height:.45rem; border-radius:1.00rem;}
+.singer_center .photo a{display:inline-block;}
+.singer_center .photo .head_portrait{border: .02rem solid #ff8600;border-radius: 1.00rem; width:.45rem; height:.45rem;}
+.singer_center .photo  span{display: inline-block;font-size: .14rem;color: #000000;margin-left: .05rem;height: .32rem;overflow: hidden;width: .80rem;margin-right: .10rem;line-height: .48rem;}
+
+/*.singer_center .sign{float:left; margin-left:20rem;}*/
+.singer_center .sign p{line-height: .46rem; margin-right: .01rem; font-size: .09rem; color: #999999; display: block; float: left; padding-top: .02rem;}
+.singer_center .sign  p a{color:#ffba00;}
+
+.singer_center .sign_btn {float:right; margin-top: .10rem;}
+.singer_center .sign_btn  a{ width:.60rem; height:.30rem; line-height:.30rem; display:block; background-color:#ff8600; text-align:center; color:white; font-size:.14rem; border-radius:.06rem; }
+/*主体部分*/
+.singer_list{height:.38rem; border-bottom:.01rem solid #efefef; background-color:white;padding: 0 .13rem;}
+
+.singer_list .list_left{float:left; height: .38rem;line-height: .38rem;}
+.singer_list .list_left img{width:.18rem; height:.18rem; margin-top:.10rem;}
+.singer_list .list_left span{font-size:.14rem; color:#999999; margin-left: .07rem;}
+.singer_list .list_left span span{color:#ffba00; }
+.singer_list .list_left b{ font-weight:400; border-radius:1.00rem; width:.17rem; height:.17rem; background-color:red; color:white; display:inline-block;  text-align:center; line-height:.18rem; font-size:.12rem; margin-left:.5rem;}
+.singer_list .list_right{float:right;}
+.singer_list .list_right img{width:.09rem; margin-top:.10rem;}
+
+#Bigimg img{height: 3.2rem;width: 3.2rem;margin-top:-1.6rem;position:absolute;top:50%;}

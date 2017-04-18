@@ -1,0 +1,39 @@
+/*背景色*/
+body{ background:#ededed;}
+.top span{width: 2.1rem;}
+.list .basic_Info, .repair_content, .images,.repair_goods,.code{ padding:.03rem .15rem 0 .15rem;}
+.list div{ margin-top:.03rem; }
+.list input{ height:.40rem; width:.80rem; border:0; background:#fff; border-radius:.05rem;}
+/*信息输入框*/
+.basic_Info input{width: 2.07rem; height:.32rem; border-radius:.05rem; padding-left:.15rem; border:0;display: inline-block;}
+.repair_goods input{ width:2.70rem; height:.32rem; border-radius:.05rem; padding-left:.15rem; border:0;}
+/* 选择框 */
+.choose .choose_01 .squear img{width: .12rem;padding-top: 0.02rem;}
+/*房屋选择*/
+.room{position:relative;}
+.choose a{ margin-top:.15rem;}
+.room_choose{ background:#FFF; width:2.56rem; color:#999999; font-size:.12rem; padding: .05rem .15rem; margin-left:.15rem;  border-radius:.05rem;}
+/*报修内容输入框*/
+.repair_content textarea{ width:2.60rem; min-height:.65rem; border-radius:.05rem;padding:.13rem; border:0;}
+/*图片的样式*/
+.images img{ width:.87rem;height:.87rem;}
+.images img a{ display: inline-block;}
+.images .images_content{ padding: 0 .095rem 0 .095rem;}
+
+/*紧急提示*/
+.emergency p{font-size: .14rem;text-align: center;margin-top: .05rem;}
+.emergency p span{ display:inline-block;}
+.emergency .phone{color:red; font-size:0.14rem;}
+.emergency .phone img{width:.13rem;margin:.03rem .03rem 0 0;}
+
+/*提交按钮*/
+.images a{display:inline-block;margin:.04rem;position:relative;}
+.images a .delete{position:absolute;top:.08rem;right:.08rem;width:.17rem;height:.17rem;z-index:999;}
+.username span {display: inline-block; font-size: .14rem;width: 0.64rem;}
+.link_tel span {display: inline-block; font-size: .14rem;width: 0.64rem;}
+.username, .link_tel{margin: auto;}
+.top .pay {border: .01rem solid #ff9600;color: #ff9600;font-size: .14rem;border-radius: .05rem;display: inline-block;width: .40rem;height: .25rem;line-height: .25rem;text-align: center;    margin-top: .08rem;margin-right: .13rem;}
+.top a:last-child{padding-right:0;}
+.code .formValidate {text-align: left;font-size: .12rem;height: 0.32rem;padding-left: 0.05rem;width: 0.75rem;}
+.emergency{padding-top: .05rem;}
+.tan {height: 1.45rem;margin-top:-.7rem;}

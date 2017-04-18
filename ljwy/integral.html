@@ -1,0 +1,81 @@
+﻿  <!doctype html>
+  <html id="mobileHtml">
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>积分详情</title>
+    <link href="Assets/Plugins/dropload/dropload.min.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/comm.css?v=1.0" rel="stylesheet" />
+     <link href="Assets/Css/integral.css?v=1.0" rel="stylesheet" />
+  </head>
+  <body>
+   <!--头部-->
+    <div class="top">
+       
+        <a href="integral_detail.html">
+           
+            <img src="Assets/Images/left.png" /></a>
+        <span>积分详情</span>
+    </div>
+    
+    <!--整体-->
+    <div class="list">
+        
+      </div>  
+   <!--底部-->
+    <!-- <div class="footer">
+        <a href="index.html">
+            <div>
+                <img src="Assets/Images/footer_01.png" /><p>首页</p>
+            </div>
+        </a>
+        <a href="recommend.html">
+            <div>
+                <img src="Assets/Images/footer_03.png" /><p>推荐</p>
+            </div>
+        </a>
+        <a href="javascript:;">
+            <div>
+                <img src="Assets/Images/footer_02.png" /><p>黄页</p>
+            </div>
+        </a>
+        <div id="newMsgCnt">
+            <a href="singer_center.html">
+                <div>
+                    <img src="Assets/Images/footerbg_04.png" /><p style="color:#ff8600;">个人</p>
+                </div>
+            </a>
+        </div>
+    </div> -->
+
+  
+  
+    
+    <div id="backtop"><a href="#"><img src="Assets/Images/backtop.png" /></a></div>
+    <script src="Assets/Plugins/zepto/zepto.min.js?v=1.0"></script>
+    <script src="Assets/Plugins/zepto/ajax.js?v=1.0"></script>
+    <script src="Assets/Plugins/cookie/jquery.cookie.js?v=1.0"></script>
+      <script src="Assets/Plugins/dropload/dropload.min.js?v=1.0"></script>
+    <script src="Assets/Scripts/comm.js?v=1.0"></script>
+    
+    <!-- 我的积分-->
+  <script src="Assets/Model/integral.js?v=1.0"></script>
+    <script>
+         window.onscroll = function () {
+            var t = document.documentElement.scrollTop || document.body.scrollTop;
+            var top_div = document.getElementById("backtop");
+            if (t >= 10) {
+                top_div.style.display = "inline";
+            } else {
+                top_div.style.display = "none";
+            }
+        }
+        Zepto(function ($) {
+           
+      new integer().score_detail();
+        })
+    </script>
+  </body>
+  </html>

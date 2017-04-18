@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflows>
+    <!-- CMS系统流程 -->
+	
+	<!-- 凯莱英-->
+	<workflow name="ICM" type="resource" location="workflows/cms-kly/in_cal.xml" /><!-- 内部校准管理 -->
+	<workflow name="CCM" type="resource" location="workflows/cms-kly/cal_cancel.xml" /><!-- 校准作废管理 -->
+	<workflow name="IRM" type="resource" location="workflows/cms-kly/ins_repl.xml" /><!-- 内部校准管理 -->
+	<workflow name="OCM" type="resource" location="workflows/cms-kly/out_cal.xml" /><!-- 外部校准管理 -->
+	<workflow name="MIN" type="resource" location="workflows/cms-kly/ins_new.xml" /><!-- 器具新增，修改 --> 
+	<workflow name="CNI" type="resource" location="workflows/cms-kly/cal_new.xml" /><!-- 校准信息新增，修改 -->
+
+	<!-- DMS-kly系统流程 -->
+	<!-- 1.文件起草管理、2.文件审批管理、3.文件生效管理、4.文件打印分发、5.文件撤销销毁、6.文件复审 -->
+	<workflow name="FD" type="resource" location="workflows/dms-kly/file_draft.xml" />
+	<workflow name="FA" type="resource" location="workflows/dms-kly/file_approve.xml" />
+	<workflow name="FE" type="resource" location="workflows/dms-kly/file_effect.xml" />
+	<workflow name="FPD" type="resource" location="workflows/dms-kly/file_print_dis.xml" />
+	<workflow name="FCD" type="resource" location="workflows/dms-kly/file_cancel_des.xml" />
+	<workflow name="FRA" type="resource" location="workflows/dms-kly/file_reapply.xml" />
+	
+	<!--验证系统 请假流程 -->
+	<workflow name="HLD" type="resource" location="workflows/holiday.xml" />
+	
+</workflows>

@@ -1,0 +1,29 @@
+﻿body{background-color:#ededed;}
+
+/*头部*/
+.top span{width:2.3rem;}
+
+.singer_list{height:.38rem; border-bottom:.01rem solid #efefef; background-color:white;padding: 0 .13rem;}
+.info_01{margin-top:.01rem;}
+.singer_list .list_left{float:left; height: .38rem;line-height: .38rem;}
+.singer_list .list_left img{width:.18rem; height:.18rem; margin-top:.10rem;}
+.singer_list .list_left span{font-size:.14rem; color:#999999; margin-left: .07rem;}
+.singer_list .list_left span span{color:#ffba00; }
+.singer_list .list_left b{ font-weight:400; border-radius:1.00rem; width:.17rem; height:17rem; background-color:red; color:white; display:inline-block;  text-align:center; line-height:.18rem; font-size:.12rem; margin-left:.05rem;}
+.singer_list .list_right{float:right;}
+.singer_list .list_right img{width:.09rem; margin-top:.10rem;}
+
+.singer_list .list_right .bg_01{width:.41rem; height:.20rem; border:.01rem solid #c6c6c6; border-radius:.19rem; display:inline-block;     margin-top: .08rem;}
+.singer_list .list_right .bg_01 img{width:.20rem; margin-top:0;}
+
+
+.info_02{margin:.15rem 0 ;}
+/*插件*/
+section{float:right; padding:.06rem 0rem 0 0; min-height:0;min-width:0; width:auto;}
+.model-3 .checkbox label{height:.24rem;}
+.checkbox label{width:.45rem;}
+.model-3 .checkbox label:after{width:.20rem; height:.20rem; top:.01rem; left:.02rem;}
+.model-3 .checkbox input:checked + label:after{left:.22rem;    background: #366bcd;}
+.checkbox label:after{box-shadow: none;}
+.checkbox input:hover + label:after{box-shadow: none;}
+.tan{height:1.2rem;top:50%;margin-top:-.6rem;}

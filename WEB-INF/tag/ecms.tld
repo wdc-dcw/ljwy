@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_1.xsd"
+	version="2.1">
+
+    <description>
+        The extended Cms / JSP integration tag library.
+        Developed by NetIT.
+    </description>
+    <display-name>Extended Cms JSP standard taglib</display-name>
+    <tlib-version>1.0</tlib-version>
+    <short-name>ecms</short-name>
+    <uri>http://www.youthen.org/taglib/ecms</uri>
+	<tag>
+        <description>
+            This tag enables read access to the current files OpenCms properties.
+        </description>
+        <name>truncate</name>
+        <tag-class>com.youthen.framework.util.ECmsJspTagTruncate</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>value</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>length</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>suffix</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>        
+        <attribute>
+            <name>charBoundary</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>         
+    </tag>   
+    
+    <tag>
+        <description>
+            This tag enables read access to the current files OpenCms properties.
+        </description>
+        <name>selectTbl</name>
+        <tag-class>com.youthen.lims.util.SelectTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>name</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>value</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>selectTblList</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>opName</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>opValue</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>        
+        <attribute>
+            <name>changeFun</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>   
+        <attribute>
+            <name>targetId</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>   
+        <attribute>
+            <name>id</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>    
+        <attribute>
+            <name>search</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute> 
+        <attribute>
+            <name>labelTxt</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>     
+        <attribute>
+            <name>size</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>     
+        <attribute>
+            <name>className</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>    
+        <attribute>
+            <name>style</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>    
+        <attribute>
+            <name>multiple</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>  
+        <attribute>
+            <name>require</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>   
+        <attribute>
+            <name>req</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>   
+       <attribute>
+            <name>disabled</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute> 
+        <attribute>
+            <name>opt1</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>   
+        <attribute>
+            <name>opt2</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>   
+        <attribute>
+            <name>opt3</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>   
+        <attribute>
+            <name>opt4</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>   
+        <attribute>
+            <name>opt5</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>   
+        <attribute>
+            <name>opt6</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>   
+        <attribute>
+            <name>opt7</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>   
+        <attribute>
+            <name>opt8</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>   
+        <attribute>
+            <name>opt9</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>   
+    </tag> 
+    
+    <function>
+		<name>n2brInV</name>
+		<function-class>com.youthen.framework.common.FormatStrUtils</function-class>
+		<function-signature>java.lang.String n2brInV(java.lang.String)</function-signature>
+	</function>
+	
+	<function>
+		<name>n2brInE</name>
+		<function-class>com.youthen.framework.common.FormatStrUtils</function-class>
+		<function-signature>java.lang.String n2brInE(java.lang.String)</function-signature>
+	</function>
+	
+	<function>
+		<name>getArray</name>
+		<function-class>com.youthen.framework.common.FormatStrUtils</function-class>
+		<function-signature>java.lang.Object getArray(java.lang.Object)</function-signature>
+	</function>
+	
+	<function>
+		<name>isWeeked</name>
+		<function-class>com.youthen.framework.common.FormatStrUtils</function-class>
+		<function-signature>java.lang.Boolean isWeeked(java.lang.String)</function-signature>
+	</function>
+	
+	<function>
+		<name>getDefMapList</name>
+		<function-class>com.youthen.framework.common.FormatStrUtils</function-class>
+		<function-signature>java.util.List getDefMapList()</function-signature>
+	</function>
+	
+	<function>
+		<name>getResultDate</name>
+		<function-class>com.youthen.framework.common.FormatStrUtils</function-class>
+		<function-signature>java.lang.String getResultDate(java.lang.String,java.lang.Integer,java.lang.String)</function-signature>
+	</function>
+	
+	<function>
+		<name>contains</name>
+		<function-class>com.youthen.framework.common.FormatStrUtils</function-class>
+		<function-signature>java.lang.Boolean contains(java.lang.Object,java.lang.Object)</function-signature>
+	</function>
+	
+	<function>
+		<name>getTIResult</name>
+		<function-class>com.youthen.framework.common.FormatStrUtils</function-class>
+		<function-signature>java.util.String getTIResult(java.lang.String,java.lang.String,java.lang.String)</function-signature>
+	</function>
+	
+	<function>
+		<name>getTIResultForHj</name>
+		<function-class>com.youthen.framework.common.FormatStrUtils</function-class>
+		<function-signature>java.util.String getTIResultForHj(java.lang.String,java.lang.String,java.lang.String)</function-signature>
+	</function>
+	
+	<function>
+		<name>getselectedhtml</name>
+		<function-class>com.youthen.framework.common.FormatStrUtils</function-class>
+		<function-signature>java.util.String getselectedhtml(java.lang.Object,java.lang.Object,java.lang.Object)</function-signature>
+	</function>
+	
+	<function>
+		<name>isArray</name>
+		<function-class>com.youthen.framework.common.FormatStrUtils</function-class>
+		<function-signature>java.lang.Boolean isArray(java.lang.Object)</function-signature>
+	</function>
+	
+	<function>
+		<name>stringToDate</name>
+		<function-class>com.youthen.framework.common.FormatStrUtils</function-class>
+		<function-signature>java.util.Date stringToDate(java.lang.String,java.lang.String)</function-signature>
+	</function>
+	
+	<function>
+		<name>isLastDayOfMonth</name>
+		<function-class>com.youthen.framework.common.FormatStrUtils</function-class>
+		<function-signature>java.lang.Boolean isLastDayOfMonth()</function-signature>
+	</function>
+	
+	
+	<function>
+		<name>fmtUptDate</name>
+		<function-class>com.youthen.framework.common.FormatStrUtils</function-class>
+		<function-signature>java.lang.String fmtUptDate(java.lang.String)</function-signature>
+	</function>
+	
+	<function>
+		<name>getMapByContent</name>
+		<function-class>com.youthen.framework.common.FormatStrUtils</function-class>
+		<function-signature>java.util.Map getMapByContent(java.lang.String)</function-signature>
+	</function>
+	
+	<function>
+		<name>cmsFmtUptDate</name>
+		<function-class>com.youthen.framework.common.FormatStrUtils</function-class>
+		<function-signature>java.lang.String fmtUptDate(java.lang.String)</function-signature>
+	</function>
+	
+	<function>
+		<name>getPlanDate</name>
+		<function-class>com.youthen.framework.common.FormatStrUtils</function-class>
+		<function-signature>java.lang.String getPlanDate(java.util.Date,java.lang.Integer,java.lang.Integer)</function-signature>
+	</function>
+	
+	<function>
+		<name>format</name>
+		<function-class>com.youthen.framework.common.FormatStrUtils</function-class>
+		<function-signature>java.lang.String format(java.util.Date,java.lang.String)</function-signature>
+	</function>
+	
+	<function>
+		<name>ifLikeGranted</name>
+		<function-class>com.youthen.framework.common.FormatStrUtils</function-class>
+		<function-signature>java.lang.Boolean ifLikeGranted(java.lang.String)</function-signature>
+	</function>
+</taglib>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<title>DOM节点删除之保留数据的删除操作detach()</title>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<style type="text/css">
+		p{
+			color: red;
+		}
+	</style>
+</head>
+
+<body>
+	<p>p元素1 默认绑定一个点击事件</p>
+	<p>p元素2 默认绑定一个点击事件</p>
+	<button id="btn1">点击删除p 元素</button>
+	<button id="btn2">点击移动p 元素</button>
+
+	<script type="text/javascript">
+		$("p").on('click',function(e){
+			alert(e.target.innerHTML);
+		});
+		var p;
+		$("#btn1").on('click',function(){
+			if(!$("p").length) return;//去重
+			//通过detach方法删除元素
+			//只是页面不可见，但是这个节点依然保存在内存中
+			//数据与事件都不会丢失
+			p=$("p").detach();
+		});
+		
+		
+		$("#btn2").on('click',function(){
+			//把p元素添加到页面中
+			//事件还存在
+			$("body").append(p);
+		});
+	</script>
+</body>

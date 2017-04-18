@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<title>DOM内部插入append()与appendTo()</title>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<style type="text/css">
+		.content{
+			width: 300px;
+		}
+
+		.append{
+			background-color: blue;
+		}
+
+		.appendTo{
+			background-color: red;
+		}
+	</style>
+</head>
+
+<body>
+	<h2>通过append与appendTo添加元素</h2>
+	<button id="btn1">点击通过jQuery的append添加元素</button>
+	<button id="btn2">点击通过jQuery的appendTo添加元素</button>
+	<div class="content"></div>
+
+	<script type="text/javascript">
+		//.append(),内容在方法的后面，
+		//参数是要插入的内容
+		$("#btn1").on('click',function(){
+			$(".content").append("<div class='append'>通过append方法添加的元素</div>");
+		});
+	</script>
+	<script type="text/javascript">
+		//.appendTo()正好相反,内容在方法的前面，
+		//无论是一个选择器表达式或创建为标记上标记
+		//它都插入到目标容器的末尾
+		$("#btn2").on('click',function(){
+			$("<div class='appendTo'>通过appendTo方法添加的元素</div>").appendTo($(".content"));
+		});
+	</script>
+</body>

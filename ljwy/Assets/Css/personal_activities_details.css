@@ -1,0 +1,49 @@
+body{background-color:#ededed;}
+.top span{width: 2.0rem;margin-left: .13rem;}
+.top .delete_activity {border: .01rem solid #ff9600;color: #ff9600;font-size: .14rem;border-radius: .05rem;display: inline-block;width: .40rem;height: .25rem;line-height: .25rem;text-align: center;    margin-top: .08rem;margin-right: .13rem;}
+.top a:last-child{padding-right:0;}
+.title{width:2.90rem; padding:0.15rem 0.15rem; }
+.title img{width:0.50rem; height:0.50rem; float:left;border-radius: 1.00rem;}
+.title p{line-height:0.25rem; font-size:0.11rem}
+.title p:first-child{font-size:0.11rem; color:#000;}
+.title p:last-child{font-size:0.09rem; color:#949494;}
+.titlename{display:inline-block; margin-left:0.15rem;}
+.nickname{margin-left: 0.15rem;}
+.time{float:right;}
+.activity_main{background-color:#ededed;margin-bottom: 0.7rem;}
+ .tourist{margin-top:0.01rem;}
+ .banner{ padding:0.15rem 0.15rem 0 0.15rem; background-color: white; font-size:0.09rem;}
+ .banner a{display: inline-block;}
+  .banner a img{width:2.90rem;}
+ .banner p{width:2.90rem; padding:0.05rem 0; margin:0rem auto; line-height:0.20rem; font-size:0.12rem;word-wrap : break-word ;}
+ .banner_child {padding:0 0.15rem 0.05rem 0.15rem; border-bottom:0.01rem solid #dddddd;}
+ .banner_child img{width:1.45rem; }
+ .banner_child p{width:2.90rem; margin:0rem auto; line-height:0.20rem; font-size:0.12rem;}
+ .banner .banner_img{ width:.11rem; height:.11rem;  margin:0.04rem 0.05rem 0 0; }
+ .banner .interact{text-align: right;}
+#participation{float:right; width:.63rem; height:.37rem; line-height:.37rem; text-align:center; display:inline-block; color:white; font-size:.13rem; background-color:#ff8600; border-radius:.06rem; margin-left:.06rem;}
+ /*����*/
+ .tourist {overflow:hidden; padding:.05rem .15rem;background-color: white;}
+ .tourist .tour_pho {float:left;}
+ .tourist .tour_pho  img{width:.43rem; height:.43rem; border-radius:1.00rem;}
+ .tourist .name{float:left; width:2.47rem;}
+.tourist .name p a:first-child{color:#ff8600; font-size:.13rem;margin-left:.10rem;}
+.tourist .name p a:last-child{color:#929292; font-size:.12rem; float:right;line-height: .21rem}
+.tourist .name .centent{color:#3a3a3a; font-size:.13rem; margin:.05rem 0 0 .10rem;}
+.tourist .name .time{color:#929292; font-size:.13rem;margin: .05rem 0 .25rem .10rem;}
+.goodNum{color:#999999;}
+/*����*/
+.comment{ padding:0.15rem;position:fixed;bottom:0;left:0;background-color:#ededed;}
+.comment input{width:2.00rem; border-radius:.06rem; border:0; height:.37rem; padding-left:.16rem;}
+.comment a{width:.63rem; height:.37rem; line-height:.37rem; text-align:center; display:inline-block; color:white; font-size:.13rem; background-color:#ff8600; border-radius:.06rem; margin-left:.06rem; }
+.tourist{margin-bottom:0.70rem;}
+.banner .interact a{margin-left:.10rem; color: #999999;}
+
+.tan{height:1.2rem;}
+
+.tan1{width: 2.40rem;height: 2.04rem; z-index: 999; background: #fff;margin: 0rem auto;text-align: center;position: fixed;top: 50%;left: 50%;margin-left: -1.2rem;margin-top:-1.02rem; border-radius:.05rem;border:.01rem solid #cdcdcd;display:none;}
+.tan1 img{width:.88rem;}
+.tan1 p{ margin: .34rem .10rem .35rem;font-size: .17rem; }
+.tan1 a{padding: .07rem .43rem;font-size: .16rem;color: #000;border-top: 1px solid #cdcdcd;}
+.tan1 a#ok1{border-right: 1px solid #cdcdcd;}
+.tan1 {height:1.2rem;}

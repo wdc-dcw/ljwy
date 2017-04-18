@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<title>jQuery遍历之closest()方法</title>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<style type="text/css">
+		.left{
+			width: auto;
+			height: 200px;
+		}
+		.left div{
+			width: 350px;
+			height: 150px;
+			padding: 5px;
+			margin: 5px;
+			float: left;
+			border: 1px solid #ccc;
+			background: #bbffaa;
+		}
+
+		span{
+			color:blue;
+		}
+	</style>
+</head>
+
+<body>
+	<h2>closest()方法</h2>
+	<div class="left first-div">
+		<div class="div">
+			<ul class="level-2">
+				<li class="item-a">A</li>
+				<li class="item-b">B
+					<ul class="level-3">
+						<li class="item-1">1</li>
+						<li class="item-2">2</li>
+						<li class="item-3">3</li>
+					</ul>
+				</li>
+				<li class="item-c">C</li>
+			</ul>
+		</div>
+	</div>
+	<button>点击:closest()无参数</button>
+	<button>点击:closest()传递一个元素对象</button>
+
+	<script type="text/javascript">
+		$("button:first").on('click',function(){
+			//找到class="item-1"的li元素，通过closest()方法向上找到class="level-2"ul,添加红色边框
+			$(".item-1").closest(".level-2").css('border', '1px solid red');
+		});
+	</script>
+	<script type="text/javascript">
+		$("button:last").on('click',function(){
+			//找到class="item-1"的li元素，通过closest()方法向上找到class="item-b"的li元素,添加蓝色边框
+			var itemB=$(".item-b");
+			$(".item-1").closest(itemB).css('border', '2px solid blue');
+		});
+	</script>
+</body>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<title>jQuery的属性和样式之增加样式.addClass()</title>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<style type="text/css">
+		.left,.right{
+			width: 300px;
+			height: 120px;
+		}
+		.left div,.right div{
+			width: 100px;
+			height: 90px;
+			padding: 5px;
+			margin: 5px;
+			float: left;
+			border: 1px solid #ccc;
+		}
+
+		.newClass{
+			background: #bbffaa;
+		}
+
+		.imoocClass{
+			background:red;
+		}
+	</style>
+</head>
+
+<body>
+	<h3>.addClass()方法</h3>
+	<div class="left">
+		<div class="aaron">
+			<p>newClass</p>
+		</div>
+		<div class="aaron">
+			<p>newClass</p>
+		</div>
+	</div>
+
+	<div class="right">
+		<div class="aa bb imooc">
+			<article>
+				<p>imoocClass</p>
+			</article>
+		</div>
+		<div class="bb cc imooc">
+			<article>
+				<p>imoocClass</p>
+			</article>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		//class=left元素下增加一个新的样式,增加背景颜色
+		$(".left div").addClass('newClass');
+	</script>
+	<script type="text/javascript">
+		//通过className(function)方法
+		//这个函数返回一个或更多用空格隔开的要增加的样式名
+		//接收index 参数表示元素在匹配集合中的索引的位置和html参数表示元素上原来的HTML内容
+
+		//找到所有的div,然后通过addClass设置颜色，根据返回的className来判断
+		$("div").addClass(function(index,className){
+			//找到类名中包含了imooc的元素
+			if(-1 !=className.indexOf('imooc')){
+				//this指向匹配元素集合中的当前元素
+				$(this).addClass('imoocClass');
+			}
+		});	
+	</script>
+</body>

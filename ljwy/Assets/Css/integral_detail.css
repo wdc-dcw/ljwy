@@ -1,0 +1,23 @@
+﻿
+body{ background:#ededed;}
+/*头部*/
+.top span {font-size: .17rem;color: #000;width: 2.30rem;display: inline-block;text-align: center;height: .42rem;line-height: .42rem;}
+
+/*整体*/
+.list div{width:3.20rem;}
+/*头像和姓名*/
+.nickName p{text-align: center;}
+#name img{width: .50rem;height: .50rem;border-radius: 1.00rem;}
+#name span{width: .50rem;height: .50rem;display: block;color: #000000;font-size: .14rem;border-radius: 1.00rem;margin: .60rem 0 0.1rem 1.32rem;border: .02rem solid #ff8600;}
+/*积分总数*/
+.toatl_score p,.today_score p{text-align: center;}
+.toatl_score p span,.today_score p span{display:inline-block;font-size: .12rem;}
+.toatl_score .grade{color:#ff8100;}
+.today_score .today_grade{color:#ff8100;}
+.score{padding-bottom: .10rem;}
+
+/*积分详情*/
+.particulars{margin-bottom: .01rem; background-color: white;}
+.particulars span{color: #ff8100;}
+.particulars .title{ word-break:break-all; word-wrap:break-word ; width:2.00rem;}
+.particulars p{font-size:.12rem;background: #fff;position: relative;padding:.15rem .135rem;}

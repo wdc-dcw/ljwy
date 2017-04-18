@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflows>
+    <!-- CMS系统流程 -->
+    <workflow name="CRI" type="resource" location="workflows/cms-999/in_cal.xml" /><!-- 内部校准管理-->
+	<workflow name="CCM" type="resource" location="workflows/cms-999/cal_cancel.xml" /> <!--校准作废管理-->
+	<workflow name="IRM" type="resource" location="workflows/cms-999/ins_repl.xml" /> <!--仪表替换管理-->
+	<workflow name="OCM" type="resource" location="workflows/cms-999/out_cal.xml" /><!-- 外部校准管理-->
+	<workflow name="GCM" type="resource" location="workflows/cms-999/glass_cal.xml" /><!--玻璃量器校准-->
+	<workflow name="CYP" type="resource" location="workflows/cms-999/cal_year_plan.xml" /><!--校准年度计划-->
+	<workflow name="CMP" type="resource" location="workflows/cms-999/cal_month_plan.xml" /> <!--校准月度计划-->
+	<workflow name="CTC" type="resource" location="workflows/cms-999/tmp_cal.xml" /> <!--临时校准申请-->
+	<workflow name="MIN" type="resource" location="workflows/cms-999/ins_new.xml" /><!--器具新增，修改-->
+	<workflow name="CNI" type="resource" location="workflows/cms-999/cal_new.xml" /><!--校准信息新增，修改 -->
+
+	<!-- DMS-999系统流程 -->
+	<!-- 1.文件起草管理、2.文件审批管理、3.文件生效管理、4.文件打印分发、5.文件撤销销毁、6.文件复审、7.文件补发管理、8.文件阅读权限 -->
+	<workflow name="FD" type="resource" location="workflows/dms-999/file_draft.xml" />
+	<workflow name="FA" type="resource" location="workflows/dms-999/file_approve.xml" />
+	<workflow name="FE" type="resource" location="workflows/dms-999/file_effect.xml" />
+	<workflow name="FPD" type="resource" location="workflows/dms-999/file_print_dis.xml" />
+	<workflow name="FCD" type="resource" location="workflows/dms-999/file_cancel_des.xml" />
+	<workflow name="FRA" type="resource" location="workflows/dms-999/file_reapply.xml" />
+	<workflow name="FR" type="resource" location="workflows/dms-999/file_reissue.xml" />
+	<workflow name="FRP" type="resource" location="workflows/dms-999/file_read_per.xml" />
+	
+	<!-- QMS-999系统流程 -->
+	<workflow name="INV" type="resource" location="workflows/qms-999/inv.xml" />
+	<workflow name="CC" type="resource" location="workflows/qms-999/cc.xml" />
+	<workflow name="CAPA" type="resource" location="workflows/qms-999/capa.xml" />
+	<workflow name="DEV" type="resource" location="workflows/qms-999/dev.xml" />
+	<workflow name="FMEA" type="resource" location="workflows/qms-999/fmea.xml" />
+	<workflow name="VA" type="resource" location="workflows/qms-999/va.xml" />
+	<workflow name="VDA" type="resource" location="workflows/qms-999/vda.xml" />
+	<workflow name="UN" type="resource" location="workflows/qms-999/un.xml" />
+	<workflow name="VN" type="resource" location="workflows/qms-999/vn.xml" />
+	<workflow name="VT" type="resource" location="workflows/qms-999/vt.xml" />
+	<workflow name="VI" type="resource" location="workflows/qms-999/vi.xml" />
+	
+	<!-- LIMS-999系统流程 -->
+	<workflow name="OOS" type="resource" location="workflows/oos.xml" /><!-- OOS 流程 -->
+	<workflow name="WLQY" type="resource" location="workflows/wlqy.xml" /><!-- 物料取样表单  -->
+	<workflow name="ZXQY" type="resource" location="workflows/zxqy.xml" /><!-- 产品在线取样  -->
+	<workflow name="ZKQY" type="resource" location="workflows/zkqy.xml" /><!-- 产品在库取样  -->
+	<workflow name="ECP" type="resource" location="workflows/ecp.xml" /><!-- ERP产品收检记录  -->
+	<workflow name="NEWCP" type="resource" location="workflows/newcp.xml" /><!-- 新增产品收检记录  -->
+	<workflow name="NEWWL" type="resource" location="workflows/newwl.xml" /><!-- 新增物料收检记录  -->
+	<workflow name="EWL" type="resource" location="workflows/ewl.xml" /><!-- ERP物料收检记录  -->
+	<workflow name="SDYR" type="resource" location="workflows/sdyr.xml" /><!-- 标准物质验收与入库 -->
+	<workflow name="SDLF" type="resource" location="workflows/sdlf.xml" /><!-- 标准物质领用发放记录 -->
+	<workflow name="SDSO" type="resource" location="workflows/sdso.xml" /><!-- 标准物质溶液配制记录 -->
+	<workflow name="SDBF" type="resource" location="workflows/sdbf.xml" /><!-- 标准物质报废 -->
+	<workflow name="SDDX" type="resource" location="workflows/sddx.xml" /><!-- 待销毁标准物质汇总表 -->
+	<workflow name="WDSS" type="resource" location="workflows/wdss.xml" /><!--  稳定性实施管理 --> 
+	<workflow name="WDKC" type="resource" location="workflows/wdkc.xml" /><!--  稳定性考察方案 -->
+	<workflow name="WDKCBG" type="resource" location="workflows/wdkcbg.xml" /><!-- 稳定性考察方案 -->  
+	<workflow name="EQN"    type="resource" location="workflows/eqn.xml" /><!-- 仪器设备新增 --> 
+	<workflow name="EQR" type="resource" location="workflows/eqr.xml" /><!-- 仪器设备维修--> 
+	<workflow name="EQS" type="resource" location="workflows/eqs.xml" /><!-- 仪器设备报废 --> 
+	<workflow name="EQM" type="resource" location="workflows/eqm.xml" /><!-- 仪器设备维护保养--> 
+	<workflow name="PYJRK" type="resource" location="workflows/pyjrk.xml" /><!-- 培养基入库记录-->
+	<workflow name="PYJSY" type="resource" location="workflows/pyjsy.xml" /><!-- 培养基适用性记录-->
+	<workflow name="PYJPZ" type="resource" location="workflows/pyjpz.xml" /><!-- 培养基配制灭菌记录-->
+	<workflow name="YPZPYJ" type="resource" location="workflows/ypzpyj.xml" /><!-- 已配制培养基使用记录-->
+	<workflow name="PYJXH" type="resource" location="workflows/pyjxh.xml" /><!-- 培养基销毁记录编号-->
+	<workflow name="TESTITEM" type="resource" location="workflows/testItem.xml" /><!-- 仪器设备维护保养-->
+	<workflow name="RY" type="resource" location="workflows/ry.xml" /><!-- 溶液配制管理-->
+	<workflow name="SJRK" type="resource" location="workflows/sjrk.xml" /><!-- 试剂入库记录-->
+	<workflow name="SJLY" type="resource" location="workflows/sjly.xml" /><!-- 领用发放记录-->
+	<workflow name="SJBF" type="resource" location="workflows/sjbf.xml" /><!-- 试剂报废-->
+	<workflow name="SJXH" type="resource" location="workflows/sjxh.xml" /><!-- 试剂销毁申请表-->
+	<workflow name="HCXZ" type="resource" location="workflows/hcxz.xml" /><!-- 新增实验耗材-->
+	<workflow name="HCLY" type="resource" location="workflows/hcly.xml" /><!-- 实验耗材领用记录-->
+	<workflow name="HCBF" type="resource" location="workflows/hcbf.xml" /><!-- 实验耗材报废申请记录-->
+	<workflow name="HCXH" type="resource" location="workflows/hcxh.xml" /><!-- 待销毁实验耗材汇总表-->
+	<workflow name="SPZXZ" type="resource" location="workflows/spzxz.xml" /><!-- 新增色谱柱-->
+	<workflow name="SPZLY" type="resource" location="workflows/spzly.xml" /><!-- 色谱柱领用记录-->
+	<workflow name="SPZBF" type="resource" location="workflows/spzbf.xml" /><!-- 色谱柱报废记录-->
+	<workflow name="DDYPZ" type="resource" location="workflows/ddypz.xml" /><!-- 滴定液配制记录-->
+	<workflow name="DDYLY" type="resource" location="workflows/ddyly.xml" /><!-- 滴定液领用发放记录-->
+	<workflow name="YZRK" type="resource" location="workflows/yzrk.xml" /><!-- 易制毒品-新增入库记录-->
+	<workflow name="YZLY" type="resource" location="workflows/yzly.xml" /><!-- 易制毒品-领用发放记录-->
+	<workflow name="YZBF" type="resource" location="workflows/yzbf.xml" /><!-- 易制毒品-报废记录-->
+	<workflow name="YZXH" type="resource" location="workflows/yzxh.xml" /><!-- 易制毒品-销毁申请表-->
+	<workflow name="TSRK" type="resource" location="workflows/tsrk.xml" /><!-- 特殊试剂-入库记录-->
+	<workflow name="TSLY" type="resource" location="workflows/tsly.xml" /><!-- 特殊试剂-领用发放记录-->
+	<workflow name="TSHM" type="resource" location="workflows/tshm.xml" /><!-- 特殊试剂-贮（储）备溶液配制记录-->
+	<workflow name="TSCB" type="resource" location="workflows/tscb.xml" /><!-- 特殊试剂-贮（储）备液领用发放记录-->
+	<workflow name="TSRY" type="resource" location="workflows/tsry.xml" /><!-- 特殊试剂-标准溶液配制记录-->
+	<workflow name="TSJC" type="resource" location="workflows/tsjc.xml" /><!-- 特殊试剂-季度检查记录-->
+	<workflow name="TSBF" type="resource" location="workflows/tsbf.xml" /><!-- 特殊试剂-报废记录-->
+	<workflow name="TSXH" type="resource" location="workflows/tsxh.xml" /><!-- 特殊试剂-销毁申请表-->
+	<workflow name="XZJZ" type="resource" location="workflows/xzjz.xml" />	<!-- 菌种管理-新增菌种-->
+	<workflow name="JZCD2" type="resource" location="workflows/jzcd2.xml" /><!-- 菌种管理-菌种传代记录（0代-2代）-->
+	<workflow name="JZCD3" type="resource" location="workflows/jzcd3.xml" /><!-- 菌种管理-菌种传代记录（3代）-->
+	<workflow name="JZCD4" type="resource" location="workflows/jzcd4.xml" /><!-- 菌种管理-菌种传代记录（4代）-->
+	<workflow name="JZCD5" type="resource" location="workflows/jzcd5.xml" /><!-- 菌种管理-菌种传代记录（5代）-->
+	<workflow name="JZXH" type="resource" location="workflows/jzxh.xml" />	<!-- 菌种管理-菌种/污染物销毁记录-->
+	
+	<!--验证系统 请假流程 -->
+	<workflow name="HLD" type="resource" location="workflows/holiday.xml" />
+	
+</workflows>

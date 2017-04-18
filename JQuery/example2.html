@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>isXML</title>
+</head>
+<body>
+	<!-- <div id="test">aaa</div>这是一个注释节点 -->
+	<script type="text/javascript">
+		var testDiv=document.createElement('div');
+		var isElement=function(obj){
+			if(obj && obj.nodeType===1){
+				if(window.Node && (obj instanceof Node)){
+					return true;
+				}
+				try{
+					testDiv.appendChild(obj);
+					testDiv.removeChild(obj);
+				}catch(e){
+					return false;
+				}
+				return true;
+			} 
+			return false;
+		}
+		/*var a={
+			nodeType:1
+		}
+		console.log(isElement(document.getElementById("test")));
+		console.log(isElement(document.getElementById("test").nextSibling));
+		console.log(isElement(a));*/
+		/*var isXML=function(document){
+			return (!!document.xmlVersion) ||(!!document.xml)||(toString.call(document)=='[object XMLDocument') 
+					|| (document.nodeType==9 && document.documentElement.nodeName!='HTML');
+		};*/
+		var isXML=function(doc){
+			return doc.createElement("p").nodeName !==doc.createElement("P").nodeName;
+		}
+
+		var isHTMLElement=function(el){
+			if(isElement(el)){
+				return isXML(el.ownerDocument);
+			}
+			return false;
+		}
+		/*var isXML=window.HTMLDocument?function(doc){
+			return !(doc instanceof HTMLDocument);
+		}:function(doc){
+			return "selectNodes" in doc;
+		}*/
+
+	</script>
+</body>
+</html>

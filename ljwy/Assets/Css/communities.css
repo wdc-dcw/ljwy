@@ -1,0 +1,18 @@
+body {background-color:#ededed;}
+.top span{width:2.30rem;}
+
+.tel{border-radius:0.04rem; background-color:white;width:2.05rem; height:.36rem; line-height:.36rem;    padding-left: .15rem;}
+.tel span{font-size:.14rem; color:#000;}
+.pho_list{border-radius:0.04rem; background-color:white;width:2.05rem; height:.36rem; line-height:.36rem;    padding-left: .15rem; font-size:.14rem;}
+.pho_main{display:none;}
+
+.telphone {position:relative;}
+.pho_main{position:absolute; top:0; left:0;}
+
+.banner img{width:3.20rem;}
+.communities{margin-bottom:.80rem;}
+.server {height: .38rem;border-bottom: .01rem solid #efefef;background-color: white;padding: 0 .13rem;}
+.server .server_left{float: left;height: .38rem;line-height: .38rem;color: #999999;font-size: .14rem;}
+.server .server_left img{width: .18rem;height: .18rem; margin-top: .10rem;margin-right: .07rem;}
+.server .server_right{float:right;}
+.server .server_right img{width: .09rem;margin-top: .10rem;}

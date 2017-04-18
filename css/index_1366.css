@@ -1,0 +1,372 @@
+#main {
+	background: url("../images/icon_18.gif") repeat-y rgb(255, 255, 255);
+	margin: 0px 0px;
+	padding: 0px 0px;
+	width:100%;
+}
+
+#main::after {
+	height: 0px;
+	overflow: hidden;
+	clear: both;
+	display: block;
+	visibility: hidden;
+	content: ".";
+}
+
+.left {
+	padding: 0px 10px 0px 0px;
+	width: 149px;
+	float: left;
+	background-color: rgb(245, 245, 245);
+}
+
+.middle {
+	padding: 17px 29px 15px 30px;
+	width: 768px;
+	float: left;
+}
+
+.right {
+	width: 266px;
+	float: left;
+	
+}
+
+.picPannel {
+	border: 1px solid rgb(215, 215, 215);
+	border-image: none;
+	width: 471px;
+	height: 268px;
+	overflow: hidden;
+	position: relative;
+}
+
+.picPannel .scrollField {
+	width: 100%;
+	height: 268px;
+}
+
+.picPannel .scrollField .scroll {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+}
+
+.picPannel .scrollField .scroll dl {
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+}
+
+.picPannel .scrollField .scroll dd a {
+	left: 0px;
+	top: 0px;
+	width: 982px;
+	height: 100%;
+	overflow: hidden;
+	display: block;
+	position: absolute;
+	z-index: 1;
+}
+
+.picPannel .scrollField .scroll dd img {
+	display: block;
+}
+
+.picPannel .control {
+	text-align: right;
+	right: 15px;
+	bottom: 10px;
+	position: absolute;
+	z-index: 3;
+}
+
+.picPannel .control span {
+	background: url("../images/icon_15.png") no-repeat 50% 50%;
+	width: 10px;
+	height: 10px;
+	margin-right: 10px;
+	display: inline-block;
+	cursor: pointer;
+	-ms-zoom: 1;
+}
+
+.picPannel .control span.on {
+	background: url("../images/icon_16.png") no-repeat 50% 50%;
+}
+
+.NewsPannel {
+	padding: 15px 0px 0px;
+}
+
+.NewsPannel .titleArea {
+	
+}
+
+.NewsPannel .contentArea {
+	padding: 17px 17px 17px 7px;
+}
+
+.NewsPannel .contentArea dl {
+	
+}
+
+.NewsPannel .contentArea dd {
+	background: url("../images/icon_22.gif") no-repeat 0px 100%;
+	padding: 5px 0px 5px 8px;
+	height: 30px;
+}
+
+.NewsPannel .contentArea dd::after {
+	height: 0px;
+	overflow: hidden;
+	clear: both;
+	display: block;
+	visibility: hidden;
+	content: ".";
+}
+
+.NewsPannel .contentArea dd .time {
+	color: rgb(153, 153, 153);
+	float: right;
+}
+
+.NewsPannel .contentArea dd a {
+	background: url("../images/icon_21.gif") no-repeat 0px 50%;
+	padding-left: 6px;
+	display: block;
+}
+
+.riliPannel {
+	padding: 17px 0px 0px;
+	width: 266px;
+	-ms-zoom: 1;
+}
+
+.riliPannel .titleArea {
+	width: 266px;
+	height: 39px;
+	border-bottom-color: rgb(192, 33, 37);
+	border-bottom-width: 4px;
+	border-bottom-style: solid;
+}
+
+.riliPannel .titleArea dl {
+	-ms-zoom: 1;
+	background-repeat: no-repeat;
+}
+
+.riliPannel .titleArea .bg_01 {
+	background-image: url("../images/icon_24.gif");
+}
+
+.riliPannel .titleArea dl::after {
+	height: 0px;
+	overflow: hidden;
+	clear: both;
+	display: block;
+	visibility: hidden;
+	content: ".";
+}
+
+.riliPannel .titleArea dd {
+	width: 133px;
+	height: 39px;
+	text-align: center;
+	color: rgb(255, 255, 255);
+	line-height: 39px;
+	font-size: 14px;
+	font-weight: bold;
+	float: left;
+	cursor: pointer;
+}
+
+.riliPannel .contentArea {
+	
+}
+
+.riliPannel .contentArea .childField {
+	background: url("../images/icon_25.gif") repeat-y;
+	display: none;
+}
+
+.riliPannel .contentArea .act {
+	display: block;
+}
+
+.riliPannel .contentArea .childField .bg {
+	background: url("../images/icon_26.gif") no-repeat 50% 0px;
+	padding: 5px 0px 0px;
+}
+
+.riliPannel .contentArea .childField .meetingField {
+	padding: 0px 1px;
+}
+
+.riliPannel .contentArea .childField .meetingField .weatherField {
+	background: url("../images/icon_27.gif") no-repeat 47px 0px
+		rgb(246, 246, 246);
+	height: 65px;
+	border-bottom-color: rgb(215, 215, 215);
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+.riliPannel .contentArea .childField .meetingField .weatherField::after
+	{
+	height: 0px;
+	overflow: hidden;
+	clear: both;
+	display: block;
+	visibility: hidden;
+	content: ".";
+}
+
+.riliPannel .contentArea .childField .meetingField .weatherField .dateField
+	{
+	width: 47px;
+	float: left;
+}
+
+.riliPannel .contentArea .childField .meetingField .weatherField .dateField .xingqi
+	{
+	background: url("../images/icon_28.gif") repeat-x;
+	height: 21px;
+	text-align: center;
+	color: rgb(177, 0, 0);
+	line-height: 21px;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.riliPannel .contentArea .childField .meetingField .weatherField .dateField .day
+	{
+	text-align: center;
+	color: rgb(0, 0, 0);
+	line-height: 44px;
+	font-size: 24px;
+	background-color: rgb(253, 253, 253);
+}
+
+.riliPannel .contentArea .childField .meetingField .weatherField .weather
+	{
+	width: 205px;
+	padding-left: 10px;
+	vertical-align: middle;
+	float: left;
+}
+
+.riliPannel .contentArea .childField .meetingField .weatherField .weather .icon
+	{
+	padding: 10px 4px 0px 0px;
+	display: inline-block;
+	-ms-zoom: 1;
+}
+
+.riliPannel .contentArea .childField .meetingField .weatherField .weather .text
+	{
+	padding: 10px 0px 0px;
+	line-height: 18px;
+	vertical-align: top;
+	display: inline-block;
+	-ms-zoom: 1;
+}
+
+.riliPannel .contentArea .childField .meetingField .meetingList {
+	
+}
+
+.riliPannel .contentArea .childField .meetingField .meetingList dl {
+	
+}
+
+.riliPannel .contentArea .childField .meetingField .meetingList dd {
+	padding: 11px 10px;
+	border-bottom-color: rgb(215, 215, 215);
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+.riliPannel .contentArea .childField .meetingField .meetingList .odd {
+	background: url("../images/icon_30.gif") repeat-x;
+}
+
+.riliPannel .contentArea .childField .meetingField .meetingList dd .title
+	{
+	color: rgb(0, 0, 0);
+}
+
+.riliPannel .contentArea .childField .meetingField .meetingList dd .title::after
+	{
+	height: 0px;
+	overflow: hidden;
+	clear: both;
+	display: block;
+	visibility: hidden;
+	content: ".";
+}
+
+.riliPannel .contentArea .childField .meetingField .meetingList dd .title .mtime
+	{
+	color: rgb(149, 149, 149);
+	float: right;
+}
+
+.riliPannel .contentArea .childField .meetingField .meetingList dd .addres
+	{
+	color: rgb(102, 102, 102);
+	line-height: 18px;
+}
+
+.weekPannel {
+	margin: 0px auto;
+	padding: 12px 0px 16px;
+	text-align: center;
+}
+
+.weekPannel a {
+	background: url("../images/icon_32.gif") no-repeat;
+	width: 266px;
+	height: 43px;
+	text-align: center;
+	color: rgb(255, 255, 255);
+	line-height: 43px;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+	display: block;
+}
+
+.peixunPannel {
+	
+}
+
+.peixunPannel .titleArea {
+	
+}
+
+.peixunPannel .contentArea {
+	
+}
+
+.peixunPannel .contentArea dl {
+	padding: 10px 8px;
+}
+
+.peixunPannel .contentArea dd {
+	padding: 3px 0px;
+	border-bottom-color: rgb(245, 245, 245);
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+.peixunPannel .contentArea dd span {
+	color: rgb(197, 36, 40);
+	padding-right: 6px;
+}

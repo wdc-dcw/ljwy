@@ -1,0 +1,18 @@
+﻿body {height:100%; background-color:#f5f5f5;}
+
+.banner img{width:100%;}
+.sub a{display:inline-block; width:90%; height:.38rem;line-height:.38rem; color:white; background:#ff8600; font-size:.14rem; text-align:center; margin:.15rem 5%; border-radius:.04rem;}
+.exectyion{margin: 0rem auto; text-align: center;     border-bottom: .01rem solid #ededed;padding-bottom: .10rem;     background: #fff;}
+.exectyion  span{ width: .60rem; height: .60rem; background: #ffe9a1; color: #cf5343; font-size: .14rem; display: inline-block;  border-radius: 1.00rem; text-align: center;line-height: .60rem;margin: .12rem .05rem 0;}
+.banner{position:relative;}
+.banner a { position: absolute; bottom: 24%; right: 27%; color: #5ea2d5;font-size: .14rem;}
+
+.exectyion p{line-height: .35rem;font-size: .11rem; color:#ff8600;}
+.exectyion .first_day{color:#808080;}
+.exectyion .last_day{color:#d11800;}
+
+/*签到规则*/
+.signs_rule{width:90%; padding:.12rem 5% 0;     background: #fff;padding-bottom: .15rem;     margin-bottom: .70rem;}
+.signs_rule h4{ font-size:.14rem; font-weight:normal;}
+.signs_rule p{font-size:.09rem; color:#808080;   line-height: .20rem;}
+.signs_rule p span{color:#ff8600;}

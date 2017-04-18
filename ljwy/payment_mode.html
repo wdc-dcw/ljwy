@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" id="mobileHtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>物业缴费</title>
+    <link href="Assets/Plugins/dropload/dropload.min.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/comm.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/payment_mode.css?v=1.0" rel="stylesheet" />
+</head>
+<body>
+    <!--头部-->
+    <div class="top" >
+        <a href="tenement.html">
+            <img src="Assets/Images/left.png" /></a>
+        <span>物业缴费</span>
+    </div> 
+    <div class="simple"></div>
+    <div class="lists" id="topDiv">
+
+    </div>
+   
+    <!--合计-->
+    <div class="total">
+        <p>合计：<span class="total" id="amt"></span>元</p>
+    </div>
+	
+    <!--支付方式-->
+    <div class="pay_style">
+        <h4>请选择支付方式</h4>
+        <p typeof="0">
+            <span class="mark">
+                <img src="Assets/Images/pay_style02.png" />微信支付</span>
+            <span class="choose_sure">
+                <img src="Assets/Images/choose_bg.png" /></span>
+        </p>
+
+    </div>
+    <div class="submit">
+        <a>提交</a>
+    </div>
+
+    <script src="Assets/Plugins/zepto/zepto.min.js?v=1.0"></script>
+    <script src="Assets/Plugins/zepto/ajax.js?v=1.0"></script>
+    <script src="Assets/Plugins/cookie/jquery.cookie.js?v=1.0"></script>
+    <script src="Assets/Scripts/comm.js?v=1.0"></script>
+    <!--缴费 -->
+    <script src="Assets/Model/pay_cost.js?v=1.0"></script>
+    <script>
+        Zepto(function ($) {
+            
+            new payCost().mode();
+            information();
+        })
+		
+    </script>
+</body>
+</html>
+

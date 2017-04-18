@@ -1,0 +1,62 @@
+﻿<!doctype html>
+<html id="mobileHtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>我的话题</title>
+    <link href="Assets/Plugins/dropload/dropload.min.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/comm.css?v=1.0" rel="stylesheet" />
+    <!-- 我的话题-->
+    <link rel="stylesheet" type="text/css" href="Assets/Css/community_topic.css?v=1.0">
+</head>
+
+
+
+<body>
+    <!--头部-->
+    <div class="top">
+        <a href="singer_center.html">
+            <img src="Assets/Images/left.png" /></a>
+        <span>我的话题</span><a href="topic_release.html" class="add_topic">新增</a>
+        
+    </div>
+    <div class="simple"></div>
+    <!--整体-->
+    <div class="list">
+        
+        
+    </div>
+    <div class="nullimg">
+        <img src="Assets/Images/payment.png" />
+        <p>亲~您还没有发布过话题哦</p>
+    </div>
+    
+     <div id="backtop"><a href="#"><img src="Assets/Images/backtop.png" /></a></div>
+    <script src="Assets/Plugins/zepto/zepto.min.js?v=1.0"></script>
+    <script src="Assets/Plugins/zepto/ajax.js?v=1.0"></script>
+    <script src="Assets/Plugins/cookie/jquery.cookie.js?v=1.0"></script>
+    <script src="Assets/Scripts/comm.js?v=1.0"></script>
+    <script src="Assets/Plugins/dropload/dropload.min.js?v=1.0"></script>
+    <script src="Assets/Model/community_topic.js?v=1.0"></script>
+    
+    <script>
+
+         window.onscroll = function () {
+            var t = document.documentElement.scrollTop || document.body.scrollTop;
+            var top_div = document.getElementById("backtop");
+            if (t >= 10) {
+                top_div.style.display = "inline";
+            } else {
+                top_div.style.display = "none";
+            }
+        }
+        
+        Zepto(function ($) {
+        	new community_topic().my_topic();
+			 })
+		
+    </script>
+</body>
+</html>

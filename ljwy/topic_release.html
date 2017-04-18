@@ -1,0 +1,60 @@
+﻿<!doctype html>
+<html id="mobileHtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>话题发布</title>
+    <link href="Assets/Plugins/dropload/dropload.min.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/comm.css?v=1.0" rel="stylesheet" />
+    <!-- 话题发布-->
+    <link rel="stylesheet" type="text/css" href="Assets/Css/topic_release.css?v=1.0">
+    
+</head>
+
+<body>
+   <!--头部-->
+    <div class="top">
+        <a href="community_topic_list.html">
+            <img src="Assets/Images/left.png" /></a>
+        <span>话题发布</span>
+        <a href="my_topic.html" class="topic_history">历史</a>
+    </div>
+    <div class="simple"></div>
+    <!-- 整体-->
+    <form id="formTopic">
+    <div class="list">
+       <div class="title">
+            <input type="text" id="title" placeholder="请输入标题" class="formValidate" require="true" labelTxt="标题" maxlength="20"/>
+       </div>
+       
+        <div class="images"> 
+  			<a href="javascript:;" id="browse"><img src="Assets/Images/repairs_img02.png" /></a> 
+  		</div>
+        <div id="Bigimg">
+        <img src="" />
+    </div>
+         <div class="content">
+           <textarea placeholder="请输入您要发布的内容" id="content" class="formValidate" require="true" labelTxt="发布内容" maxlength="300"></textarea>
+         </div>
+         
+         <div class="submit">
+             <a id="sub" onselectstart="" ontouchstart="">发  布</a>
+       </div>
+    </div>
+    </form>
+    
+     <script src="Assets/Plugins/zepto/zepto.min.js?v=1.0"></script>
+    <script src="Assets/Plugins/zepto/ajax.js?v=1.0"></script>
+    <script src="Assets/Plugins/cookie/jquery.cookie.js?v=1.0"></script>
+    <script src="Assets/Scripts/comm.js?v=1.0"></script>
+    <script src="Assets/Plugins/plupload/plupload.full.min.js?v=1.0"></script>
+    <script src="Assets/Model/community_topic.js?v=1.0"></script>
+    <script>
+        Zepto(function ($) {
+        	 new community_topic().add_topic();
+        })
+    </script>
+</body>
+</html>

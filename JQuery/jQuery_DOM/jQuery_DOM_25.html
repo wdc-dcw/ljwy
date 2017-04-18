@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<title>jQuery遍历之add()方法</title>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<style type="text/css">
+		.left{
+			width: auto;
+			height: 150px;
+		}
+		.left div{
+			width: 150px;
+			height: 120px;
+			padding: 5px;
+			margin: 5px;
+			float: left;
+			border: 1px solid #ccc;
+			background: #bbffaa;
+		}
+
+	</style>
+</head>
+
+<body>
+	<h2>add()方法</h2>
+	<div class="left first-div">
+		<div class="div">
+			<ul>
+				<li>list item 1</li>
+				<li>list item 2</li>
+				<li>list item 3</li>
+			</ul>
+			<p>新的p元素</p>
+		</div>
+	</div>
+	<div class="right"></div>
+	<br/>
+	<button>点击:add传递元素标签</button>
+	<button>点击:add传递html结构</button>
+	<script type="text/javascript">
+		$("button:first").on('click',function(){
+			//把p元素加入到li的合集中
+			$("li").add("p").css("background","red");
+		});
+	</script>
+	<script type="text/javascript">
+		$("button:last").on('click',function(){
+			//把html结构"<p>新的p元素</p>"
+			//加入到li的合集中，为了能够在页面上显示
+			//需要再重新appendTo到指定的节点处
+			//值得注意，整个结构的位置发生变化
+			$("li").add("<p>新增的p元素</p>").appendTo($(".right"));
+		});
+	</script>
+</body>

@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>首页</title>
+    <link href="Assets/Plugins/Swiper/swiper.min.css" rel="stylesheet" />
+    <link href="Assets/Css/comm.css" rel="stylesheet" />
+    <link href="Assets/Css/index.css" rel="stylesheet" />
+</head>
+<body>
+    <!--头部-->
+    <div class="top">
+            <img src="Assets/Images/index_01.png" />
+        <a href="message_list.html"><img src="Assets/Images/massage.png" /></a>
+    </div>
+    <!--轮播-->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="informs">通知
+        <marquee Direction="left" scrolldelay="200">今天天气：多云 3~16℃ 东南风4-5级 PM2.5 200</marquee></div>
+    <div class="list">
+        <div>
+            <a href="tenement.html">
+                <img src="Assets/Images/index_04.png" />
+                <p>物业缴费</p>
+            </a>
+        </div>
+        <div class="middle">
+            <a href="repair_property_list.html">
+                <img src="Assets/Images/index_05.png" />
+                <p>物业报修</p>
+            </a>
+        </div>
+        <div>
+            <a href="owner_complaints.html">
+                <img src="Assets/Images/index_06.png" />
+                <p>业主投诉</p>
+            </a>
+        </div>
+        <div>
+            <a href="announcement.html">
+                <img src="Assets/Images/index_07.png" />
+                <p>公告活动</p>
+            </a>
+        </div>
+        <div class="middle">
+            <a href="parking.html">
+                <img src="Assets/Images/index_08.png" />
+                <p>停车位</p>
+            </a>
+        </div>
+        <div>
+            <a href="communities.html">
+                <img src="Assets/Images/index_09.png" />
+                <p>社区</p>
+            </a>
+        </div>
+        <div>
+            <a href="home_service.html">
+                <img src="Assets/Images/index_10.png" />
+                <p>家政服务</p>
+            </a>
+        </div>
+        <div class="middle">
+            <a href="convenience.html">
+                <img src="Assets/Images/index_11.png" />
+                <p>便利店</p>
+            </a>
+        </div>
+        <div>
+            <a href="delivery_service.html">
+                <img src="Assets/Images/index_12.png" />
+                <p>快递服务</p>
+            </a>
+        </div>
+    </div>
+
+
+       <!--底部-->
+    <div class="footer">
+        <a href="javascript:;">
+            <div>
+                <img src="Assets/Images/footerbg_01.png" /><p  style="color:#ff8600;">首页</p>
+            </div>
+        </a>
+        <a href="recommend.html">
+            <div>
+                <img src="Assets/Images/footer_03.png" /><p>推荐</p>
+            </div>
+        </a>
+        <a href="javascript:;">
+            <div>
+                <img src="Assets/Images/footer_02.png" /><p>黄页</p>
+            </div>
+        </a>
+        <div id="newMsgCnt">
+            <a href="singer_center.html">
+                <div>
+                    <img src="Assets/Images/footer_04bg.png" /><p>个人</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <script src="Assets/Plugins/zepto/zepto.min.js"></script>
+    <script src="Assets/Plugins/zepto/ajax.js"></script>
+    <script src="Assets/Plugins/Swiper/swiper.min.js"></script>
+    <script src="Assets/Plugins/cookie/jquery.cookie.js"></script>
+    <script src="Assets/Scripts/comm.js"></script>
+    
+    <!--首页 -->
+    <script src="Assets/Model/index.js"></script>
+    <script>
+        Zepto(function ($) {
+            refreshViewport();
+			new index().indexList();
+        });
+        
+    </script>
+</body>
+</html>

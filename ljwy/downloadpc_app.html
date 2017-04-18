@@ -1,0 +1,574 @@
+﻿<!DOCTYPE HTML>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" />
+<meta name="description" />  
+<title>易理家</title>
+<script type="text/javascript" src="Assets/Model/jquery-1.6.4.min.js"></script>
+<script language="javascript" type="text/javascript">
+if ($.browser.msie && ($.browser.version==='6.0' ||$.browser.version==='7.0')) {
+	window.location.href="ie6.html";
+}
+
+
+var _dyweq = _dyweq || [];
+_dyweq.push(['_setAccount',window['acc4zpAnalytics']||'log000001']);
+_dyweq.push(['_setDomainName',window['dom4zpAnalytics']||'.zhaopin.com']);
+if(window['url4zpAnalytics']) _dyweq.push(['_trackPageview',url4zpAnalytics]);
+else _dyweq.push(['_trackPageview']);
+(function(){
+	var dywe = document.createElement('script');
+	dywe.type = 'text/javascript'; dywe.async = true;
+	dywe.src = 'Assets/Model/dywe.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(dywe, s);
+})();
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', window['acc4googleAnalytics']||'UA-7874902-2']);
+_gaq.push(['_setDomainName',window['dom4googleAnalytics']||'zhaopin.com']);
+_gaq.push(['_addOrganic','youdao','q']);
+_gaq.push(['_addOrganic','sogou','query']);
+_gaq.push(['_addOrganic','soso','w']);
+if(window['url4googleAna']) _gaq.push(['_trackPageview',url4googleAna]);
+else _gaq.push(['_trackPageview']);
+(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src ='Assets/Model/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+function recordOutboundLink(link, category, action) {
+	function ed(d,a){var c=encodeURIComponent;return c instanceof Function?(a?encodeURI(d):c(d)):escape(d);}
+	try{
+		_dywet._getTrackerByName()._trackEvent(category, action);
+		try{
+			_gat._getTrackerByName()._trackEvent(category, action);
+		}catch(err){}
+		if(link.target!="_blank") setTimeout('document.location = "' + link.href + '"', 100);
+	}catch(err){
+		var i=new Image(1,1);
+		var e=document.location;
+		i.src="http://l.zhaopin.com/track_err.gif?dywee=5("+category+"*"+action+")&dywehn="+ed(e.hostname)+"&dywep="+ed(e.pathname+e.search,true);
+	}
+}
+</script>
+<link href="Assets/Css/downloadpc_app.css" type="text/css" rel="stylesheet" />
+</head>
+<style type="text/css">
+	body{font-size:12px;}
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}
+.main{
+	width:100%;
+	height:625px;
+    overflow:hidden;
+	position:relative;
+}
+.content{
+	height:625px;
+	position:relative;
+	overflow:hidden;
+	left:0;
+	background:url(Assets/Images/linebg.png) bottom repeat-x;
+}
+.fl{
+	float:left;
+}
+.box{
+	width:100%;
+	height:547px;
+	overflow:hidden;
+	text-align:center;
+}
+.defaultbox,.box1{
+	background-color:#87c0f3;
+}
+.box2{
+	background-color:#256d2b;
+}
+.box3{
+	background-color:#fbb609;
+}
+.box4{
+	background-color:#6aacef;
+}
+.box5{
+	background-color:#6eb811;
+}
+.box6{
+	background-color:#8e1912;
+}
+.center{
+	width:960px;
+	height:625px;
+	position:absolute;
+	top:0px;
+	left:50%;
+	margin-left:-480px;
+	z-index:1000;
+	zoom:1;
+}
+#scrollLeft{
+	position:absolute;
+	left:0;
+	top:213px;
+	width:67px;
+	height:69px;
+	cursor:pointer;
+	background:url(Assets/Images/leftbtn.png) no-repeat;
+	_background:none; 
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=Assets/Images/leftbtn.png);
+}
+#scrollRight{
+	position:absolute;
+	right:0;
+	top:213px;
+	width:67px;
+	height:69px;
+	cursor:pointer;
+	background:url(Assets/Images/rightbtn.png) no-repeat;
+	_background:none; 
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=Assets/Images/rightbtn.png);
+}
+.phone{
+	width:230px;
+	height:346px;
+	float:left;
+	margin-top:40px;
+	display:inline;
+	overflow:hidden;
+	background:url(Assets/Images/iphone-pic.png) bottom no-repeat;
+	padding:84px 22px 110px 22px;
+	margin-left:90px;
+	_background:none; 
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=Assets/Images/iphone-pic.png);
+}
+#smallframe{
+    width:230px;
+	height:346px;
+	overflow:hidden;
+	position:relative;
+}
+.scrollImg,.scrolldl{
+	position:absolute;
+	top:0;
+	left:0;
+}
+.vido{
+	float:left;
+	width:120px;
+	height:38px;
+	padding-left:40px;
+	line-height:38px;
+	font-size:14px;
+	color:#fff;
+	display:inline;
+	margin-top:427px;	
+	margin-left:20px;
+	opacity:0.4;
+	_background-image:none;
+	_filter:alpha(opacity=40)
+	progid:DXImageTransform.Microsoft.AlphaImageLoader(src=Assets/Images/vidobg.png);
+}
+
+.vido a{
+	color:#fff;
+	text-decoration:none;
+}
+
+.qr_code{
+	margin-top: 464px;
+}
+.down{
+	width:590px;
+	height:77px;
+	float:right;
+
+}
+.down li{
+	float:left;
+	width:102px;
+	padding-left:20px;
+	text-align:left;
+	line-height:30px;
+	font-size:12px;
+		padding-top: 80px;
+}
+
+.down .android{
+	
+}
+
+.down .qr_ios{
+	float: left;
+    padding: 68px 0 0 20px;
+	width: 80px;
+}
+
+.down .qr_android{
+	padding: 68px 0 0 20px;
+}
+
+.down .upload{
+	display:block;
+	width:102px;
+	height:53px;
+	color:#96e422;
+}
+.down1{
+	background:url(Assets/Images/btn1.png) no-repeat;
+	_background-image:none;
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=Assets/Images/btn1.png);
+	cursor:pointer;
+}
+.down2{
+	background:url(Assets/Images/btn2.png) no-repeat;
+	_background-image:none;
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=Assets/Images/btn2.png);
+	cursor:pointer;
+}
+.down5{
+    background:url(Assets/Images/btn5.png) no-repeat;
+	_background-image:none;
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=Assets/Images/btn5.png);
+	cursor:pointer;
+}
+.down3{
+	background:url(Assets/Images/btn3.png) no-repeat;
+	_background-image:none;
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=Assets/Images/btn3.png);
+	cursor:pointer;
+}
+.down4{
+	background:url(Assets/Images/btn4.png) no-repeat;
+	_background-image:none;
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=Assets/Images/btn4.png);
+	cursor:pointer;
+}
+
+.down a{
+	color:#3c6400;
+}
+.down .newWids{
+	margin-left:5px;
+}
+.frendlink{
+	width:100%;
+	background-color:#17325e;
+	padding-bottom:10px;
+}
+.frendlink h2,.frendlink dl{
+	width:880px;
+	margin:0 auto;
+	padding-left:120px;
+	color:#c7c7c7;
+}
+.frendlink h2{
+    font-size:18px;
+	font-family:黑体;
+	font-weight:bold;
+	padding-top:10px;
+	line-height:30px;
+}
+.frendlink dl{
+	height:60px;
+}
+.frendlink dd{
+	width:120px;
+	float:left;
+	line-height:30px;
+	font-size:14px;
+}
+.frendlink a{
+	color:#c7c7c7;
+}
+.popupDiv{
+	width:596px;
+	height:532px;
+	display:none;
+}
+.object,.closedbtn{
+    background-color:#000;
+}
+.closedbtn{
+	display:block;
+	float:right;
+	width:44px;
+	height:34px;
+	text-align:center;
+	padding-top:10px;
+}
+.object{
+	width:596px;
+	height:478px;
+	text-align:center;
+	float:left;
+	padding-top:10px;
+}
+.Details{
+	width:770px;
+	height:418px;
+	display:none;
+}
+.Details-txt{
+	border:1px solid #fff;
+	background-color:#fff;
+	height:370px;
+	width:768px;
+	float:right;
+}
+.Details .closedbtn{
+    background-color:#fff;
+}
+.dimensional-code{
+	height:180px;
+	font-size:14px;
+	color:#393939;
+	padding-top:30px;
+	font-family:simsun;
+}
+.dimensional-code th,.dimensional-code td{
+	line-height:24px;
+	vertical-align:top;
+}
+.dimensional-code th{
+	font-weight:bold;
+	text-align:right;
+}
+.dimensional-code .paddTop{
+	padding-top:10px;
+}
+.dimensional-code img{
+	
+}
+.explain{
+	height:145px;
+	background-color:#4e9bff;
+	color:#fff;
+	font-size:14px;
+	padding-left:30px;
+	line-height:22px;
+	padding-top:15px;
+	padding-right:15px;
+}
+.explain a{
+	color:#000;
+	text-decoration:underline;
+}
+#footer .link{
+	border:0;
+	text-align: center;
+}
+
+</style>
+<body>
+<div class="main">
+	<div class="content defaultbox" id="bigframe">
+		<dl class="scrolldl">
+		<div class="fl box box1"><img src="Assets/Images/bg1.jpg" /></div>
+		<div class="fl box box2"><img src="Assets/Images/bg2.jpg" /></div>
+		<div class="fl box box3"><img src="Assets/Images/bg3.jpg" /></div>
+		<div class="fl box box4"><img src="Assets/Images/bg4.jpg" /></div>
+		<div class="fl box box5"><img src="Assets/Images/bg5.jpg" /></div>
+		<div class="fl box box6"><img src="Assets/Images/bg6.jpg" /></div>
+		<div style="clear:both"></div>
+		</dl>
+	</div>
+	<div class="center">
+		<div id="scrollLeft"></div>
+		<div id="scrollRight"></div>
+		<div class="phone">
+			<div id="smallframe"><img src="Assets/Images/sprite.png" class="scrollImg" /></div>
+		</div>
+		<div class="vido"></div>
+		<div class="down">
+			<ul id="newWids-box">
+				<li><a href="https://itunes.apple.com/us/app/yi-li-jia/id1088772145?l=zh&ls=1&mt=8" target="_blank"  class="upload down2">&nbsp;</a></li>
+				<img src="Assets/Images/icon2.jpg" align="center" class="qr_ios"/>
+				<li class="android"><a href="http://139.196.24.123:8080/youthen-web/ssgjApp/app-release.apk_1.1.apk" target="_blank" class="upload down1">&nbsp;</a></li>
+				<img src="Assets/Images/ico1.png" align="center" class="qr_android"/>
+			</ul>
+		</div>
+	</div>	
+</div>
+<div class="frendlink">
+	<h2>其他下载地址</h2>
+	<dl>
+        <dd>·<a href="http://apk.91.com/Soft/Android/com.shopkv.yilijia-1-1.0.0.html" target="_blank">91助手</a></dd>
+        <dd>·<a href="http://apk.hiapk.com/appinfo/com.shopkv.yilijia" target="_blank">安卓市场</a></dd>
+        <dd>·<a href="http://www.wandoujia.com/apps/com.shopkv.yilijia" target="_blank">豌豆荚</a></dd>
+        <dd>·<a href="http://android.app.qq.com/myapp/search.htm?kw=%E6%98%93%E7%90%86%E5%AE%B6" target="_blank">应用宝</a></dd>
+        <dd>·<a href="http://shouji.baidu.com/software/9155642.html" target="_blank">百度手机助手</a></dd>
+        <dd>·<a href="http://zhushou.360.cn/detail/index/soft_id/3250294?recrefer=SE_D_%E6%98%93%E7%90%86%E5%AE%B6#nogo" target="_blank">360手机助手下载</a></dd>
+        
+	</dl>
+</div>
+
+<div id="footer">
+	<script src="Assets/Model/bottom_2011_utf_8.js"></script>
+</div>
+<!--详情弹出-->
+<!--iphone-->
+<div class="Details" id="de1">
+	<a href='#' class='closedbtn'><img src='Assets/Images/close.png' /></a>
+	<div class="Details-txt">
+		<div class="dimensional-code">
+			<table width="100%">
+				<tr>
+					<th width="104" class="paddTop">适配终端：</th>
+					<td width="405" class="paddTop">iPhone3、iPhone3GS、iPhone4、iPhone 4S、ipad2、iTouch 2代以上等机型;</td>
+					<td rowspan="4" align="center"><img src="Assets/Images/ico2.png" align="center" /></td>
+				</tr>
+				<tr>
+					<th>支&nbsp;&nbsp;&nbsp;&nbsp;持：</th>
+					<td>iOS4.0及以上版本;</td>
+				</tr>
+				<tr>
+					<th>容&nbsp;&nbsp;&nbsp;&nbsp;量：</th>
+					<td>4.0M;</td>
+				</tr>
+				<tr>
+					<th>版&nbsp;本&nbsp;号：</th>
+					<td>V1.2</td>
+				</tr>
+			</table>
+		</div>
+		<dl class="explain">
+			<dt>安装方法：</dt>
+			<dd>1、	手机打开App Store搜索“易理家”下载并安装使用。</dd>
+			<dd>2、	在电脑中操作，<a href="http://itunes.apple.com/cn/app/id488033535" target="_blank">点这里</a>进入iTunes下载并保存至电脑中，连接数据线将下载的文件同步到手机中，安装使用。</dd>
+			<dd>3、	手机扫描二维码，联网访问App Store下载并安装使用。</dd>
+		</dl>
+	</div>
+</div>
+<!--安卓-->
+<div class="Details" id="de2">
+	<a href='#' class='closedbtn'><img src='Assets/Images/close.png' /></a>
+	<div class="Details-txt">
+		<div class="dimensional-code">
+			<table width="100%">
+				<tr>
+					<th width="104" class="paddTop">适配终端：</th>
+					<td width="405" class="paddTop">HTC/多普达、摩托罗拉、三星、LG、华为、小米等品牌以及大部分Android系统手机。</td>
+					<td rowspan="4" align="center"><img src="Assets/Images/ico1.png" align="center" /></td>
+				</tr>
+				<tr>
+					<th>支&nbsp;&nbsp;&nbsp;&nbsp;持：</th>
+					<td>Android 2.3.3及以上固件版本</td>
+				</tr>
+				<tr>
+					<th>容&nbsp;&nbsp;&nbsp;&nbsp;量：</th>
+					<td>4.7M</td>
+				</tr>
+				<tr>
+					<th>版&nbsp;本&nbsp;号：</th>
+					<td>V1.0.0</td>
+				</tr>
+			</table>
+		</div>
+		<dl class="explain">
+			<dt>安装方法：</dt>
+			<dd>1、	在电脑中操作，<a href="http://139.196.24.123:8080/youthen-web/ssgjApp/app-release.apk_1.1.apk" target="_blank">点这里</a>下载并保存至电脑中，连接数据线将下载的文件同步到手机中安装使用。</dd>
+			<dd>2、	手机扫描二维码，联网即可直接下载并安装使用。</dd>
+			<dd>3、	手机用户也可在知名App Market搜索“易理家”下载并安装使用。（如：91手机助手、豌豆荚、360、应用宝等电子市场。）</dd>
+		</dl>
+	</div>
+</div>
+
+<script type="text/javascript" src="Assets/Model/jquery.zlzp.popupbase.js"></script>
+	<script type="text/javascript">
+	function changeBackground(id,isright) {
+		var box = $('#'+id), // 容器	
+			boxWidth,
+			imgWidth,
+			img; // 滑动图片 背景
+				
+		if(id=='bigframe'){
+		    boxWidth = $(document).width(); //计算显示屏幕的宽度
+			img = $(box).find('dl');
+			imgWidth = boxWidth*6;//背景容器的总宽度
+		    }else{
+			boxWidth = $(box).width(); // 图片容器宽度
+			img = $(box).find('img');
+			imgWidth = $(img).width()//图片宽度
+		}	
+		
+		var imgLeft = parseInt($(img).css('left')), // 图片当前left值
+			direction = isright ? true : false,
+			scrollLeft; // 滚动坐标
+			
+		if (direction) {
+			// 向右滚动
+			scrollLeft = '-='+boxWidth;
+			// 判断是否超过右边界，若超出，滚回left:0
+			if (imgLeft <= -(imgWidth-boxWidth)) {
+				scrollLeft = 0;
+			}
+		} else {
+			// 向左滚动
+			scrollLeft = '+='+boxWidth;
+			// 判断是否超过左边界，若超出，滚回left:-imgWidth
+			if (imgLeft>=0 ) {
+				scrollLeft = -imgWidth+boxWidth;
+			}
+		}
+		// 滚动到目标left
+		$(img).stop(true,true).delay(200).animate({
+			left:scrollLeft+'px'
+		},400,'swing')
+	
+	}
+	$(document).ready(function(){
+		
+	
+		$(window).resize(function(){
+			window.parent.location = window.parent.location.href;
+		})
+	
+		var screenWidth = $(document).width();
+		var dlWid = screenWidth*6;
+		$('.content').css('width',screenWidth+'px');
+		$('.box').css('width',screenWidth+'px');
+		$('.scrolldl').css('width',dlWid+'px');
+		setInterval(function(){
+			changeBackground('bigframe',true);
+			changeBackground('smallframe',true);
+		},4000);
+		$('#scrollLeft').click(function(){
+			// 元素id，参数{isright:滑动方向}
+			changeBackground('bigframe',false);
+			changeBackground('smallframe',false);
+		});
+		$('#scrollRight').click(function(){
+			// 元素id，参数{isright:滑动方向}
+			changeBackground('bigframe',true);
+			changeBackground('smallframe',true);
+		});
+		//--弹层内容开始
+		$("#clicked").click(function(){
+				$.popupBase.init({div:"<a href='#' class='closedbtn'><img src='img/closedxx.gif' /></a><div class='object'><embed width='590' height='470' src='http://www.tudou.com/v/qksZt9IvNz4/&resourceId=0_05_05_99/v.swf' type='application/x-shockwave-flash' allowscriptaccess='always' allowfullscreen='true' wmode='opaque'></div>", posx:"center", posy:80,closeMode:'remove'});
+				return false;
+		});
+		$(".popupDiv .closedbtn").live('click',function(){
+				$(this).parent().remove();
+				$("#divMask").remove();
+				return false;
+				//$.popupBase.close($(this).parent(".popupDiv"));
+		});
+
+		$('.newWids').click(function(){
+			var idx = $(this).attr('popwin');
+			$.popupBase.init({div:$("#de"+idx), posx:"center", posy:70});
+			return false;
+			});
+			
+		$(".Details .closedbtn").click(function(){
+					$.popupBase.close($(this).parent(".Details"));
+					return false;
+			})
+		
+	});
+	</script>
+		
+
+</body>
+</html>

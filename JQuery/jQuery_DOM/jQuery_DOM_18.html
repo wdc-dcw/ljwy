@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<title>jQuery遍历之find()方法</title>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<style type="text/css">
+		.left{
+			width: auto;
+			height: 200px;
+		}
+		.left div{
+			width: 150px;
+			height: 70px;
+			padding: 5px;
+			margin: 5px;
+			float: left;
+			border: 1px solid #ccc;
+			background: #bbffaa;
+		}
+
+		span{
+			color:blue;
+		}
+	</style>
+</head>
+
+<body>
+	<h2>find()方法</h2>
+	<div class="left first-div">
+		<div class="div">
+			<ul class="level-1">
+				<li class="item-1">1</li>
+				<li class="item-2">2</li>
+				<li class="item-3">3</li>
+			</ul>
+		</div>
+		<div class="div">
+			<ul class="level-2">
+				<li class="item-1">1</li>
+				<li class="item-2">2</li>
+				<li class="item-3">3</li>
+			</ul>
+		</div>
+		<div class="div">
+			<ul class="level-3">
+				<li class="item-1">1</li>
+				<li class="item-2">2</li>
+				<li class="item-3">3</li>
+			</ul>
+		</div>
+	</div>
+	<button>点击，find传递表达式</button>
+	<br/>
+	<br/>
+	<h2>find表达式</h2>
+	<div style="border:1px solid red;">
+		<p>
+			<span>测试一</span>
+			<a>测试二</a>
+		</p>
+		<p>
+			<span>慕课网一</span>
+			<a>慕课网二</a>
+		</p>
+		<p>
+			<span>Aaron一</span>
+			<a>Aaron二</a>
+		</p>
+	</div>
+	<br/>
+	<br/>
+	<button>点击,find传递$对象</button>
+
+	<script type="text/javascript">
+		$("button:first").on('click',function(){
+			//在class="left"的元素中，找到后代元素li的最后一个,并加上红色边框
+			//$(".left").find("li:last").css("border","1px solid red");
+			$(".left").find("li").last().css("border","1px solid red");
+		});
+
+	</script>
+	<script type="text/javascript">
+		$("button:last").on('click',function(){
+			//找到所有的p元素,然后筛选子元素span标签，改变其颜色
+			var $span=$("span");
+			$("p").find($span).css("color","red");
+		});
+
+	</script>
+</body>

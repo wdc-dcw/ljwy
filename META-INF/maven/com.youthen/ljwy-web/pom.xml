@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.youthen</groupId>
+	<artifactId>ljwy-web</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>ljwy-web</name>
+	<packaging>war</packaging>
+	<properties>
+		<maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+		<maven.compiler.target>1.7</maven.compiler.target>
+		<maven.compiler.source>1.7</maven.compiler.source>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<maven.findbugs.enable>true</maven.findbugs.enable>
+		<!-- <spring.version>3.0.6.RELEASE</spring.version> -->
+		<spring.version>3.0.6.RELEASE</spring.version>
+		<spring.security.version>3.0.2.RELEASE</spring.security.version>
+	</properties>
+	<build>
+		<defaultGoal>package</defaultGoal>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+			<resource>
+				<directory>src/main/config</directory>
+			</resource>
+			<resource>
+				<directory>src/main/java</directory>
+			</resource>
+		</resources>
+		<testResources>
+			<testResource>
+				<directory>src/test/resources</directory>
+			</testResource>
+			<testResource>
+				<directory>src/test/config</directory>
+			</testResource>
+			<testResource>
+				<directory>src/test/java</directory>
+			</testResource>
+		</testResources>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.1</version>
+				<configuration>
+					<encoding>${project.build.sourceEncoding}</encoding>
+					<showDeprecation>false</showDeprecation>
+					<showWarnings>true</showWarnings>
+					<argLine>-javaagent:lib/jmockit-0.998.jar</argLine>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.1.2</version>
+				<configuration>
+					<inputEncoding>${project.build.sourceEncoding}</inputEncoding>
+					<outputEncoding>${project.reporting.outputEncoding}</outputEncoding>
+					<excludeResources>false</excludeResources>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.1</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<skipTests>false</skipTests>
+					<includes>
+						<include>**/*Test.class</include>
+					</includes>
+					<excludes>
+						<exclude>**/BaseTest.class</exclude>
+					</excludes>
+					<systemPropertyVariables>
+						<com.youthen.master.configpath>${youthen-master.configpath}</com.youthen.master.configpath>
+					</systemPropertyVariables>
+					<argLine>${surefire.argLine.ljwy-web}</argLine>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>2.3</version>
+			</plugin>
+		</plugins>
+	</build>
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>2.1</version>
+				<configuration>
+					<locales>ja,en</locales>
+					<inputEncoding>${project.build.sourceEncoding}</inputEncoding>
+					<outputEncoding>${project.reporting.outputEncoding}</outputEncoding>
+				</configuration>
+			</plugin>
+			<!-- mvn jxr:jxr -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jxr-plugin</artifactId>
+				<version>2.1</version>
+				<configuration>
+					<aggregate>true</aggregate>
+					<inputEncoding>${project.build.sourceEncoding}</inputEncoding>
+					<outputEncoding>${project.reporting.outputEncoding}</outputEncoding>
+				</configuration>
+			</plugin>
+			<!-- mvn surefire-report:report mvn surefire-report:report-only -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-report-plugin</artifactId>
+				<version>2.5</version>
+				<configuration>
+					<showSuccess>true</showSuccess>
+				</configuration>
+				<reportSets>
+					<reportSet>
+						<reports>
+							<report>report-only</report>
+						</reports>
+					</reportSet>
+				</reportSets>
+			</plugin>
+			<!-- mvn checkstyle:checkstyle -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<encoding>${project.build.sourceEncoding}</encoding>
+					<configLocation>${basedir}/src/misc/java/youthen-checks.xml</configLocation>
+				</configuration>
+			</plugin>
+			
+			<!-- mvn pmd:pmd -->
+			<plugin>
+				<artifactId>maven-pmd-plugin</artifactId>
+				<version>2.5</version>
+				<configuration>
+					<targetJdk>${maven.compiler.target}</targetJdk>
+				</configuration>
+				<reportSets>
+					<reportSet>
+						<reports>
+							<report>pmd</report>
+							<report>cpd</report>
+						</reports>
+					</reportSet>
+				</reportSets>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>cobertura-maven-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<formats>
+						<format>html</format>
+						<format>xml</format>
+					</formats>
+					<instrumentation>
+						<ignores>
+							<ignore>com.youthen.master.entity.*</ignore>
+							<ignore>com.youthen.master.service.dto.*</ignore>
+						</ignores>
+						<includes>
+							<include>com/youthen/master/**/*.class</include>
+						</includes>
+						<excludes>
+							<exclude>**/ObjectFactory.class</exclude>
+							<exclude>**/*Test*.class</exclude>
+						</excludes>
+					</instrumentation>
+				</configuration>
+			</plugin>
+			<!-- mvn jdepend:generate -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>jdepend-maven-plugin</artifactId>
+				<version>2.0-beta-2</version>
+			</plugin>
+			<!-- mvn javancss:report -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>javancss-maven-plugin</artifactId>
+				<version>2.0</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<version>2.1</version>
+				<reportSets>
+					<reportSet>
+						<reports>
+							<report>index</report>
+							<report>summary</report>
+						</reports>
+					</reportSet>
+				</reportSets>
+			</plugin>
+		</plugins>
+
+	</reporting>
+
+	<dependencies>
+	
+		<dependency>
+			<groupId>com.youthen</groupId>
+			<artifactId>youthen-framework</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.youthen</groupId>
+			<artifactId>youthen-master</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.youthen</groupId>
+			<artifactId>youthen-oa</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+   
+ 		<dependency>
+			<groupId>com.youthen</groupId>
+			<artifactId>youthen-lj</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>  
+
+		<!-- J2EE容器所需包 -->
+		<dependency>
+			<groupId>org.apache.openejb</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>5.0-1</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.faces</groupId>
+			<artifactId>jsf-api</artifactId>
+			<version>1.2_04</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+			<scope>compile</scope>
+		</dependency>
+	 	<!-- <dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.1</version>
+			<scope>compile</scope>
+		</dependency>  --> 
+		<dependency>
+			<groupId>javax.faces</groupId>
+			<artifactId>jsf-impl</artifactId>
+			<version>1.2_04</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.6.12</version>
+		</dependency>
+		<!-- Oracle数据库驱动 -->
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc14</artifactId>
+			<version>10.2.0.4.0</version>
+		</dependency>
+		<!-- c3p0数据库连接池 -->
+		<dependency>
+			<groupId>c3p0</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>0.9.1.2</version>
+		</dependency>
+		
+		<!-- sqlserver数据库驱动 -->
+		<dependency>
+			<groupId>net.sourceforge.jtds</groupId>
+			<artifactId>jtds</artifactId>
+			<version>1.2.4</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- ======================================================================= -->
+
+		<!-- spring核心包 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<!-- 利用IOC管理Bean的包 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<!-- 对bean再次封装后的包，方便性强。 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<!-- spring扩展包 -->
+		<!-- SpringWeb下的工具包 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${spring.security.version}</version>
+			<scope>compile</scope>
+		</dependency>
+        
+         <dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-taglibs</artifactId>
+			<version>${spring.security.version}</version>
+		</dependency> 
+		
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+			<version>${spring.security.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		
+		<!-- 对struts支持包 -->
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-tiles-plugin</artifactId>
+			<version>2.3.1.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-struts</artifactId>
+			<version>${spring.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>xalan</groupId>
+					<artifactId>xalan</artifactId>
+				</exclusion>
+			 </exclusions>
+		</dependency>
+		<!-- 支持hibernate,对对象映射框架的支持 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<!-- ======================================================================= -->
+
+		<!-- struts2.2.3必须包 -->
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-core</artifactId>
+			<version>2.2.3.1</version>
+			<exclusions>
+				<exclusion>
+					<groupId>xalan</groupId>
+					<artifactId>xalan</artifactId>
+				</exclusion>
+			 </exclusions>
+		</dependency>
+		
+		<!-- 日志功能 -->
+		<!-- LOG -->
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.1.1</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.16</version>
+			<scope>compile</scope>
+		</dependency>
+		<!-- ASM字节码库 -->
+		<dependency>
+			<groupId>asm</groupId>
+			<artifactId>asm</artifactId>
+			<version>3.1</version>
+		</dependency>
+		<!-- struts2对于spring的支持 -->
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-spring-plugin</artifactId>
+			<version>2.2.3.1</version>
+		</dependency>
+		<!-- struts2中对于注解的支持 -->
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-convention-plugin</artifactId>
+			<version>2.2.3.1</version>
+		</dependency>
+
+
+		<!-- hibernate3.6.8必须包 -->
+		<!-- hibernate核心包 -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>3.6.8.Final</version>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-collections</groupId>
+					<artifactId>commons-collections</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>dom4j</groupId>
+					<artifactId>dom4j</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!-- 集合类 -->
+		<dependency>
+			<groupId>commons-collections</groupId>
+			<artifactId>commons-collections</artifactId>
+			<version>3.2.1</version>
+		</dependency>
+		<!-- XML配置和映射管理器 -->
+		<dependency>
+			<groupId>dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+		<!-- ASM字节码库 -->
+		<dependency>
+			<groupId>asm</groupId>
+			<artifactId>asm-attrs</artifactId>
+			<version>2.2.3</version>
+		</dependency>
+		<!-- cglib字节码解释器 -->
+		<dependency>
+			<groupId>cglib</groupId>
+			<artifactId>cglib-nodep</artifactId>
+			<version>2.2.2</version>
+		</dependency>
+
+		<!-- #### TEST-FRAMEWORK DEPENDENCIES #### -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>3.0.5.RELEASE</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.dbunit</groupId>
+			<artifactId>dbunit</artifactId>
+			<version>2.4.7</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.2-FINAL</version>
+		</dependency>
+		<dependency>
+			<groupId>mockit</groupId>
+			<artifactId>jmockit</artifactId>
+			<version>0.998</version>
+			<scope>compile</scope>
+		</dependency>
+		<!-- #### FRAMEWORK-TEST DEPENDENCIES #### -->
+	   <dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${spring.security.version}</version>
+		</dependency>  
+		<!-- EHCACHE-INTERNAL-USED DEPENDENCIES -->
+		<dependency>
+			<groupId>net.sf.ehcache</groupId>
+			<artifactId>ehcache</artifactId>
+			<version>2.0.1</version>
+			<type>pom</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.6.0</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.6.0</version>
+			<scope>compile</scope>
+		</dependency>
+		
+		<!-- 定时器所需jar -->
+		<dependency>
+			<groupId>opensymphony</groupId>
+			<artifactId>quartz</artifactId>
+			<version>1.6.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.7</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.7</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml-schemas</artifactId>
+			<version>3.7</version>
+		</dependency>
+		 
+		<!-- 容联发送短信 -->
+		<dependency>
+			<groupId>com.coolpen.sms</groupId>
+			<artifactId>ccp-sms</artifactId>
+			<version>v2.6.3r</version>
+			<scope>compile</scope>
+		</dependency>
+		 
+	</dependencies>
+
+	<repositories>
+
+		<repository>
+			<id>jboss.release</id>
+			<name>JBoss releases</name>
+			<url>http://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+		</repository>
+		<repository>
+			<id>maven2-repository.dev.java.net</id>
+			<name>Java.net Repository for Maven</name>
+			<url>http://download.java.net/maven/2/</url>
+		</repository>
+		<repository>
+			<id>maven.seasar.org</id>
+			<name>The Seasar Foundation Maven2 Repository</name>
+			<url>http://maven.seasar.org/maven2/</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>maven.seasar.org</id>
+			<name>The Seasar Foundation Maven2 Repository</name>
+			<url>http://maven.seasar.org/maven2/</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>maven-snapshot.seasar.org</id>
+			<name>The Seasar Foundation Maven2 Repository</name>
+			<url>http://maven.seasar.org/maven2-snapshot/</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>Maven Snapshots</id>
+			<url>http://snapshots.maven.codehaus.org/maven2/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</pluginRepository>
+	</pluginRepositories>
+</project>

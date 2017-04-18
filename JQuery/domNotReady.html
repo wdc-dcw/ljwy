@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1" >
+	<title>Dom Not Ready</title>
+	<script type="text/javascript" src="js/domReady.js"></script>
+	<script type="text/javascript">
+	//第一种渲染的方法，用setTimeout()函数
+	/*setTimeout(function(){
+		document.getElementById("header").style.color="red";
+	},3000);*/
+	//第二种渲染的方法，用onload
+	/*window.onload=function(){
+		document.getElementById("header").style.color="red";
+	}*/
+	//第三种渲染的方法，用Jquery
+	/*$(document).ready(function() {
+		document.getElementById("header").style.color="red";
+	});*/
+	myReady(function(){
+		document.getElementById("header").style.color="red";
+	});
+	</script>
+</head>
+<body>
+	<h1 id="header">这里是h1元素包含的内容</h1>
+</body>
+</html>

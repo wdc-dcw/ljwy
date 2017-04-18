@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" id="mobileHtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>保姆服务</title>
+    <link href="Assets/Plugins/dropload/dropload.min.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/comm.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/nanny_service.css?v=1.0" rel="stylesheet" />
+</head>
+<body>
+    <!--头部-->
+    <div class="top">
+        <a href="home_service.html">
+         <img src="Assets/Images/left.png" /></a>
+        <span id="domestic">保姆服务</span>
+    </div>
+    <div class="simple"></div>
+    <div class="domestic_service">
+	    <!-- <div class="pet_shop">
+	        <div class="shop_icon">
+	           <img src="Assets/Images/nanny.png" />
+	        </div>
+	        <div class="pet_pro">
+	            <p>南京乐家妈妈人力资源有限公司</p>
+	            <p>闵行 - 七宝 - 新龙路1058号</p>
+	        </div>
+	    </div>
+	    <div class="pet_shop">
+	        <div class="shop_icon">
+	         <img src="Assets/Images/nanny.png" />
+	        </div>
+	        <div class="pet_pro">
+	            <p>南京乐家妈妈人力资源有限公司</p>
+	            <p>闵行 - 七宝 - 新龙路1058号</p>
+	        </div>
+	    </div>
+	    <div class="pet_shop">
+	        <div class="shop_icon">
+	            <img src="Assets/Images/nanny.png" />
+	        </div>
+	        <div class="pet_pro">
+	            <p>南京乐家妈妈人力资源有限公司</p>
+	            <p>闵行 - 七宝 - 新龙路1058号</p>
+	        </div>
+	    </div> -->
+  </div>
+  <div class="nullimg">
+        <img src="Assets/Images/payment.png" />
+        <p id="noList">亲~附近无保姆服务哦</p>
+  </div>
+  <div id="backtop"><a href="#"><img src="Assets/Images/backtop.png" /></a></div>
+ <script src="Assets/Plugins/zepto/zepto.min.js?v=1.0"></script>
+    <script src="Assets/Plugins/zepto/ajax.js?v=1.0"></script>
+    <script src="Assets/Plugins/cookie/jquery.cookie.js?v=1.0"></script>
+    <script src="Assets/Plugins/dropload/dropload.min.js?v=1.0"></script>
+    <script src="Assets/Scripts/comm.js?v=1.0"></script>
+    
+    <!-- 引入js -->
+    <script src="Assets/Model/domestic_service.js?v=1.0"></script>
+    <script>
+        Zepto(function ($) {
+
+            window.onscroll = function () {
+            var t = document.documentElement.scrollTop || document.body.scrollTop;
+            var top_div = document.getElementById("backtop");
+            if (t >= 10) {
+                top_div.style.display = "inline";
+            } else {
+                top_div.style.display = "none";
+            }
+        }
+
+            // refreshViewport();
+            new domestic().domesticServiceList();
+        })
+    </script>
+</body>
+</html>

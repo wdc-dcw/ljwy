@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<title>jQuery表单事件之submit事件</title>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<style type="text/css">
+		.left div,.right div{
+			width: 500px;
+			height: 50px;
+			padding: 5px;
+			margin: 5px;
+			float: left;
+			border: 1px solid #ccc;
+		}
+
+		.left div{
+			background: #bbffaa;
+		}
+
+		.right div{
+			background: yellow;
+		}
+
+		select{
+			height: 100px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<h2>submit()方法</h2>
+	<div class="left">
+		<div class="aaron">
+			<form id="target1" action="jQuery_form_change.html">
+				回车键或点击提交表单:
+				<input type="text" value="输入新的值"/>
+				<input type="submit" value="GO"/>
+			</form>
+		</div>
+		<div class="aaron">
+			<form id="target2" action="jQuery_form_select.html">
+				回车键或点击提交表单,禁止浏览器提交表单:
+				<input type="text" value="输入新的值"/>
+				<input type="submit" value="GO"/>
+			</form>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		//回车键或点击提交表单
+		$("#target1").submit(function(){
+			alert("捕获提交表达动作，不阻止浏览器跳转");
+		});
+
+		//回车键或点击提交表单,禁止浏览器提交表单
+		$("#target2").submit(function(){
+			alert("捕获提交表达动作，阻止浏览器跳转");
+			return false;
+		});
+	</script>
+</body>

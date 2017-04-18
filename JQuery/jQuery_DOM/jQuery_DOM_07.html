@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<title>DOM节点删除之remove()的有参用法和无参用法</title>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<style type="text/css">
+		.test1{
+			background: #bbffaa;
+		}
+
+		.test2{
+			background: yellow;
+		}
+	</style>
+</head>
+
+<body>
+	<h2>通过jQuery的remove方法 移除元素</h2>
+	<div class="test1">
+		<p>p元素1</p>
+		<p>p元素2</p>
+	</div>
+	<div class="test2">
+		<p>p元素3</p>
+		<p>p元素4</p>
+	</div>
+	<button>通过点击jQuery的remove移除元素</button>
+	<button>通过点击jQuery的remove移除指定元素</button>
+
+	<script type="text/javascript">
+		$("button:first").on('click',function(){
+			//删除class=test1整个div下的节点
+			$(".test1").remove();
+		});
+	</script>
+	<script type="text/javascript">
+		$("button:last").on('click',function(){
+			//找到所有p元素中包含"3"的p元素，并删除
+			//这也是一个过滤的处理
+			$("p").remove(":contains('3')");
+		});
+	</script>
+</body>

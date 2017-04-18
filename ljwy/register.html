@@ -1,0 +1,309 @@
+﻿  <!doctype html>
+  <html id="mobileHtml">
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>用户注册</title>
+    <link href="Assets/Plugins/dropload/dropload.min.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/comm.css?v=1.0" rel="stylesheet" />
+    <!-- 用户注册-->
+     <link href="Assets/Css/complete.css?v=1.0" rel="stylesheet" />
+      
+  </head>
+  <body>
+   <!--头部-->
+    <div class="top">
+        <a href="login.html" >
+            <img src="Assets/Images/left.png" /></a>
+        <span>用户注册</span>
+    </div>
+      <div class="simple"></div>
+    <!--整体-->
+    <form id="formRegister" action="#" method="post">
+    <input type="hidden" name="nickName" id="nickName">
+	<input type="hidden" name="accessToken" id="accessToken">
+	<input type="hidden" name="openId" id="openId">
+	<input type="hidden" name="sex" id="sex">
+	<input type="hidden" name="headimgurl" id="headimgurl">
+    <div class="list">
+   <div class="tel" >
+        <input type="text" style="background: url(Assets/Images/loginn_01.png) no-repeat 0.1rem center;background-size: 9%;"  id="mobile" class="formValidate" require="true" labelTxt="手机号码" format="mobile" maxlength="11" placeholder="请输入手机号码" />        
+       <a class="rown"><img src="Assets/Images/loginn_02.png" style="display:none;" /></a>
+    </div>
+    <div class="verify" >
+        <input type="text" id="verifyCode" class="formValidate" require="true" labelTxt="验证码" format="num1" maxlength="4" placeholder="请输验证码" /> 
+        <input type="button" id="verify" value="获取验证码" class="get_code" />
+        <input type="hidden" id="hideverifycode" verifyCode=""/>     
+    </div>
+
+
+    <div class="pwd">
+        <input type="password" style="background:url(Assets/Images/loginn_03.png) no-repeat 0.1rem center;background-size:9%;" class="formValidate" require="true" labelTxt="密码" id="pwd1" maxlength="20"  placeholder="请输入密码" />
+        <a class="rown"><img src="Assets/Images/loginn_02.png" style="display:none;" /></a>
+       </div>
+       
+       <div class="again_pwd">
+        <input type="password" style="background:url(Assets/Images/loginn_03.png) no-repeat 0.1rem center;background-size:9%;" class="formValidate" require="true" labelTxt="确认密码" id="pwd2" maxlength="20" placeholder="请再次输入密码" />
+           <a class="rown"><img src="Assets/Images/loginn_02.png" style="display:none;" /></a>
+       </div>
+       
+      
+
+       <div class="submit">
+          <a href="javascript:;" id="sum">提  交</a> 
+       </div>
+       
+        <div class="agreement">
+         <p><span><img src="Assets/Images/choose_bg.png"/></span><span class="aggree" cur="1">我已阅读并同意</span><a href="user_agreement.html">《易理家用户协议》</a></p>
+       </div>
+
+
+      
+
+</div> 
+</form>
+  
+   <!--底部-->
+     <div class="footer">
+        <a href="index.html">
+            <div>
+                <img src="Assets/Images/footer_01.png" /><p>首页</p>
+            </div>
+        </a>
+        <a href="recommend.html">
+            <div>
+                <img src="Assets/Images/footer_03.png" /><p>推荐</p>
+            </div>
+        </a>
+        <a href="community_page.html">
+            <div>
+                <img src="Assets/Images/footer_02.png" /><p>黄页</p>
+            </div>
+        </a>
+        <a href="singer_center.html">
+            <div>
+                <img src="Assets/Images/footer_04bg.png" /><p>个人</p>
+            </div>
+        </a>
+    </div>
+  
+
+
+ 
+
+    
+    <script src="Assets/Plugins/zepto/zepto.min.js?v=1.0"></script>
+    <script src="Assets/Plugins/zepto/ajax.js?v=1.0"></script>
+    <script src="Assets/Scripts/comm.js?v=1.0"></script>
+    
+     <script src="Assets/Plugins/jquery/jquery-1.9.1.js?v=1.0"></script>
+     <script src="Assets/Plugins/cookie/jquery.cookie.js?v=1.0"></script>
+    <!-- 注册 -->
+    <script src="Assets/Model/user.js?v=1.0"></script>
+    
+    <!-- 验证密码的正确性-->
+    <script src="Assets/Scripts/check.js?v=1.0"></script>
+    <!--获取短信验证码倒计时-->
+    <script type="text/javascript">
+    var wait=60;
+    document.getElementById("verify").disabled = false;   
+    function time(o) {
+      if (wait == 0) {
+        o.removeAttribute("disabled");           
+        o.value="获取验证码";
+        wait = 60;
+      } else {
+        o.setAttribute("disabled", true);
+        o.value="重新发送(" + wait +"s)";
+        wait--;
+        setTimeout(function() {
+          time(o)
+        },
+        1000)
+      }
+    }
+    
+  </script> 
+
+    <script>
+        Zepto(function ($) {
+           
+            new user().register();
+            if ($("#mobile").val() != "") { $(this).parent().children().find(".rown img").css("display", "block"); }
+            $("#mobile").keyup(function (event) {
+                if ($("#mobile").val() != "") {
+                    $(this).parent().children().find(".rown img").css("display", "block");
+                }
+                else {
+                    $(this).parent().children().find(".rown img").css("display", "none");
+                }
+            });
+            $(".pwd").keyup(function () {
+                if ($("#pwd").val() != "") {
+                    $(this).find(".rown img").css("display", "block");
+                }
+                else {
+                    $(this).find(".rown img").css("display", "none");
+                }
+            });
+            $(".again_pwd").keyup(function () {
+                if ($("#pwd").val() != "") {
+                    $(this).find(".rown img").css("display", "block");
+                }
+                else {
+                    $(this).find(".rown img").css("display", "none");
+                }
+            });
+            $(".rown img").click(function () {
+                $(this).parent().parent().find("input").val("");
+                $(this).hide();
+            });
+
+
+        })
+        
+   function isUserBinded(code){
+		getOpenId(code);
+		if(openId!=""){ 
+	       	var paramsJson = {
+	   				openId: openId,
+	   		}
+	   		var adata = {
+	       		secretKey: "mobileSecretKey1234567890",
+	   			opt : "isUserBinded",
+	   			params : JSON.stringify(paramsJson)
+	   		};
+	       	
+	       
+	       	$.ajax({ 
+	   			type: "post", 
+	   	        url:  interfaceApi , 
+	               async:false, 
+	               dataType: "text", 
+	               data:adata,
+	               success: function(data){ 
+	            	
+	            	var dataObj=eval("("+data+")");
+					//alert(dataObj.messageCode);
+	               	//var dataObj=JSON.parse(data);//转换为json对象 
+	               	if(  dataObj.messageCode==1){//根据openId查找用户是否注册过
+	               		getBomBbox("你已经是会员了！");
+	       				window.location.href = "index.html";
+	               	}else{//未注册过的用户，获取其信息
+	               		var accessToken = $("#accessToken").val();
+	               		var openId = $("#openId").val();
+	               		//alert(accessToken + " -- " + openId);
+	               		getWxUserInfo(accessToken,openId)
+	               	}
+	   	        }  
+	   		});  
+		} 
+		
+	}
+	
+	var openId = "";
+	var accessToken = "";
+	function getOpenId(code){
+		var paramsJson = {
+				code : code,
+		};
+		
+		var data = {
+			secretKey: "mobileSecretKey1234567890",
+			opt : "getAccessToken",
+			params : JSON.stringify(paramsJson)
+		}; 
+		
+		$.ajax({ 
+			type: "get", 
+	        url:  interfaceApi , 
+            async:false, 
+            data:data, 
+            dataType: "text", 
+            success: function(data){ //获取openId
+            	var dataObj=eval("("+data+")");//转换为json对象
+            	//var dataObj=JSON.parse(data); //转换为json对象   
+                openId = dataObj.resultObject.openid;
+            	accessToken= dataObj.resultObject.accessToken;
+            	$("#openId").val(openId);
+            	$("#accessToken").val(accessToken);
+            }  
+		});
+	}
+	
+	
+	
+	
+	function getWxUserInfo(token,openId){
+		var data = {
+				accessToken : token,
+				openId : openId,
+		};
+		var _url = "http://www.elinnuan.com/ljwy-web/wx-user/wx-user-ajax.action?method=getWxUserInfo"
+		$.ajax({ 
+			type: "get", 
+	        url:  _url , 
+            async:false, 
+            data:data,  
+            dataType : "json",
+            success: function(dataObj){ //获取openId
+            	$("#nickName").val(dataObj.resultObject.nickname); 
+            	$("#sex").val(dataObj.resultObject.sex);
+            	$("#headimgurl").val(dataObj.resultObject.headimgurl); 
+            }  
+		});
+	}
+	
+	
+	function getWxUserInfo_Bak(token,openId){
+		var paramsJson = {
+				accessToken : token,
+				openId : openId,
+		};
+		
+		var data = {
+			secretKey: "mobileSecretKey1234567890",
+			opt : "getWxUserInfo",
+			params : JSON.stringify(paramsJson)
+		}; 
+		
+		$.ajax({ 
+			type: "get", 
+	        url:  interfaceApi , 
+            async:false, 
+            data:data, 
+            contentType:"application/x-www-form-urlencoded;charset=utf-8", 
+            dataType: "text", 
+            success: function(data){ //获取openId
+            	//alert(data);
+            	var dataObj=eval("("+data+")");
+            	//var dataObj=JSON.parse(data);//转换为json对象   
+            	$("#nickName").val(dataObj.resultObject.nickname); 
+            	$("#sex").val(dataObj.resultObject.sex);
+            	$("#headimgurl").val(dataObj.resultObject.headimgurl); 
+            }  
+		});
+	}
+	
+	
+	function getCode(){
+		var code= GetQueryString("code");
+		if(code==null || typeof(code)=="undifined"){
+			if (JSON.parse(eval($.cookie(managerMemory))) != null) {
+				code = JSON.parse(eval($.cookie(managerMemory))).openId;
+				//alert("cookie="+code);
+			 }  
+		}
+		return code;
+	}
+	
+	var code = getCode();
+	if(code!=null){
+		 isUserBinded(code);
+	} 
+    
+    </script>
+  </body>
+  </html>

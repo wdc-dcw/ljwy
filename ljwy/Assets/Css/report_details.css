@@ -1,0 +1,39 @@
+﻿/* CSS Document */
+/*背景色*/
+body{ background:#ededed;}
+.list .basic_Info, .images{padding: 0.1rem .15rem 0 .15rem;}
+.list div{ margin-top:.06rem; }
+/*头部*/
+.top span{width:1.78rem;}
+.top a:first-child{ padding: 0 .26rem 0 0;}
+.top a:last-child{padding-right: 0;margin-right: .13rem;margin-top: .08rem;}
+.top .pay{border:.01rem solid #ff9600; color:#ff9600; font-size:.14rem; border-radius:.05rem; display:inline-block; width:.40rem; height:.25rem; line-height:.26rem; text-align:center;}
+/*图片的样式*/
+.images img{width:.87rem;height:.87rem;}
+.images img a{ display: inline-block;}
+.images .images_content{ padding: 0 .095rem 0 .095rem;}
+/*标题*/
+.titles{background:#FFF; border-radius:.05rem; width:2.86rem;font-size:.12rem; margin-left:.15rem; min-height:.31rem;}
+.titles span{padding: .08rem .1rem .08rem .08rem;}
+.heading{display: inline-block;  float:left;}   
+.state02 {display: inline-block; float:right; color:#45ae38; }
+/*内容*/
+.content{background:#fff;border-radius:.05rem;margin-left:.15rem;width:2.86rem;border:0;min-height: 1rem;}
+.content p{ padding:.13rem;font-size:.12rem;}
+.content p.che{overflow:hidden;padding:0 .13rem .13rem;}
+.content p.che span{float:right;padding: .06rem .14rem .06rem;background-color: #ff9600;border-radius: .05rem;color: #fff;}
+/*服务评价选择*/
+.evaluate{background:#FFF; border-radius:.05rem;width: 2.65rem;height: .55rem;margin-left:.15rem; font-size:.12rem; padding: .02rem .10rem;}
+.choose{display:block;}
+.choose a{ margin-left:.30rem;}
+.choose img{ width:.15rem;margin:0rem .04rem;}
+/*报评价容输入框*/
+.repair_content textarea{ width:2.60rem; min-height:.65rem; border-radius:.05rem;padding:.13rem; border:0;}
+/*提交按钮*/
+.submit{ margin-left:.15rem; margin-bottom:.20rem;}
+.images a{margin:.04rem;}
+.code input{height: .40rem; width: .80rem; border: 0; background: #fff; border-radius: .05rem;padding-left: .07rem;padding-right: .07rem;}
+ .code{margin-left: .15rem;}
+ .stotal{margin-left:.10rem;}
+ .tan p,.tan1 p{ margin: 0rem .10rem .2rem;}
+ .content textarea{border: 0;width: 92%;height: auto;padding: 3%;margin: 1%;    height: .8rem;}

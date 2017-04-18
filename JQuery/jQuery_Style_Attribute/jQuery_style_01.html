@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<title>Jquery对象与DOM对象</title>
+	<!--使用JS原生语法-->
+	<script type="text/javascript">
+		window.onload=function(){
+			//通过原生的JS语法获取id为imooc1的元素p
+			var p=document.getElementById("imooc1");
+			//将元素p在html中改变
+			p.innerHTML='P1:你好！通过慕课网学习jQuery才是最佳的途径！';
+			//将元素p的内容颜色改为红色
+			p.style.color='red';
+		};
+	</script>
+
+	<!--使用jQuery语法 -->
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$("#imooc2").html('P2:您好！通过慕课网学习jQuery才是最佳的途径!').css('color','red');
+	});
+		
+	</script>
+</head>
+<body>
+	<p id="imooc1"></p>
+	<p id="imooc2"></p>
+</body>
+</html>

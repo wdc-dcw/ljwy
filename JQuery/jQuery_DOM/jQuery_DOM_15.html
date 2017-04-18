@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<title>DOM包裹wrapAll()方法</title>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<style type="text/css">
+		.left,.right{
+			width: 250px;
+			height: 120px;
+		}
+		.left div,.right div{
+			width: 100px;
+			padding: 5px;
+			margin: 5px;
+			float: left;
+			border: 1px solid #ccc;
+			background: #bbffaa;
+		}
+
+		.right div{
+			background: yellow;
+		}
+
+		p{
+			border: 1px solid red;
+		}
+		a{
+			border: 1px solid blue;
+		}
+	</style>
+</head>
+
+<body>
+	<h2>DOM包裹wrapAll方法</h2>
+	<div class="left">
+		<div class="aaron1">点击，通过jQuery的wrapAll方法为所有的p元素增加父容器div</div>
+		<div class="aaron2">点击，通过jQuery的wrapAll的回调方法为每个a元素增加父容器div</div>
+	</div>
+
+	<div class="right">
+		<p>p元素</p>
+		<p>p元素</p>
+	</div>
+
+	<div class="left">
+		<a>a元素</a>
+		<a>a元素</a>
+	</div>
+
+	<script type="text/javascript">
+		$(".aaron1").on('click',function(){
+			//给所有的p元素增加一个父容器div
+			$("p").wrapAll('<div></div>');
+		});
+	</script>
+	<script type="text/javascript">
+		$(".aaron2").on('click',function(){
+			//wrapAll接收一次回调
+			//每一次遍历this都指向了集合中的每一个a元素
+			$("a").wrapAll(function(){
+				return '<div></div>';
+			});
+		});
+	</script>
+</body>

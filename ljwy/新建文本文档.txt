@@ -1,0 +1,116 @@
+60.191.57.21:8043/wuyue/
+
+公告活动       announcement.html
+
+关于我们       about.html
+
+个人中心       singer_center.html 
+  
+社区公告       community.html  
+
+社区公告       community_detail.html  (物业)
+
+社区活动       community_activities.html    
+  
+社区活动       activity_detail.html （评论)
+
+首页           index.html
+
+推荐           recommend.html
+
+个人信息       singer_info.html 
+
+信息设置       set_detail.html
+
+
+
+1.登录 login.html 已完成（魏东城）
+
+2.注册 register.html 已完成(魏东城)
+
+3.我的优惠劵 coupons.html (魏东城)
+
+4.意见反馈 feed_back.html (魏东城)
+
+修改密码      updatepwd.html
+
+忘记密码      forgetpwd.html
+
+我的积分      integral.html
+
+ 
+
+
+
+ 第二期
+
+ parking.html                 停车位
+
+ property.html                物业缴成功
+
+ tenement.html                物业缴费（缴费）
+
+ preferential_activity.html   优惠活动
+
+ payment_mode                 物业缴费方式    
+ 
+ pet_foster.html              宠物寄养
+ 
+ delivery_service.html        快递服务
+ 
+ home_service.html            家政服务
+ 
+ communities.html             社区
+   
+ second_mark.html             二手商品详情（下架）
+ dry_cleaning.html            衣物干洗
+shopcar.html                  购物车
+ community_page.html          社区黄页
+
+ bank.html                    银行
+
+ business_detail              商家详情
+
+ confirm_order.html           确认订单
+
+ commodity_info.html          商品信息
+
+nanny_service.html            保姆服务
+
+
+
+ 
+
+
+ i_complaint.html             我要投诉(魏东城)  
+
+ owner_complaints.html        物业投诉(魏东城)
+
+ complaints_detail.html       投诉详情
+
+ pay_advance.html             预交费(魏东城)
+ 
+ repair_property.html         我要报修(王威)
+
+ repair_details.html          报修详情(王威)
+
+ repair_property_list.html    物业报修(王威)
+
+ convenience.html             便利店
+
+ topic_details.html           社区话题
+
+ secondary_market.html        二手市场
+
+ community_topic.html         社区话题(魏东城)
+
+ secondary_market.html        二手商品发布(魏东城)
+
+ topic_release.html           话题发布(魏东城)
+
+
+
+
+
+
+

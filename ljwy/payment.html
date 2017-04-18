@@ -1,0 +1,113 @@
+﻿<!doctype html>
+<html id="mobileHtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>物业缴费</title>
+    <link href="Assets/Plugins/dropload/dropload.min.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/comm.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/repair_property_list.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/payment.css?v=1.0" rel="stylesheet" />
+</head>
+<body>
+    <!--头部-->
+    <div class="top">
+        <a id="pageBack">
+            <img src="Assets/Images/left.png" />
+        </a>
+        <span>物业缴费</span>
+        <a>缴费</a>
+    </div>
+    <div class="simple"></div>
+
+
+    <!--中部-->
+    <div class="list">
+        <!--选择时间-->
+        <div class="choose_date">
+            <div class="choose_01">
+                <select id="year">
+                    <option value="" selected="selected">全部</option>
+                    <option value="2010">2010</option>
+                    <option value="2011">2011</option>
+                    <option value="2012">2012</option>
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                </select>
+                <span>年</span>
+                <select id="month">
+                    <option value="" selected="selected">全部</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="7">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <span>月</span>
+                <select id="state">
+                    <option value="" selected="selected">全部</option>
+                    <option value="0">已报修</option>
+                    <option value="1">处理中</option>
+                    <option value="2">已处理</option>
+                    <option value="3">已撤销</option>
+                </select>
+            </div>
+        </div>
+        <!--底部-->
+        <div class="footer">
+            <a href="index.html">
+                <div>
+                    <img src="Assets/Images/footer_01.png" /><p>首页</p>
+                </div>
+            </a>
+            <a href="recommend.html">
+                <div>
+                    <img src="Assets/Images/footer_03.png" /><p>推荐</p>
+                </div>
+            </a>
+            <a href="javascript:;">
+                <div>
+                    <img src="Assets/Images/footer_02.png" /><p>黄页</p>
+                </div>
+            </a>
+            <div id="newMsgCnt">
+                <a href="singer_center.html">
+                    <div>
+                        <img src="Assets/Images/footerbg_04.png" /><p style="color:#ff8600;">个人</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="nullimg">
+        <img src="Assets/Images/payment.png" />
+        <p>当前无需要的缴费记录</p>
+    </div>
+    
+        <script src="Assets/Plugins/zepto/zepto.min.js?v=1.0"></script>
+    <script src="Assets/Plugins/zepto/ajax.js?v=1.0"></script>
+    <script src="Assets/Plugins/cookie/jquery.cookie.js?v=1.0"></script>
+    <script src="Assets/Scripts/unix.js?v=1.0"></script>
+    <script src="Assets/Scripts/comm.js?v=1.0"></script>
+    <script src="Assets/Model/repair_property.js?v=1.0"></script>
+    <script>
+        Zepto(function ($) {
+            
+            information();
+        })
+    </script>
+</body>
+</html>

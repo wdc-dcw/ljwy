@@ -1,0 +1,97 @@
+@charset "utf-8";
+/* CSS Document */
+
+.onShow {
+	padding-left:25px;
+	font-size: 12px;
+	line-height:22px;
+	vertical-align:middle;
+}
+.onFocus {
+	font-size: 12px;
+	line-height:22px;
+	vertical-align:middle;
+}
+.onError {
+	color:#f00;
+	font-size: 12px;
+	line-height:22px;
+	vertical-align:middle;
+}
+.onCorrect {
+	font-size: 12px;
+	line-height:22px;
+	vertical-align:middle;
+}
+.onLoad {
+	font-size: 12px;
+	line-height:22px;
+	vertical-align:middle;
+}
+/*以下是编辑文件生成js文件，引进的css*/
+
+.table {
+	background:#ffffff;
+	overflow: hidden;
+}
+li {
+	list-style: none;
+}
+.table_box_td {
+	border-collapse:collapse;
+	border:none;
+	background:#fff;
+	_border-left:1px solid #fff;
+}
+.table_box_td td {
+	border:1px solid #dbdbdb;
+	border-right:none;
+	border-TOP:none;
+}
+.table_box_td tr:first-child td {
+	border-right:none;
+}
+.table_box_td tr td:first-child {
+	border-left:1px solid #dbdbdb;
+}
+.table_box_td .td6 {
+	color:#666;
+	padding-left:22px;
++height:27px;
+	height:27px;
+	line-height:27px;
+	padding-right:2px;
+	background:#fafafa;
+	font-size:14px;
+}
+.table_box_td .td1 {
+	color:#666;
+	padding-left:22px;
++height:27px;
+	height:27px;
+	line-height:27px;
+	padding-right:2px;
+	width:92px;
+	background:#fafafa;
+}/*表格左缩进 大 背景宽度*/
+.table_box_td td {
+	color:#666;
+	padding-left:8px;
++height:27px;
+	height:27px;
+	line-height:27px;
+	padding-right:2px;
+}/*表格缩进*/
+.left_short {
+	width:50%;
+	text-align:left;
+	float:left;
+	display: block;
+}
+.left_lang {
+	width:100%;
+	float:left;
+	text-align:left;
+}
+.close{color:#ffffff;display:none; width:0px; height:0px;z-index: 1111;}
+.hide_class{display:none; width:0px; height:0px;}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<title>Jquery对象与DOM对象</title>
+	<script type="text/javascript">
+	//如果没有方法体，比如引入js外部文件，就需要先预加载
+	//如果有方法体，当客户点击时才生效
+	//如果要操作DOM元素，等待DOM元素都加载完成后，再告诉浏览器怎么做
+		alert("in head");
+	</script>
+</head>
+
+<body>
+	<script type="text/javascript">
+		//是为了实现某些动态地创建文档
+		alert("in body");
+	</script>
+</body>

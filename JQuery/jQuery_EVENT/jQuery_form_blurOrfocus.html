@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<title>jQuery表单事件之blur与focus事件</title>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<style type="text/css">
+		.left div,.right div{
+			width: 500px;
+			height: 50px;
+			padding: 5px;
+			margin: 5px;
+			float: left;
+			border: 1px solid #ccc;
+		}
+
+		.left div{
+			background: #bbffaa;
+		}
+
+		.right div{
+			background: yellow;
+		}
+
+	</style>
+</head>
+
+<body>
+	<h2>.focusin与focus</h2>
+	<div class="left">
+		<div class="aaron">
+			点击触发焦点（无反应）:<input type="text"/>
+		</div>
+		<div class="aaron1">
+			点击触发焦点并冒泡:<input type="text"/>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(".aaron").focus(function(){
+			$(this).css("border","2px solid red");
+		});
+		$(".aaron1").focusin(function() {
+			$(this).find("input").val("冒泡捕获了focusin事件");
+		});
+	</script>
+    <br/>
+	<h2>.focusout()与blur</h2>
+	<div class="right">
+		<div class="aaron2">
+			点击失去焦点（无反应）:<input type="text"/>
+		</div>
+		<div class="aaron3">
+			点击失去焦点并冒泡:<input type="text"/>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$(".aaron2").blur(function(){
+			$(this).css("border","1px solid blue");
+		});
+		$(".aaron3").focusout(function(){
+			$(this).find("input").val("冒泡捕获了focusout事件");
+		});
+	</script>
+</body>

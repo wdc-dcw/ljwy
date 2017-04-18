@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" id="mobileHtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>物业缴费</title>
+    <title>缴费历史</title>
+    <link href="Assets/Plugins/dropload/dropload.min.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/comm.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/tenement.css?v=1.0" rel="stylesheet" />
+</head>
+<body>
+    <!--头部-->
+    <div class="top">
+        <a id="pageBack">
+            <img src="Assets/Images/left.png" /></a>
+        <span id="typeCode">缴费历史</span>
+        <a class="pay" href="pay_sort.html">缴费</a>
+    </div>
+    <div class="simple"></div>
+    <!--选择时间-->
+<!--     <div class="choose_01">
+        <select id="year">
+            <option value="">全部</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+        </select>
+        <span>年</span>
+        <select id="month">
+            <option value="">全部</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="7">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+        <span>月</span>
+        <select id="state">
+            <option value="">全部</option>
+            <option value="0">未支付</option>
+            <option value="1">已支付</option>
+        </select>
+    </div> -->
+    <!--缴费明细-->
+   <div class="detail_main">
+      
+   </div>
+
+    <div class="nullimg">
+        <img src="Assets/Images/payment.png" />
+        <p>亲~您还没有缴费记录哦</p>
+    </div>
+    <div id="backtop" style="z-index:99"><a href="#"><img src="Assets/Images/backtop.png" /></a></div>
+    <script src="Assets/Plugins/zepto/zepto.min.js?v=1.0"></script>
+    <script src="Assets/Plugins/zepto/ajax.js?v=1.0"></script>
+    <script src="Assets/Plugins/cookie/jquery.cookie.js?v=1.0"></script>
+    <script src="Assets/Scripts/comm.js?v=1.0"></script>
+    
+    <!-- 缴费-->
+    <script src="Assets/Model/pay_cost.js?v=1.0"></script>
+    <script>
+        window.onscroll = function () {
+            var t = document.documentElement.scrollTop || document.body.scrollTop;
+            var top_div = document.getElementById("backtop");
+            if (t >= 5) {
+                top_div.style.display = "inline";
+            } else {
+                top_div.style.display = "none";
+            }
+        }
+        Zepto(function ($) {
+            var isCookie = JSON.parse($.cookie("IspayCookie"));
+            if (isCookie == null) { getBomBbox("↑上拉加载更多"); $.cookie("IspayCookie", 1, { expires: 3650, path: "/" }); }
+            new payCost().payment_history();
+            information();
+        })
+    </script>
+</body>
+</html>

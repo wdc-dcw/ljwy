@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" id="mobileHtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>首页</title>
+    <link href="Assets/Plugins/Swiper/swiper.min.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/comm.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/index.css?v=1.0" rel="stylesheet" />
+   
+</head>
+<body>
+    <!--头部-->
+    <div class="top" >
+             <img src="Assets/Images/index_01.png" />
+        <a href="message_list.html"><img src="Assets/Images/massage.png" /></a> 
+    </div>
+
+    <div class="simple"><img src="Assets/Images/ch.png"></div>
+    <!--轮播-->
+    
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="informs" id="gongao">通知
+        <div style="width:2.55rem;height:0.3rem;margin:0 auto;white-space: nowrap;overflow:hidden;position: absolute;top: .08rem;left: .5rem;font-size: .13rem;" id="scroll_div" class="scroll_div">
+            <div id="scroll_begin">
+                
+            </div>
+            <div id="scroll_end"></div>
+        </div>
+    <div style="width:100%;height:.3rem;background-color:rgba(0,0,0,0);position:absolute;top:0;left:0;z-index:111"></div>
+    </div>
+    <div class="list">
+        <div>
+            <a href="pay_sort.html"> 
+                <img src="Assets/Images/index_04.png" />
+                <p>生活缴费</p>
+            </a>
+        </div>
+        <div class="middle">
+            <a href="repair_property_add.html">
+                <img src="Assets/Images/index_05.png" />
+                <p>物业报修</p>
+            </a>
+        </div>
+        <div>
+            <a href="i_complaint.html">
+                <img src="Assets/Images/index_06.png" />
+                <p>业主投诉</p>
+            </a>
+        </div>
+        <div>
+            <a href="community.html">
+                <img src="Assets/Images/index_07.png" />
+                <p>社区公告</p>
+            </a>
+        </div>
+        
+        <div>
+            <a href="community_activities.html">
+                <img src="Assets/Images/huodong.png" />
+                <p>社区活动</p>
+            </a>
+        </div>
+        <!--<div class="middle">
+            <a href="feed_back.html">
+                <img src="Assets/Images/singer_03.png" />
+                <p>意见反馈</p>
+            </a>
+        </div>
+        <div>
+            <a href="home_service.html">
+                <img src="Assets/Images/indexbg_10.png" />
+                <p>家政服务</p>
+            </a>
+        </div>
+        <div class="middle">
+            <a href="convenience.html">
+                <img src="Assets/Images/index_11.png" />
+                <p>便利店</p>
+            </a>
+        </div>-->
+        <div>
+            <a href="delivery_service.html">
+                <img src="Assets/Images/index_12.png" />
+                <p>快递服务</p>
+            </a>
+        </div>
+    </div>
+    <div class="newsdiv">
+        <div class="newstop">
+            <p>
+                <span class="top_1"></span>
+                <span class="top_2">社区资讯</span>
+                <a href="information.html"><span class="top_3">更多</span></a>
+            </p>
+        </div>
+        <a href="javascript:;">
+        <div class="newscontent">
+            <!--<div class="newsimg"><img src="Assets/Images/second_goods02.png"></div>
+            <div class="news">
+                <p class="bt">标题标题标题标题</p>
+                <p class="nr">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+            </div>-->
+        </div>
+        </a>
+
+    </div>
+
+       <!--底部-->
+    <div class="footer">
+        <a href="javascript:;">
+            <div>
+                <img src="Assets/Images/footerbg_01.png" /><p  style="color:#ff8600;">首页</p>
+            </div>
+        </a>
+        <a href="recommend.html">
+            <div>
+                <img src="Assets/Images/footer_03.png" /><p>推荐</p>
+            </div>
+        </a>
+        <a href="community_page.html">
+            <div>
+                <img src="Assets/Images/footer_02.png" /><p>黄页</p>
+            </div>
+        </a>
+            <a href="singer_center.html" id="newMsgCnt">
+                <div>
+                    <img src="Assets/Images/footer_04bg.png" /><p>个人</p>
+                </div>
+            </a>
+    </div>
+    <script src="Assets/Plugins/zepto/zepto.min.js?v=1.0"></script>
+    <script src="Assets/Plugins/zepto/ajax.js?v=1.0"></script>
+    <script src="Assets/Plugins/Swiper/swiper.min.js?v=1.0"></script>
+    <script src="Assets/Plugins/cookie/jquery.cookie.js?v=1.0"></script>
+    <script src="Assets/Plugins/scrollImgLeft/scrollImgLeft.js?v=1.0"></script>
+    <script src="Assets/Scripts/comm.js?v=1.0"></script>
+    
+    <!--首页 -->
+    <script src="Assets/Model/index.js?v=1.0"></script>
+    <script>
+       
+        Zepto(function ($) {
+            new index().indexList();
+            //information();
+            new index().notice();
+            new index().information();
+        });        
+    </script>
+</body>
+</html>

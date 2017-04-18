@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<appender name="SYS_LOG" class="com.youthen.framework.util.logging.SisqpPeriodRollingFileAppender">
+		<param name="file" value="logs/youthen-web-sys.log" />
+		<param name="append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%X{systemCd} %d %p [%t] '%C:%L' - %m%n" />
+		</layout>
+	</appender>
+	<appender name="SQL_LOG" class="com.youthen.framework.util.logging.SisqpPeriodRollingFileAppender">
+		<param name="file" value="logs/youthen-web-sql.log" />
+		<param name="append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%X{systemCd} %d %p [%t] - %m%n" />
+		</layout>
+	</appender>
+	<appender name="LOGIN_LOG" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="logs/youthen-login.log" />
+		<param name="append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%X{systemCd} %d [%t] %X{ipAddress} %X{userId} %X{accountStatus} %X{loginResult} %X{userAgent}%n" />
+		</layout>
+	</appender>
+	<appender name="LOGIN_STDOUT" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%X{systemCd} %d [%c] [%t] %X{ipAddress} %X{userId} %X{accountStatus} %X{loginResult} %X{userAgent}%n" />
+		</layout>
+	</appender>
+    <appender name="ACCESS_LOG_FILE" class="com.youthen.framework.util.logging.SisqpPeriodRollingFileAppender">
+        <param name="file" value="logs/youthen-access.log" />
+        <param name="append" value="true" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern"
+                value="%X{systemCd} %d [%t] %X{operationKaishaCd} %X{operationKaishaNm} %X{operationUserId} %X{operationUserNm} %X{eventId}%n" />
+        </layout>
+    </appender>
+	<appender name="ACCESS_DETAIL_LOG_FILE" class="com.youthen.framework.util.logging.SisqpPeriodRollingFileAppender">
+		<param name="file" value="logs/youthen-access-detail.log" />
+		<param name="append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%X{systemCd} %d [%t] %X{operationKaishaCd} %X{operationKaishaNm} %X{operationUserId} %X{operationUserNm} %X{eventId} %m%n" />
+		</layout>
+	</appender>
+	<appender name="ACCESS_D_STDOUT" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%X{systemCd} %d %p [%c] [%X{hostName}] [%t] %X{operationKaishaCd} %X{operationUserId} %X{eventId} %m%n" />
+		</layout>
+	</appender>
+	<appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%X{systemCd} %d %p [%c] [%t] '%C:%L' - %m%n" />
+		</layout>
+	</appender>
+
+	<category name="com.youthen">
+		<priority value="INFO" />
+	</category>
+	<category name="java" additivity="false">
+		<priority value="DEBUG" />
+		<appender-ref ref="SQL_LOG" />
+	</category>
+	<category name="java.sql">
+		<priority value="DEBUG" />
+        <appender-ref ref="SQL_LOG" />
+	</category>
+	<category name="login" additivity="false">
+		<priority value="DEBUG" />
+		<appender-ref ref="LOGIN_LOG" />
+	</category>
+	<category name="access" additivity="false">
+		<priority value="INFO" />
+		<appender-ref ref="ACCESS_LOG_FILE" />
+		<appender-ref ref="ACCESS_DETAIL_LOG_FILE" />
+	</category>
+
+	<root>
+		<priority value="ERROR" />
+		<appender-ref ref="SYS_LOG" />
+	    <appender-ref ref="STDOUT" /> 
+	</root>
+
+</log4j:configuration>

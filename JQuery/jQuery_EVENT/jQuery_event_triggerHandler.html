@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<title>jQuery自定义事件之triggerHandler事件</title>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<style type="text/css">
+		.left div,.right div{
+			width: 500px;
+			height: 150px;
+			padding: 5px;
+			margin: 5px;
+			float: left;
+			border: 1px solid #ccc;
+		}
+
+		.left div{
+			background: #bbffaa;
+		}
+
+	</style>
+</head>
+
+<body>
+	<h2>自定义事件triggerHandler</h2>
+	<div class="left">
+		<div id="accident">
+			<a>triggerHandler事件</a>
+			<input type="text"/>
+		</div>
+		<button>事件冒泡,会触发浏览器的默认行为</button>
+		<button>事件不冒泡,不会触发浏览器的默认行为</button>
+	</div>
+
+	<script type="text/javascript">
+		//给input绑定聚焦事件
+		$("input").on('focus',function(e,title){
+			$(this).val(title);
+		});
+
+		//给id为accident绑定点击事件
+		$("#accident").click(function(){
+			alert("trigger事件，会向DOM树上冒泡");
+		});
+
+		//trigger触发聚焦事件
+		$("button:first").on("click",function(){
+			$("a").trigger('click');
+			$("input").trigger("focus");
+		});
+
+		//triggerHandler不触发聚焦事件
+		$("button:last").on("click",function(){
+			$("a").triggerHandler('click');
+			$("input").triggerHandler('focus','没有触发默认聚焦事件');
+		});
+	</script>
+</body>

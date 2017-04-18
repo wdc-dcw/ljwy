@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>isXml</title>
+</head>
+<body>
+	<div id="test">aaa</div>
+	<!-- 这是一个注释节点 -->
+	<script type="text/javascript">
+		var isXML=function(elem){
+			var documentElement=elem && (elem.ownerDocument || elem).documentElement;
+			return documentElement?documentElement.nodeName!=="HTML":false;
+		};
+		console.log(isXML(document.getElementById("test")));
+
+		try{
+			var doc=document.implementation.createDocument(null,"HTML",null);
+			console.log(doc.documentElement);
+			console.log(isXML(doc));
+		}catch(e){
+			console.log("不支持createDocument方法");
+		}
+	</script>
+</body>
+</html>

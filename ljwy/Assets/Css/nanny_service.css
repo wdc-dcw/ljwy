@@ -1,0 +1,8 @@
+﻿body {background-color:#ededed;}
+.top span{width:2.3rem;}
+.pet_shop {overflow:hidden;padding: .15rem; background-color: white;margin-top: .01rem;}
+.pet_shop .shop_icon img{width:.84rem;}
+.pet_shop .shop_icon{float:left;}
+.pet_shop .pet_pro{float:left;margin-left:.15rem;}
+.pet_shop .pet_pro p:first-child{font-size:.12rem; text-overflow: ellipsis;white-space: nowrap;width: 1.5rem;overflow: hidden;}
+.pet_shop .pet_pro p:last-child{color:#747474; font-size:.09rem; margin-top:.08rem; text-overflow: ellipsis;white-space: nowrap;width: 1.8rem;overflow: hidden;}

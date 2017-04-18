@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<title>jQuery的属性和样式之.attr()与.removeAttr()</title>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<style type="text/css">
+		input{
+			display: block;
+			margin: 10px;
+			padding: 10px;
+			background: #bbffaa;
+			border: 1px solid #ccc;
+		}
+	</style>
+</head>
+
+<body>
+	<h2>.attr()与.removeAttr()</h2>
+	<h3>.attr</h3>
+	<form>
+		<input type="text" value="设置value"/>
+		<input type="text" value="获取value"/>
+		<input type="text" value="回调拼接value"/>
+		<input type="text" value="删除value"/>
+	</form>
+
+	<script type="text/javascript">
+		//找到第一个input,通过attr设置属性value值
+		$("input:first").attr('value','.attr(attributeName,value)');
+	</script>
+	<script type="text/javascript">
+		//找到第二个input,通过attr获取属性value值
+		$("input:nth-child(2)").attr('value');
+		//$("input:eq(2)").attr('value');
+	</script>
+	<script type="text/javascript">
+		//找到第三个input,通过使用一个函数来设置属性
+		//可以根据该元素上的其它值返回最终所需的值
+		//例如，我们可以把新的值与现有的值联系在一起
+		$("input:nth-last-child(2)").attr('value',function(i,val){
+			return '通过function设置'+val;
+		});
+	</script>
+	<script type="text/javascript">
+		//找到第四个input,通过removeAttr删除属性
+		$("input:last").removeAttr('value');
+	</script>
+</body>

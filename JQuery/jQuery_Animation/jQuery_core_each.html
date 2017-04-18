@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<title>jQuery中each的应用</title>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<style type="text/css">
+		p{
+			color: red;
+		}
+		div{
+			width: 300px;
+			height: 100px;
+			background-color: yellow;
+			color: red;
+		}
+	</style>
+</head>
+
+<body>
+	<h2>each方法</h2>
+	<p>慕课网1，专注分享</p>
+	<div id="aaron"></div>
+	点击观察动画效果:
+	<select id="animation">
+		<option value="1">each数组</option>
+		<option value="2">each对象</option>
+	</select>
+	<input id="exec" type="button" value="执行动画"/>
+
+	<script type="text/javascript">
+		$("#exec").click(function(){
+			var v=$("#animation").val();
+			var $aaron=$("#aaron");
+			$aaron.empty();
+			if(v=="1"){
+				//遍历数组
+				$.each(['慕课网','Aaron'],function(i,item){
+					$aaron.append("索引="+i+"; 元素="+item+";<br/>");
+				});
+			}else if(v=="2"){
+				//遍历对象
+				$.each({
+					name:"张三",
+					age:20
+				},function(property,value){
+					$aaron.append("属性名="+property+"; 属性值="+value+";<br/>");
+				});
+			}
+		});
+	</script>
+</body>

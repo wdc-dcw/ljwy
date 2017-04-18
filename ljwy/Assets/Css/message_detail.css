@@ -1,0 +1,20 @@
+﻿
+body{ background:#ededed;}
+.list div{ margin-top:.01rem; }
+.aggregate_score{ height:.40rem; width:3.20rem;}
+.list .aggregate_score span{ line-height:.40rem; display:inline-block;}
+.list .source{ background:#fff; width:3.20rem; position:relative; padding:.15rem 0;}
+.month_text{ color:black; font-size:.10rem; margin-left:.135rem}
+.integral_text{ color:#c9c9c9; font-size:.10rem;line-height:.25rem ;}
+.integral{ color:#ff8100; font-size:.10rem;}
+.particulars{}
+.particulars p{margin-left:.135rem;}
+.particulars .title{ word-break:break-all; word-wrap:break-word ; width:2.00rem;}
+.integral_num{ position:absolute; right:.15rem;top:50%; height:.16rem;}
+.list .integral_num{ margin-top:-.08rem;}
+.integral_num p{ font-size:.12rem;}
+.source div p{font-size:.12rem;}
+.integral_num{ color:#ff8100;}
+
+.top span {font-size: .17rem;color: #000;width: 2.30rem;display: inline-block;text-align: center;height: .42rem;line-height: .42rem;}
+

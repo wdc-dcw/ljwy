@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<title>jQuery中查找数组中的索引inArray</title>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<style type="text/css">
+		p{
+			color: red;
+		}
+		div{
+			width: 200px;
+			height: 100px;
+			background-color: yellow;
+			color: red;
+		}
+		
+	</style>
+</head>
+
+<body>
+	<h2>inAarry方法</h2>
+	<p>慕课网，专注分享</p>
+	<div id="aaron"></div>
+	点击观察动画效果:
+	<select id="animation">
+		<option value="1">inArray</option>
+		<option value="2">inArray</option>
+	</select>
+	<input id="exec" type="button" value="执行动画"/>
+
+	<script type="text/javascript">
+		$("#exec").click(function(){
+			var v=$("#animation").val();
+			var $aaron=$("#aaron");
+			if(v=="1"){
+				var index=$.inArray('Aaron',['test','Aaron','慕课网']);
+				$aaron.text("Aaron的索引是:"+index);
+			}else{
+				var index=$.inArray('a',['a','b','c','d','a','c'],2);
+				$aaron.text("a的索引是:"+index);
+			}
+		});
+	</script>
+</body>

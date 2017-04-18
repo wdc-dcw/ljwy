@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<title>jQuery的属性和样式之.val()</title>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<style type="text/css">
+		p{
+			color: red;
+			margin: 4px;
+		}
+		b{
+			color: blue;
+		}
+	</style>
+</head>
+
+<body>
+	<h3>.val()</h3>
+	<select id="single">
+		<option>慕课网</option>
+		<option>博客园</option>
+	</select>
+	<select id="multiple" multiple="multiple">
+		<option selected="selected">imooc</option>
+		<option>慕课网</option>
+		<option selected="selected">博客园</option>
+	</select>
+	<input type="text" value="click a button"/>
+	<p></p>
+
+	<script type="text/javascript">
+		//单个select,返回第一个
+		$("p").text($("#single").val());
+	</script>
+	<script type="text/javascript">
+		//多个select被选中,返回【"imooc","博客园"】
+		$("p").text($("#multiple").val());
+	</script>
+	<script type="text/javascript">
+		//选择一个表单，修改value的值
+		$("input[type='text']").val("修改表单的值");
+		//$("input:text").val("修改表单的值");
+	</script>
+</body>

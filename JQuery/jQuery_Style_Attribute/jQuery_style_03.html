@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery选择器之id选择器</title>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+</head>
+<body>
+	<div id="arron">
+		<p>id="arron"</p>
+		<p>选中</p>
+	</div>
+	<div id="imooc">
+		<p>id="imooc"</p>
+		<p>jquey选中</p>
+	</div>
+	<div id="imooc">
+		<p>id="imooc"</p>
+		<p>jquey未选中</p>
+	</div>
+
+	<script type="text/javascript">
+	//js原生写法
+		var div=document.getElementById('arron');
+		div.style.border="3px solid yellow";
+	</script>
+
+	<script type="text/javascript">
+	//jQuery写法
+		$("#imooc").css('color','red');
+	</script>
+</body>
+</html>

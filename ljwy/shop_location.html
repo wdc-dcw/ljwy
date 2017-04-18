@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" id="mobileHtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>地址详情</title>
+    <!--引入百度Api -->
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=XbaZBoBaeftenVRlxVDvuulF"></script>
+
+    <script type="text/javascript" src="http://api.map.baidu.com/library/TrafficControl/1.4/src/TrafficControl_min.js?v=1.0"></script>
+
+    <link href="Assets/Plugins/dropload/dropload.min.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/comm.css?v=1.0" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="Assets/Css/address_location.css?v=1.0" />
+</head>
+<body>
+
+    <!--头部-->
+    <div class="top">
+         <a href="convenience.html">
+            <img src="Assets/Images/left.png" /></a>
+        <span>商家地址</span> 
+    </div>
+    <div id="allmap"></div>
+
+
+
+    <script src="Assets/Plugins/zepto/zepto.min.js?v=1.0"></script>
+    <script src="Assets/Plugins/zepto/ajax.js?v=1.0"></script>
+    <script src="Assets/Plugins/dropload/dropload.min.js?v=1.0"></script>
+    <script src="Assets/Plugins/cookie/jquery.cookie.js?v=1.0"></script>
+    <script src="Assets/Scripts/comm.js?v=1.0"></script>
+
+    <!--引入js-->
+    <script src="Assets/Model/shopaddress.js?v=1.0"></script>
+
+    <script>
+        Zepto(function ($) {
+            new address().addressLocation();
+
+        })
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" id="mobileHtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>银行</title>
+    <link href="Assets/Plugins/dropload/dropload.min.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/comm.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/bank.css?v=1.0" rel="stylesheet" />
+</head>
+<body>
+    <!--头部-->
+    <div class="top">
+        <a href="community_page.html">
+            <img src="Assets/Images/left.png" /></a>
+        <span id="smallType">银行</span>
+    </div>
+    <div class="simple"></div>
+    <div class="bank_all">
+        <!-- <div class="bank">
+            <div class="shop_icon">
+                <img src="Assets/Images/bank_01.png" />
+            </div>
+            <div class="pet_pro">
+                <p>中信银行</p>
+                <p>浦东新区 　龙东大道2865号</p>
+            </div>
+        </div>
+
+        <div class="bank">
+            <div class="shop_icon">
+                <img src="Assets/Images/bank_02.png" />
+            </div>
+            <div class="pet_pro">
+                <p>交通银行</p>
+                <p>浦东新区 　龙东大道2865号</p>
+            </div>
+        </div>
+
+        <div class="bank">
+            <div class="shop_icon">
+                <img src="Assets/Images/bank_03.png" />
+            </div>
+            <div class="pet_pro">
+                <p>中国银行</p>
+                <p>浦东新区 　龙东大道2865号</p>
+            </div>
+        </div>
+
+        <div class="bank">
+            <div class="shop_icon">
+                <img src="Assets/Images/bank_04.png" />
+            </div>
+            <div class="pet_pro">
+                <p>招商银行</p>
+                <p>浦东新区 　龙东大道2865号</p>
+            </div>
+        </div>
+
+        <div class="bank">
+            <div class="shop_icon">
+                <img src="Assets/Images/bank_05.png" />
+            </div>
+            <div class="pet_pro">
+                <p>工商银行</p>
+                <p>浦东新区 　龙东大道2865号</p>
+            </div>
+        </div> -->
+	         <div class="nullimg">
+		        <img src="Assets/Images/payment.png" />
+		        <p id="noList">亲~附近没有送餐哦</p>
+	    	</div>
+    </div>
+    <div id="backtop"><a href="#"><img src="Assets/Images/backtop.png" /></a></div>
+    <script src="Assets/Plugins/zepto/zepto.min.js?v=1.0"></script>
+    <script src="Assets/Plugins/zepto/ajax.js?v=1.0"></script>
+     <script src="Assets/Plugins/dropload/dropload.min.js?v=1.0"></script>
+    <script src="Assets/Plugins/cookie/jquery.cookie.js?v=1.0"></script>
+    <script src="Assets/Scripts/comm.js?v=1.0"></script>
+    
+    <!-- 引入银行js -->
+    <script src="Assets/Model/bank.js?v=1.0"></script>
+    <script>
+        window.onscroll = function () {
+            var t = document.documentElement.scrollTop || document.body.scrollTop;
+            var top_div = document.getElementById("backtop");
+            if (t >= 5) {
+                top_div.style.display = "inline";
+            } else {
+                top_div.style.display = "none";
+            }
+        }
+   
+        Zepto(function ($) {
+            // refreshViewport();
+            new yellowPageSmall().yellowPageSmallList();
+        })
+    </script>
+</body>
+</html>

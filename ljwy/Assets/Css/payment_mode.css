@@ -1,0 +1,30 @@
+﻿body {background-color:#ededed;}
+.top span{width:2.30rem;}
+.address{margin: 0rem .15rem ; width: 2.90rem; line-height:.37rem;}
+.address img{width:.17rem;    margin-top: .10rem;}
+.address span{display:inline-block; font-size: .14rem;}
+.address span:last-child{float:right;}
+
+.fees_detail{background-color:white;padding:.04rem .15rem .06rem .15rem;}
+.fees_detail h4{color:#999999; font-weight:400;}
+.pay_detail{background-color:white;}
+.pay_detail img{width:.17rem; margin: .07rem .10rem 0 0;}
+.pay_detail p{padding:0 .15rem 0 .25rem;}
+.pay_detail span{line-height:.30rem;}
+.pay_detail span:last-child{float:right;padding-right: .13rem;}
+
+/*合计*/
+.total p{line-height:.37rem; text-align:center;}   
+.total span{color:#ff0000;}
+.address01, .address02{padding: .12rem 0rem .12rem .15rem;}
+.address01 img{ width:.17rem; float:right; margin-right: .15rem;}
+.address02 img{ width:.17rem; float:right; margin-right: .15rem;}
+.pay_style{background-color:white;padding:.10rem .15rem 0rem .15rem;}
+.pay_style  h4{font-size:.14rem; font-weight:400;}
+
+.pay_style .mark{display:inline-block;line-height: .36rem; font-size: .14rem;color: #999999;}
+.pay_style .mark img{width:.33rem; margin-right:.08rem;}
+.pay_style .choose_sure{float:right;}
+.pay_style .choose_sure img{width:.17rem;margin-top: .10rem;}
+.pay_style p{border-bottom:.01rem solid #e7e7e7;}
+

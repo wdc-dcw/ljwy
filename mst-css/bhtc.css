@@ -1,0 +1,354 @@
+ body { font-family:Verdana;  font-size:12px; margin:0;text-align:center; background-color:#ffffff;}
+ 
+.menu1{
+	background-color:#3366cc;
+	border-bottom-color:#FFFFFF;
+	border-bottom-width:1px;
+	font-size:12px;
+    font-family:Verdana;
+	font-style: normal;
+	font-weight: normal;
+	color: #FFFFFF;
+	 
+	height: 25px;
+}
+.name {
+	font-family:Verdana;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: blue;
+	background-color: #D9DFF7;
+}
+A.name:link { 
+    font-family:Verdana;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: blue;
+	background-color: #D9DFF7;
+} 
+
+A.name:visited{ 
+    font-family:Verdana;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: blue;
+	background-color: #D9DFF7;
+} 
+ 
+ 
+A.name:hover { 
+    font-family:Verdana;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: red;
+	background-color: #D9DFF7;
+} 
+
+A.edit:link { 
+    font-family:Verdana; 
+	font-size: 12px;
+	font-style: normal;
+	color: blue;
+ 
+} 
+A.edit:visited  { 
+    font-family:Verdana; 
+	font-size: 12px;
+	font-style: normal;
+	color: blue;
+ 
+} 
+A.edit:hover { 
+    font-family:Verdana;
+	font-size: 12px;
+	font-style: normal;
+	color: red;
+ 
+}
+
+a:link, a:visited{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+a:hover{
+	color: #FF0000;
+	text-decoration: underline; 
+}
+
+.huodong_link a:link{
+	font-family:Verdana; 
+	font-size: 11px;
+	color: #003366;
+	text-align: left;
+	vertical-align: middle;
+}
+.huodong_link a:visited{
+    font-family:Verdana;
+	font-size: 11px;
+	color: #003366;
+	text-align: left;
+	vertical-align: middle;
+}
+.huodong_link a:hover{
+    
+	font-size: 11px;
+	color: #FF0000;
+	text-align: left;
+	vertical-align: middle;
+}
+
+
+.Item1 {
+	 
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+}
+.Item2 {
+	font-family:Verdana;
+	font-size: 11px;
+	color: #003366;
+	text-align: left;
+	vertical-align: middle;
+}
+.grayBg {
+	background-color: #e1e7ed; 
+	line-height:10px;
+	display:block;
+}
+.grayBg2 {
+	background-color: #e1e7ed; 
+	line-height:10px;
+	display:none;
+}
+.tdLabel {
+	font-size: 12px;
+	font-style: normal;
+	color: #000000;
+	text-align: left;
+	text-transform: capitalize;
+	font-weight: normal;
+}
+
+.tdValue {
+	font-family:Verdana; 
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	color: #000000;
+	text-align: left;
+}
+.bigTitle {
+	font-family:Verdana; 
+	font-size: 14px;
+	font-style: normal;
+	font-weight: bold;
+	color: #000000;
+	text-transform: uppercase;
+	text-align: left;
+	background-color: #FFFFFF;
+	height: 25px;
+	background-position: center;
+}
+.biaotou {
+	background-color: #e0eef8;
+	font-family:Verdana;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	color: #000000;
+	text-transform: capitalize;
+}
+#contain{
+	width: 95%;
+	height: 100%;
+}
+#contain #line {
+	height: 20px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #000000;
+}
+input.on{
+	width: 250px;
+	font-family:Verdana; 
+	font-size: 11px;
+	font-style: normal;
+	font-weight: normal;
+	color: #000000;
+}
+input.red{
+	background-color: #cc3300;
+	font-family:Verdana;
+	font-size: 11px;
+	font-style: normal;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-transform: capitalize;
+}
+input.blue{
+	background-color: #0000FF;
+	font-family:Verdana;
+	font-size: 11px;
+	font-style: normal;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-transform: capitalize;
+}
+
+
+.tab_focus{
+    height: 20px;
+    background-color:#7d7d7d;
+	border-bottom-color:#FFFFFF;
+	border-bottom-width:1px;
+	font-size:12px;
+    font-family:Verdana;
+	font-style: normal;
+	font-weight: normal;
+	color: #FFFFFF;
+}
+.tab_notfocus{
+    height: 20px;
+ 	background-color:#cccccc;
+	border-bottom-color:#FFFFFF;
+	border-bottom-width:1px;
+	font-size:12px;
+    font-family:Verdana;
+	font-style: normal;
+	font-weight: normal;
+ 
+}
+.table_detail{
+    background-color:#f0f0f0;
+	border-bottom-color:#FFFFFF;
+	border-bottom-width:1px;
+	font-size:12px;
+    font-family:Verdana;
+	font-style: normal;
+	font-weight: normal;
+}
+.vLine{
+    width:1px;
+    background-color:#FFFFFF;
+	border-right-color:#FFFFFF;
+	border-right-width:1px;
+	 
+}
+.calendar_head{
+	background-color:#f29b62;
+	color:#FFFFFF;
+	border-right-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-right-color: #FFFFFF; 
+	text-align: center;
+}
+
+
+
+
+TD {
+	FONT-SIZE: 8pt; FONT-FAMILY: Verdana
+}
+FONT {
+	FONT-SIZE: 8pt; FONT-FAMILY: Verdana
+}
+P {
+	FONT-SIZE: 8pt; FONT-FAMILY: Verdana
+}
+ 
+ 
+ 
+.errormsg {
+	FONT-SIZE: 10pt; COLOR: #ff0000; FONT-FAMILY: Verdana
+}
+.standardtext {
+	FONT-SIZE: 7pt; FONT-FAMILY: Verdana; font-color: #000000
+}
+.titles {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; TEXT-TRANSFORM: none; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.tableinfo {
+	FONT-WEIGHT: normal; FONT-SIZE: 10px; TEXT-TRANSFORM: capitalize; COLOR: #ffffff; BACKGROUND-COLOR: #000000
+}
+.btnsubmit {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #ffffff; BORDER-TOP-STYLE: outset; BORDER-RIGHT-STYLE: outset; BORDER-LEFT-STYLE: outset; BACKGROUND-COLOR: #cc3300; TEXT-ALIGN: center; BORDER-BOTTOM-STYLE: outset
+}
+.smgreytext {
+	FONT-SIZE: 10px; COLOR: #666666; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.heading {
+	FONT-WEIGHT: bold; COLOR: #ffffff; HEIGHT: 20px; BACKGROUND-COLOR: #3366ff
+}
+.tab_focus {
+	COLOR: #ffffff; BACKGROUND-COLOR: #7d7d7d
+}
+.tab_notfocus {
+	COLOR: #ffffff; BACKGROUND-COLOR: #cccccc
+}
+.table_detail {
+	BACKGROUND-COLOR: #f0f0f0
+}
+.btnsubmit2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #ffffff; BORDER-TOP-STYLE: outset; BORDER-RIGHT-STYLE: outset; BORDER-LEFT-STYLE: outset; BACKGROUND-COLOR: #0066ff; TEXT-ALIGN: center; BORDER-BOTTOM-STYLE: outset
+}
+.table_heading {
+	FONT-WEIGHT: bold; BACKGROUND-COLOR: #a6e6dc
+}
+.table_footer {
+	BACKGROUND-COLOR: #e0e1df
+}
+.table_detail2 {
+	BACKGROUND-COLOR: #ebe2e7
+}
+.table_heading2 {
+	FONT-WEIGHT: bold; COLOR: #ffffff; BACKGROUND-COLOR: #274274
+}
+.table_detail_yellow {
+	BACKGROUND-COLOR: #ffffea
+}
+.table_detail_blue {
+	BACKGROUND-COLOR: #eaf4ff
+}
+.table_heading3 {
+	FONT-WEIGHT: bold; COLOR: #ffffff; BACKGROUND-COLOR: #999999
+}
+.calendar_head {
+	FONT-WEIGHT: bold; FONT-SIZE: xx-small; COLOR: #ffffff; BACKGROUND-COLOR: #f29b62
+}
+.calendar_interval {
+	BACKGROUND-COLOR: #eaeaea
+}
+.calendar_reserved {
+	BACKGROUND-COLOR: #d3eeef
+}
+.calendar_subhead {
+	BACKGROUND-COLOR: #e5e5e5
+}
+.menu_heading {
+	COLOR: #ffffff; BACKGROUND-COLOR: #3366cc
+}
+ 
+.table_heading4 {
+	FONT-WEIGHT: bold; FONT-SIZE: xx-small; COLOR: #ffffff; BACKGROUND-COLOR: #999999
+}
+.smalltext {
+	FONT-SIZE: 7pt; FONT-FAMILY: "Verdana"; font-color: #000000
+}
+.btnsubmitGrey {
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; BORDER-TOP-STYLE: outset; BORDER-RIGHT-STYLE: outset; BORDER-LEFT-STYLE: outset; TEXT-ALIGN: center; BORDER-BOTTOM-STYLE: outset
+}
+.smalltextOrange {
+	FONT-SIZE: 7pt; COLOR: #ff6600; FONT-FAMILY: Verdana; font-color: #000000
+}
+em {color:#999; margin:0 10px; font-size:11px; display:block}

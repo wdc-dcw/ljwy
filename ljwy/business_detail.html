@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" id="mobileHtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>商家详情</title>
+    <link href="Assets/Plugins/dropload/dropload.min.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/comm.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/business_detail.css?v=1.0" rel="stylesheet" />  
+</head>
+<body>
+    <!--头部-->
+    <div class="top">
+         <a id="back">
+            <img src="Assets/Images/left.png" /></a>
+        <span>商家详情</span> 
+    </div>
+    <div class="simple"></div>
+    <div class="bank">
+        <div class="shop_icon">
+            <img src="Assets/Images/dry.png" />
+        </div>
+        <div class="pet_pro">
+            <p id="shopDesc">美国UCC洗衣</p>
+        </div> 
+    </div>
+
+    <div class="shop_detail">
+        <div class="shop_address">
+            <!-- <span class="address">
+                <img src="Assets/Images/business_add.png" /></span>
+            <span class="pro">
+                <img src="Assets/Images/right.png" /></span>  -->
+        </div>
+    </div>
+
+    <div class="shop_detail">
+        <div id="tel">
+            <!--  <span class="address">
+                <img src="Assets/Images/business_tel.png" />
+            </span>
+            <span class="pro">
+            </span> -->
+        </div>
+    </div>
+    <!--上架简介-->
+    <div class="business_itd">
+        <span>商家简介</span>
+        <p id="businessShortDesc"></p>
+    </div>
+
+    <div class="submit">
+         <a id="merchant">联系商家</a>
+    </div>
+
+    <div id="Bigimg">
+        <img src="" />
+    </div>
+    <script src="Assets/Plugins/zepto/zepto.min.js?v=1.0"></script>
+    <script src="Assets/Plugins/zepto/ajax.js?v=1.0"></script>
+    <script src="Assets/Plugins/cookie/jquery.cookie.js?v=1.0"></script>
+    <script src="Assets/Scripts/comm.js?v=1.0"></script>
+    
+    <!-- 引入商家详情js -->
+    <script src="Assets/Model/business_detail.js?v=1.0"></script>
+    <script>
+        Zepto(function ($) {
+            // refreshViewport();
+            new business().businessDetail();
+        })
+
+         
+    </script>
+</body>
+</html>

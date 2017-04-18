@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<title>jQuery鼠标事件之mouseenter与mouseleave事件</title>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<style type="text/css">
+		.left div,.right div{
+			width: 300px;
+			height: 150px;
+			padding: 5px;
+			margin: 5px;
+			border: 1px solid #ccc;
+		}
+
+		p{
+			height: 50px;
+			border: 1px solid red;
+			margin: 30px;
+		}
+
+		.left div{
+			background: #bbffaa;
+		}
+
+		.right div{
+			background: yellow;
+		}
+
+	</style>
+</head>
+
+<body>
+	<h2>.mouseout()方法</h2>
+	<div class="left">
+		<div class="aaron1">
+			<p>鼠标离开此区域触发mouseout事件</p>
+			<a>mouseout事件触发的次数:</a><br/>
+			<a>mouseout冒泡事件触发的次数:</a>
+		</div>
+	</div>
+
+	<h2>.mouseleave()方法</h2>
+	<div class="right">
+		<div class="aaron2">
+			<p>鼠标进入此区域触发mouseleave事件</p>
+			<a>mouseleave事件触发的次数:</a><br/>
+			<a>mouseleave冒泡事件触发的次数:</a>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+
+		var i = 0;
+		$(".aaron1 p").mouseout(function(){
+			$(".aaron1 a:first").html("mouseout事件触发的次数: "+ (++i));
+		});
+
+		var n = 0;
+		$(".aaron1").mouseout(function(){
+			$(".aaron1 a:last").html("mouseout冒泡事件触发的次数: "+ (++n));
+		});
+	</script>
+	<script type="text/javascript">
+
+		var i = 0;
+		$(".aaron2 p").mouseleave(function(){
+			$(".aaron2 a:first").html("mouseleave事件触发的次数: "+ (++i));
+		});
+
+		var n = 0;
+		$(".aaron2").mouseleave(function(){
+			$(".aaron2 a:last").html("mouseleave冒泡事件触发的次数: "+ (++n));
+		});
+	</script>
+
+</body>

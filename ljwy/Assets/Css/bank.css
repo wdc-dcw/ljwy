@@ -1,0 +1,8 @@
+﻿body {background-color:#ededed;}
+.top span{width:2.3rem;}
+.bank {overflow:hidden;padding: .15rem; background-color: white;margin-top: .01rem;}
+.bank .shop_icon img{width:.84rem;}
+.bank .shop_icon{float:left;}
+.bank .pet_pro{float:left;margin-left:.15rem;}
+.bank .pet_pro p:first-child{font-size:.12rem;width: 1.9rem;text-overflow: ellipsis;white-space: nowrap;width: 1.9rem;overflow: hidden;}
+.bank .pet_pro p:last-child{color:#747474; font-size:0.09rem; margin-top:0.08rem; width: 1.9rem;text-overflow: ellipsis;white-space: nowrap;width: 1.9rem;display: inline-block;overflow: hidden;}

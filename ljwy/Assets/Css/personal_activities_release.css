@@ -1,0 +1,38 @@
+/*澶撮儴*/
+.top span{width: 2.0rem;margin-left: .13rem;}
+.top .activity_history {border: .01rem solid #ff9600;color: #ff9600;font-size: .14rem;border-radius: .05rem;display: inline-block;width: .40rem;height: .25rem;line-height: .25rem;text-align: center;    margin-top: .08rem;margin-right: .13rem;}
+.top a:last-child{padding-right:0;}
+
+/*整体*/
+.list div{margin-top: .08rem;}
+
+/*鏁翠綋*/
+body{ background:#ededed;}
+.list{ padding:.07rem .15rem 0 .15rem; margin-bottom:.8rem;}
+.list input{padding-left:.15rem; height:.4rem; width:2.75rem; border:0; background:#fff; border-radius:.05rem;}
+
+
+
+/*鍥剧墖鐨勬牱寮�*/
+.list .images{ padding-top:.15rem;}
+.list .number_activities input,.list .date input{width:1.2rem;}
+.images img{ width:.87rem;}
+.uploadimg{height:.87rem;}
+.images #browse{ display: inline-block;margin:.04rem;position:relative;}
+.images .images_content{ padding:0 .09rem 0 .09rem;}
+.images a{position:relative;display: inline-block;margin: .04rem;}
+.images a .delete{position:absolute;top:.08rem;right:.08rem;width:.17rem;z-index:998;}
+
+#zhi{font-family: Microsoft YaHei,"Helvetica Neue",Helvetica,Arial,sans-serif;    font: 13.3333px Arial;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 13.3333px;
+    line-height: normal;}
+/*鍐呭*/
+.list .content{padding:.15rem 0 0 0;}
+.list .content textarea{width:2.75rem; height:2.76rem;background:#fff; border-radius:.05rem; border:0rem; padding:.1rem 0 0 .15rem;}
+
+/*鍙戝竷*/
+.submit a{margin-top: .1rem;}

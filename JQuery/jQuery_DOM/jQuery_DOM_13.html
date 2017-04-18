@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<title>DOM包裹wrap()方法</title>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<style type="text/css">
+		.left div,.right div{
+			width: 100px;
+			padding: 5px;
+			margin: 5px;
+			border: 1px solid #ccc;
+			background: #bbffaa;
+		}
+
+		.right div{
+			background: yellow;
+		}
+
+		p{
+			border: 1px solid red;
+		}
+		a{
+			border: 1px solid blue;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="left">
+		<button class="aaron1">点击，通过jQuery的wrap方法给p元素增加父元素div容器</button>
+		<button class="aaron2">点击，通过jQuery的wrap的回调方法给a元素增加父元素div容器</button>
+	</div>
+	<div class="right">
+		<p>p元素</p>
+		<p>p元素</p>
+	</div>
+	<div class="left">
+		<a>a元素</a>
+		<a>a元素</a>
+	</div>
+
+	<script type="text/javascript">
+		$(".aaron1").on('click',function(){
+			//给所有p元素增加父容器
+			$("p").wrap('<div></div>');
+		});
+	</script>
+	<script type="text/javascript">
+		$(".aaron2").on('click',function(){
+			//给所有a元素增加父容器
+			$("a").wrap(function(){
+				return '<div class="'+$(this).text()+'"></div>';
+			});
+		});
+	</script>
+</body>

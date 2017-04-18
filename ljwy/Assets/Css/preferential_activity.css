@@ -1,0 +1,22 @@
+﻿body {background-color:#ededed;}
+.top span{width:2.64rem;}
+
+.banner{background-color:white;}
+.banner a{display:inline-block;}
+.banner img{width:3.20rem;}
+.banner p{line-height:.20rem; font-size:.14rem; color:#ff0000;    padding: .10rem .15rem ;}
+
+
+.coupon{width:1.33rem; border:.02rem solid #ff0000; background-color:white;float:left;padding-bottom: .05rem; margin:.22rem 0 .22rem .15rem;}
+.coupon .coupon_child{overflow:hidden;}
+.coupon img{width:1.32rem;display: inherit;}
+.coupon .money {   float: left; padding:.02rem 0 0 .29rem; position:relative;}
+.coupon .money span:first-child{   font-size: .09rem;color: #da251d; position: absolute;top: .15rem;left: .21rem;}
+.coupon .money span:last-child{  font-size: .31rem;color: #da251d;}
+.coupon a{display:inline-block; width:.57rem; height:.18rem; line-height:.20rem;  text-align:center; color:white; background-color:#da251d; font-size:.09rem; border-radius:.02rem;margin-left: .39rem;}
+.pre_detail{  float: right; padding:.08rem .24rem 0 0;}
+.pre_detail span:first-child{  display: block; color: #aa6d44;font-size: .09rem;margin-bottom: -.03rem;}
+.pre_detail span:last-child{  font-size: .15rem; color: #da251d;}
+/*商家信息*/
+.shop_info{min-height:1.25rem; background-color:white;}
+.shop_info p{font-size:.14rem; color:#999999;margin:.15rem 0 0 .14rem; display:inline-block;} 

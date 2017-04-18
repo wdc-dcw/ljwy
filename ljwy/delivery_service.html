@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" id="mobileHtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>快递服务</title>
+    <link href="Assets/Plugins/dropload/dropload.min.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/comm.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/delivery_service.css?v=1.0" rel="stylesheet" />
+</head>
+<body>
+    <!--头部-->
+    <div class="top">
+        <a href="index.html">
+            <img src="Assets/Images/left.png" /></a>
+        <span>快递服务</span>
+    </div>
+    <div class="simple"></div>
+    <div class="service">
+        <a class="selects cur">快递查询</a>
+        <a class="send">发送快递</a>
+    </div>
+        <!--快递查询-->
+        <form id="formDelivery">
+            <div class="polling">
+            <div class="delivery_select">
+                <h4>请选择快递公司</h4>
+                <div class="main">
+                    <span class="icon">
+                        <img src="Assets/Images/icon.png" /></span>
+                    <div class="list_child list_first">
+                        
+                    </div>
+
+                    <div class="delivery_style">
+                        
+                    </div>
+                </div>
+                <div class="delivery_order">
+                    <input id="orderNo" type="text" class="formValidate" require="true" labelTxt="快递单号" placeholder="请输入你的快递单号" format="num1"/>
+                </div>
+
+            </div>
+            <div class="submit" id="queryBtn">
+                <a id="queryBtn">查询</a>
+            </div>
+        </form>
+            <!--物流-->
+    <div class="logistics" id="resultDiv">
+         
+    </div>
+    <div class="logistics1" id="resultDiv1">
+         
+    </div>
+    </div>
+    <!--发送快递列表-->
+    
+    <div class="service_list">
+     
+    </div>
+
+
+
+
+
+    <!--底部-->
+     <div class="footer">
+        <a href="index.html">
+            <div>
+                <img src="Assets/Images/footer_01.png" /><p>首页</p>
+            </div>
+        </a>
+        <a href="recommend.html">
+            <div>
+                <img src="Assets/Images/footer_03.png" /><p>推荐</p>
+            </div>
+        </a>
+        <a href="community_page.html">
+            <div>
+                <img src="Assets/Images/footer_02.png" /><p>黄页</p>
+            </div>
+        </a>
+            <a href="singer_center.html" id="newMsgCnt">
+                <div>
+                    <img src="Assets/Images/footer_04bg.png" /><p>个人</p>
+                </div>
+            </a>
+    </div>
+    
+    <script src="Assets/Plugins/zepto/zepto.min.js?v=1.0"></script>
+    <script src="Assets/Plugins/zepto/ajax.js?v=1.0"></script>
+    <script src="Assets/Model/delivery_service.js?v=1.0" ></script>
+    <script src="Assets/Plugins/cookie/jquery.cookie.js?v=1.0"></script>
+    <script src="Assets/Scripts/comm.js?v=1.0"></script>
+
+ 
+    <script>
+        Zepto(function ($) {
+            information();
+            $(".list_first").bind("click",function () {
+                $(".delivery_style").toggle();
+            });
+            $(".delivery_style").delegate(".list_child","click",function () {
+                $(".list_first").html($(this).html());
+                $(".delivery_style").hide();
+            });
+            $(".service .selects").click(function () {
+                $(".polling").show();
+                $(".service_list").hide();
+                $(this).parent().find("a").removeClass("cur");
+                $(this).addClass("cur");
+            });
+            $(".service .send").click(function () {
+                $(".service_list").show();
+                $(".polling").hide();
+                $(this).parent().find("a").removeClass("cur");
+                $(this).addClass("cur");
+            });
+        })
+    </script>
+</body>
+</html>

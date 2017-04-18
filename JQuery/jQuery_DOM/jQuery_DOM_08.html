@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<title>DOM节点删除之empty()与remove()的区别</title>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<style type="text/css">
+		.left,.right{
+			width: 300px;
+		}
+
+		.left div,.right div{
+			width: 100px;
+			height: 90px;
+			padding: 5px;
+			margin: 5px;
+			float: left;
+			border: 1px solid #ccc;
+		}
+
+		.left{
+			background: #bbffaa;
+		}
+
+		.right{
+			background: yellow;
+		}
+	</style>
+</head>
+
+<body>
+	<h2>通过jQuery的empty与remove方法移除节点</h2>
+	<div class="left">
+		<button id="btn1">通过jQuery的empty方法移除内部P元素</button>
+		<button id="btn2">通过jQuery的remove方法移除整个节点</button>
+	</div>
+
+	<div class="right">
+		<div id="test1">
+			<p>p元素1</p>
+			<p>p元素2</p>
+		</div>
+		<div id="test2">
+			<p>p元素3</p>
+			<p>p元素4</p>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		$("#btn1").on('click',function(){
+			//删除了2个p元素，但是本身没删除
+			$("#test1").empty();
+		});
+	</script>
+	<script type="text/javascript">
+		$("#btn2").on('click',function(){
+			//删除了整个节点
+			$("#test2").remove();
+		});
+	</script>
+</body>

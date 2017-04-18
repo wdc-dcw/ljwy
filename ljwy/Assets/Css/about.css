@@ -1,0 +1,9 @@
+﻿body{background-color:#ededed;}
+.top span{width:2.3rem;}
+
+
+
+.main{width:2.9rem; min-height:3.55rem; background-color:white; margin:.18rem auto .4rem;border-radius:.07rem;}
+.main p{font-size:.14rem; color:#808080; padding: .12rem;line-height: .20rem;text-align:justify;}
+.Copyright{margin-bottom:.30rem;}
+.Copyright p{text-align: center; font-size: .14rem; color: black;}

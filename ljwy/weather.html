@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<script type="text/javascript">
+
+window.onload=function(){
+document.getElementById("sss").contentDocument.getElementById("weather-city");
+}
+
+</script>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>天气</title>
+    <link href="Assets/Plugins/dropload/dropload.min.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/comm.css?v=1.0" rel="stylesheet" />
+</head>
+<body>
+    <!--头部-->
+    <div class="top">
+        <a href="index.html">
+            <img src="Assets/Images/left.png" /></a>
+        <span>天气</span>
+    </div>
+    <div class="simple"></div>
+<iframe name="weather_inc" id="sss" src="http://i.tianqi.com/index.php?c=code&id=82" width="100%" height="440" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="background-color:#F1F7FD" class="ddd"></iframe>
+<!--底部-->
+    <div class="footer">
+        <a href="index.html">
+            <div>
+                <img src="Assets/Images/footer_01.png" /><p>首页</p>
+            </div>
+        </a>
+        <a href="recommend.html">
+            <div>
+                <img src="Assets/Images/footer_03.png" /><p>推荐</p>
+            </div>
+        </a>
+        <a href="javascript:;">
+            <div>
+                <img src="Assets/Images/footer_02.png" /><p>黄页</p>
+            </div>
+        </a>
+
+        <a href="javascript:;">
+            <div>
+                <img src="Assets/Images/footerbg_04.png" /><p style="color:#ff8600;">个人</p>
+
+        
+            </div>
+        </a>
+    </div> 
+
+
+
+
+
+   
+    <script src="Assets/Plugins/zepto/zepto.min.js?v=1.0"></script>
+    <script src="Assets/Plugins/zepto/ajax.js?v=1.0"></script>
+    <script src="Assets/Plugins/cookie/jquery.cookie.js?v=1.0"></script>
+    <script src="Assets/Scripts/comm.js?v=1.0"></script>
+    <script>
+    
+        Zepto(function ($) {
+            refreshViewport();
+        // var iframe = document.createElement("iframe"); 
+        // iframe.src = "http://i.tianqi.com/index.php?c=code&id=82"; 
+        // if (!/*@cc_on!@*/0) {
+        // iframe.onload = function(){ 
+        // iframe.contentWindow.document.body.style.backgroundColor="#f00";
+        // }
+        // }else { 
+        //     iframe.onreadystatechange = function(){ 
+        //     if (iframe.readyState == "complete"){ 
+        //     alert("Local iframe is now loaded."); 
+        //       } 
+        //     }; 
+        // }
+        // document.body.appendChild(iframe);
+			
+        })
+		
+    </script>
+
+</body>
+</html>

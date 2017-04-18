@@ -1,0 +1,36 @@
+﻿body{background-color:#ededed;}
+.convenience_message{    padding: .10rem .15rem .10rem .15rem;}
+.imgs img{ width:3.20rem;}
+.name{ font-size:.12rem; color:#808080;}
+.tel{ float:right; font-size:.12rem; text-align:center;color:#999;}
+.tel img{ width: .15rem;     margin: .02rem .03rem 0 0;}
+.address{float:left; font-size:.12rem;text-align:center;}
+.address img{width: .13rem; margin:.01rem 0 0 -.02rem;}
+.commodity_type{overflow: hidden;max-height: 2rem;}
+.commodity{background-color:#fff; width:.79rem; float:left;border-right: 0.01rem solid #ededed;border-bottom: 0.01rem solid #ededed;height: .79rem;}
+.commodity img{width:.63rem;height: .47rem;}
+.commodity_img{text-align:center;}
+.commodity_name{ color:#333333; text-align:center; font-size:.10rem;height: .15rem;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.commodity_price{color:#ff4900; text-align:center; font-size:.09rem; margin-bottom: .05rem;}
+.content{ overflow: hidden;margin-bottom: .40rem;}
+.convenience_message .address_main{ overflow:hidden; margin-top:.05rem;color: #999999;}
+
+.footer div{width:0.6rem;}
+#newMsgCnt .spot {right: .16rem;}
+.top_1 {
+    background: red;
+    padding: 0rem .02rem 0rem 0rem;
+}
+.top_2 {
+    margin-left: .12rem;
+    font-size: .14rem;
+    color: #ff8600;
+}
+.top_3 {
+    float: right;
+    color: red;
+    margin-right: .15rem;
+    display: inline-block;
+    font-size: .14rem;
+}
+.p_commodity_typeclick{background: #eeeeee;;border-bottom: .01rem solid #eeeeee;}

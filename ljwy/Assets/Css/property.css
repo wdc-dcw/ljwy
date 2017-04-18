@@ -1,0 +1,7 @@
+﻿body {background-color:#ededed;}
+.top span{width:2.40rem;}
+.submit{width:1.05rem;}
+
+.success{width:2.90rem; min-height:1.70rem; margin:.19rem auto 0; background-color:white; text-align:center;    border-radius: 0.04rem;}
+.success img{width:100%;}
+.success img#failer{display:none;}

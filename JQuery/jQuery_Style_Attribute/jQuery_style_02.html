@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery转换为DOM对象</title>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+</head>
+<body>
+	<div>第一个元素</div>
+	<div>第二个元素</div>
+	<div>第三个元素</div>
+
+	<script type="text/javascript">
+		// var $div=$('div');//jquery对象
+		// var div1=$div.get(0);//通过get方法，转换为DOM对象
+		// var div2=$div.get(1);//通过get方法，转换为DOM对象
+		// var div3=$div.get(2);//通过get方法，转换为DOM对象
+		// div1.style.color='red';
+		// div2.style.color='gray';
+		// div3.style.color='blue';
+
+		var div=document.getElementsByTagName('div');
+		var $div=$(div);
+		var $first=$div.first();
+		$first.css('color','red');
+	</script>
+</body>
+</html>

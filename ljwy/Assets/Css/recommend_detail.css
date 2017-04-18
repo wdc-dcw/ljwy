@@ -1,0 +1,15 @@
+
+body{background-color:#ededed;}
+.top span{width:2.30rem;}
+.banner a{display:block;}
+.banner a img{width:100%;}
+
+.title{width:2.90rem; padding:.05rem .15rem;}
+.title p{line-height:.25rem;}
+.title p:first-child{font-size:.16rem; color:#000;}
+.title p:last-child{font-size:.11rem; color:#c0c0c0;}
+
+.list{background-color: white; margin-top: .01rem;}
+.banner p{width:3.20rem; text-align:justify; font-size:.15rem;}
+.banner p img{width:100%;}
+.name p{ font-size:.11rem; text-align:right; margin-top:.15rem;}

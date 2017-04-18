@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+	   <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	   <title>使用post()方法以POST方式从服务器获取数据</title>
+	   <script type="text/javascript" src="../js/jquery.js"></script>
+	   <link rel="stylesheet" type="text/css" href="../css/jQuery_Ajax_CSS/post.css">
+	</head>
+
+	<body>
+		<div id="divtest">
+			<div class="title">
+				<span class="fl">检查数字的是否大于0</span>
+				<span class="fr">
+					<input id="btnCheck" type="button" value="检查"/>
+				</span>
+			</div>
+			<ul>
+				<li>请输入一个数字:
+					<input id="txtNumber" type="text" size="12"/>
+				</li>
+			</ul>
+		</div>
+		
+		<script type="text/javascript">
+			$(function(){
+				$("#btnCheck").bind("click",function(){
+					$.post("http://www.imooc.com/data/check_f.php",{num:$("#txtNumber").val()},function(data){
+						$("ul").append("<li>你输入的<b>"+$("#txtNumber").val()+"</b>是<b>"+data+"</b></li>");
+					});
+				});
+			});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<title>jQuery选择器之基本筛选选择器</title>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<style type="text/css">
+		.left div{
+			width: 100px;
+			height: 80px;
+			padding: 5px;
+			margin: 5px;
+			background-color: #00dd00;
+		}
+	</style>
+</head>
+
+<body>
+	<h2>基本筛选器</h2>
+	<h3>:first/:last/:even/:odd</h3>
+	<div class="left">
+		<div class="div">
+			<p>div:first</p>
+			<p>:even</p>
+		</div>
+		<div class="div">
+			<p>:odd</p>
+		</div>
+		<div class="div">
+			<p>:even</p>
+		</div>
+		<div class="div">
+			<p>:odd</p>
+		</div>
+		<div class="div">
+			<p>:even</p>
+		</div>
+		<div class="div">
+			<p>div:last</p>
+			<p>:odd</p>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		//:first 找到第一个div
+		$(".div:first").css('color', '#CD00CD');
+	</script>
+	
+	<script type="text/javascript">
+		//:last 找到最后一个div
+		$(".div:last").css('color', '#CD00CD');
+	</script>
+
+	<script type="text/javascript">
+		//:even 选择索引值为偶数的元素，从0开时计数
+		$(".div:even").css('border', '3px groove blue');
+	</script>
+
+	<script type="text/javascript">
+		//:odd 选择索引值为奇数的元素，从0开时计数
+		$(".div:odd").css('border', '10px groove red');
+	</script>
+
+
+
+
+
+
+	<h3>:eq/:gt/:lt</h3>
+	<div class="left">
+		<div class="aaron">
+			<p>:lt(3)</p>
+		</div>
+		<div class="aaron">
+			<p>:lt(3)</p>
+		</div>
+		<div class="aaron">
+			<p>:eq(2)</p>
+		</div>
+		<div class="aaron">
+		</div>
+		<div class="aaron">
+			<p>:gt(3)</p>
+		</div>
+		<div class="aaron">
+			<p>:gt(3)</p>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		//:eq()选择单个元素
+		$(".aaron:eq(2)").css("border","3px groove gray");
+	</script>
+
+	<script type="text/javascript">
+		//:gt 选择匹配集合中所有值大于给定index参数的元素
+		$(".aaron:gt(3)").css("border","3px groove gray");
+	</script>
+
+	<script type="text/javascript">
+		//:lt 选择匹配元素集合中所有值小于给定index参数的元素
+		$(".aaron:lt(3)").css("color","#0000ee");
+	</script>
+
+	
+
+	<h3>:not</h3>
+	<div class="left">
+		<div>
+			<input type="checkbox" name="a"/>
+			<p>Aaron</p>
+		</div>
+		<div>
+			<input type="checkbox" name="b"/>
+			<p>慕课</p>
+		</div>
+		<div>
+			<input type="checkbox" name="c" checked="checked"/>
+			<p>其他</p>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		//:not 选择所有元素去除不匹配给定的选择器的元素
+        //选中所有紧接着没有checked属性的input元素后的p元素，赋予颜色
+        $("input:not(:checked)+p").css("background","#CD00CD");
+	</script>
+</body>

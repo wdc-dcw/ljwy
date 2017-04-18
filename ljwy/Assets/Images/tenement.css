@@ -1,0 +1,33 @@
+﻿body {background-color:#ededed;}
+.top span{width:178px;}
+.top a:first-child{ padding: 0;}
+.top a:last-child{padding-right: 0;margin-right: 13px;margin-top: 4px;}
+.top .pay{border:1px solid white; color:white; font-size:17px; border-radius:5px; display:inline-block; width:56px; height:31px; line-height:35px; text-align:center;}
+/*时间选择*/
+.choose_date{margin: 14px 15px 14px 15px;}
+.choose_date input{width:68px; height:38px; border-radius:5px; border:0; text-align:center; line-height:38px;}
+.choose_date span{margin:0 8px;}
+.choose_date .year::-webkit-input-placeholder,textarea::-webkit-input-placeholder {color: black; font-size:14px;}
+.choose_date .day{width:88px;}
+
+
+/*支付明细*/
+.detail_main{margin-bottom: 80px; margin-top:12px; background-color:white;}
+.detail_main img{width:32px; margin-right:7px;}
+.detail_main .order{padding:0  15px; border-bottom:1px solid #e7e7e7; padding-bottom:0px;    padding-top: 12px;}
+.detail_main .order .order_child{color:#808080; font-size:12px;    line-height: 32px;}
+.detail_main .order .order_child span:last-child{float:right;}
+.detail_main .order .pay{margin-top: 10px;padding-bottom:15px;}
+.detail_main .order .pay .price{margin-left:37px; font-size:35px;}
+.detail_main .order .pay .state{float: right;line-height: 55px; font-size:12px; color:#e71f19;}
+.detail_main .order .pay .stone{color:#64bb5c;}
+.detail_main .order .last_time span{font-size: 12px;text-align: center;display: block;color: #a5a5a5;    line-height: 32px;}
+
+
+.choose_01{width:270px;overflow:hidden;margin:15px auto;}
+.choose_01 span{float:left;margin:8px; }
+select {height:38px; background-color:white; border-radius:4px; float:left; text-align:center; position: relative;border:0;text-align:center;}
+select option{text-align:center;}
+select#year{padding-left:11px;}
+select#month{padding-left:17px;}
+select#state{padding-left:9px;}

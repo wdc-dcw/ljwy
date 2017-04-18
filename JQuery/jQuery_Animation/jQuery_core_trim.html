@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<title>jQuery中去空格神器trim方法</title>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<style type="text/css">
+		p{
+			color: red;
+		}
+		div{
+			width: 200px;
+			height: 100px;
+			background-color: yellow;
+			color: red;
+		}
+		
+	</style>
+</head>
+
+<body>
+	<h2>trim方法</h2>
+
+	未处理
+	<input id="result1" type="text" value=" 前后留空 " name=""/>
+	<input type="button" id="exec1" value="点击执行"/>
+
+	trim处理
+	<input id="result2" type="text" value=" 前后留空 " name=""/>
+	<input type="button" id="exec2" value="点击执行"/>
+
+	<script type="text/javascript">
+		$("#exec1").click(function(){
+			alert("值的长度:"+$("#result1").val().length);
+		});
+
+		$("#exec2").click(function(){
+			alert("值的长度:"+$.trim($("#result2").val()).length);
+		});
+	</script>
+</body>

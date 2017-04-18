@@ -1,0 +1,23 @@
+/*头部*/
+.top span{font-size:.17rem; color:#666666;  width: 2.30rem;display: inline-block;text-align: center; height: .42rem;line-height: .42rem;}
+
+/*整体*/
+body{ background:#ededed;}
+.list{ padding:.16rem .15rem 0 .15rem;}
+.list textarea{padding:.10rem .13rem 1.40rem; width:2.65rem; border:0; background:#fff; border-radius:.05rem;}
+.list input{ height:.30rem; width:.80rem; border:0; background:#fff; border-radius:.05rem;padding-left:0.1rem}
+.code input {margin-left: 0rem; }
+
+
+
+/*提交按钮*/
+.submit a{display: block;color: white;font-size: .17rem;text-align: center;
+ line-height: .40rem;margin-top:.15rem;}
+
+/* 设置滚动条的样式 */
+::-webkit-scrollbar,::-moz-scrollbar,::-ms-scrollbar {width: 0px;}
+/* 滚动槽 */
+::-webkit-scrollbar-track,::-moz-scrollbar-track,::-webkit-ms-track {-webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0);border-radius: 10px;}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb,::-moz-scrollbar-thumb,::-ms-scrollbar-thumb {border-radius: 10px;background: rgba(255,255,255,0);-webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0);}
+::-webkit-scrollbar-thumb:window-inactive,::-moz-scrollbar-thumb:window-inactive,::-ms-scrollbar-thumb:window-inactive {background: rgba(255,255,255,0);}

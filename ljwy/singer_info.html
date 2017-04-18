@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" id="mobileHtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>个人信息</title>
+    <link href="Assets/Plugins/dropload/dropload.min.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/comm.css?v=2.0" rel="stylesheet" />
+    <link href="Assets/Css/singer_info.css?v=2.0" rel="stylesheet" />
+
+    <style type="text/css">
+
+        .moxie-shim moxie-shim-html5{position: absolute;top: 10px; left: 222px;width: 82px; height: 82px; overflow: hidden;}
+    </style>
+
+</head>
+<body>
+    <!--头部-->
+    <div class="top">
+        <a id="pageBack">
+            <img src="Assets/Images/left.png" />
+        </a>
+        <span>个人信息</span>
+    </div>
+    <div class="main">
+        <div class="userimg">
+            <div class="imgs"id="headImgDiv">
+                <img src="Assets\Images\singer.png" id="browse">
+            </div>
+            <div class="score">
+                <p><span>总积分:</span><span id="sumscore">0</span></p>
+                <p><span>今日获得积分:</span><span id="todayscore">0</span></p>
+            </div>
+        </div>
+        <div class="userinfo">
+             <p>姓名<input type="text" class="formValidate" require="true" labelTxt="姓名" maxlength="11" placeholder="请输入你的姓名" id="name"/></P>
+             <p>昵称<input type="text" placeholder="请输入你的昵称" class="formValidate" maxlength="20" require="true" labelTxt="昵称" id="nickName"/></p>
+        </div>
+        <div class="room">
+            <div>
+                <div class="roombuding">
+                    <img src="Assets/Images/iconfont.png">
+                    <span>楼栋号</span>
+                </div>
+                 <div class="roomflloer" id="click_1">
+                    <img src="Assets/Images/flloer.jpg">
+                    <span>房间号</span>
+                    <img src="Assets/Images/font.png" class="down" />
+                </div>
+            </div>
+            <div class="roomNumber" id="roomNumber"></div>
+            <form id="formHouse">
+            <div class="roominput">
+                <span class="address">羽山路383弄</span><span><input class="one_main" type="text" maxlength="2"  require="true" labelTxt="楼栋号" format="intege1"  placeholder="楼栋号 1" id="build" onKeypress="if (event.keyCode < 48 || event.keyCode > 57) event.returnValue = false;"/></span>
+                <span><input class="secend_main" type="text" maxlength="4" require="true" labelTxt="房间号" format="intege1" placeholder="房间号 101" id="room" onKeypress="if (event.keyCode < 48 || event.keyCode > 57) event.returnValue = false;"/></span>
+                <span class="last"><a>添加</a></span>
+            </div>
+          </form>
+        </div>
+        <!-- <div class="car">
+            <div>
+                <div class="carnum">
+                    <img src="Assets/Images/car.jpg" />
+                    <span>车牌号</span>
+                </div>
+                <div class="stopnum" id="click_2">
+                    <img src="Assets/Images/park.png" />
+                    <span>车位号</span>
+                    <img src="Assets/Images/font.png" class="down"/>
+                </div>
+            </div>
+            <div class="carNumber" id="carNumber"></div>
+             <form id="formCar">
+            <div class="carinput">
+                <span><input class="carNum" placeholder="沪A12345" require="true" labelTxt="车牌号" maxlength="7" type="text" id="carNum" /></span>
+                <span><input class="parkNum" placeholder="车位号 1" maxlength="5" require="true"  labelTxt="车位号" format="intege1"  type="text" id="parkNum" /></span>
+                <span class="lasts"><a>添加</a></span>
+            </div>
+            </form>
+        </div> -->
+        <div class="submit" >
+            <a href="javascript:;" >提交</a>
+        </div>
+
+    </div>
+
+
+    <!--底部-->
+    <div class="footer">
+        <a href="index.html">
+            <div>
+                <img src="Assets/Images/footer_01.png" /><p>首页</p>
+            </div>
+        </a>
+        <a href="recommend.html">
+            <div>
+                <img src="Assets/Images/footer_03.png" /><p>推荐</p>
+            </div>
+        </a>
+        <a href="community_page.html">
+            <div>
+                <img src="Assets/Images/footer_02.png" /><p>黄页</p>
+            </div>
+        </a>
+        <div id="newMsgCnt">
+            <a href="singer_center.html">
+                <div>
+                    <img src="Assets/Images/footerbg_04.png" /><p style="color:#ff8600;">个人</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <script src="Assets/Plugins/zepto/zepto.min.js?v=1.0"></script>
+    <script src="Assets/Plugins/zepto/ajax.js?v=1.0"></script>
+    <script src="Assets/Plugins/cookie/jquery.cookie.js?v=1.0"></script>
+    <script src="Assets/Scripts/comm.js?v=1.0"></script>
+
+    <script src="Assets/Plugins/plupload/plupload.full.min.js?v=1.0"></script>
+    <script src="Assets/Scripts/check.js?v=1.0"></script>
+    <script src="Assets/Model/singer_info.js?v=1.0"></script>
+    <script>
+        Zepto(function ($) {
+            
+            information();
+            new singer().singer_info();
+            $(".secend").click(function () {
+                $(".choose_detail_01").toggle();
+            });
+            $(".third").click(function () {
+                $(".choose_detail_02").toggle();
+            });
+            $(".secend .choose_detail_01 a").click(function () {
+                $(".secend .one_main").html($(this).html());
+            });
+            $(".third .choose_detail_02 a").click(function () {
+                $(".third .secend_main").html($(this).html());
+            });
+        })
+    </script>
+    <script type="text/javascript" >
+            $("#click_1").bind("click", function(event) { $("#roomNumber").toggle();});
+            /* $("#click_2").bind("click", function(event) { $("#carNumber").toggle();}); */       
+    </script>
+</body>
+</html>

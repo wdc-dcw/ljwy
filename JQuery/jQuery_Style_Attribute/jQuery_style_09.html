@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<title>jQuery选择器之内容筛选选择器</title>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<style type="text/css">
+		.left div{
+			width: 100px;
+			height:50px;
+			padding: 5px;
+			margin:5px;
+			background-color: #ccc;
+		}
+	</style>
+</head>
+
+<body>
+	
+	<h2>内容筛选选择器</h2>
+	<h3>:contains/:has</h3>
+	<div class="left">
+		<div class="div">
+			<p>:contains</p>
+		</div>
+		<div class="div">
+			<p>:contains</p>
+		</div>
+		<div class="div">
+			<p>
+				<span>:has</span>
+			</p>
+		</div>
+		<div class="div">
+			<p>:contains</p>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		//找到所有class="div"中的DOM元素包含"contians"的元素节点，并改变字体颜色
+		$(".div:contains('contains')").css('color','#CD00CD');
+	</script>
+
+	<script type="text/javascript">
+		//找到所有class="div"中的DOM元素包含"span"的元素节点，并设置字体颜色
+		$(".div:has(span)").css('color','blue');
+	</script>
+
+	<h3>:parent/:empty</h3>
+	<div class="left">
+		<div class="aaron">
+			<a>:parent</a>
+		</div>
+		<div class="aaron">
+			<a>:parent</a>
+		</div>
+		<div class="aaron">
+			<a>:parent</a>
+		</div>
+		<div class="aaron">
+			<a></a>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		//选择所有包含子元素或文本的a元素，添加一个蓝色边框
+		$("a:parent").css('border','2px groove red');
+	</script>
+
+	<script type="text/javascript">
+		//找到a元素下面的所有空节点（没有子元素）
+		//并设置文本与边框
+		$("a:empty").text(':empty').css('border','3px groove blue');
+	</script>
+
+</body>

@@ -1,0 +1,123 @@
+﻿<!doctype html>
+<html id="mobileHtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>缴费中心</title>
+    <link href="Assets/Plugins/dropload/dropload.min.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/comm.css?v=1.0" rel="stylesheet" />
+    <!-- 物业缴费-->
+    <link rel="stylesheet" type="text/css" href="Assets/Css/pay_advance.css?v=1.0">  
+</head>
+
+<body>
+   <!--头部-->
+
+    <div class="top">
+        <a href="pay_sort.html">
+            <img src="Assets/Images/left.png" /></a>
+        <span>缴费中心</span>
+        <a class="pay" href="tenement.html">历史</a>
+    </div>
+    <div class="simple"></div>
+    <div class="list">
+
+     <div class="content">
+     <!--缴费类别 -->
+      <!--<div class="categories">
+        <span>您要缴费的类别:</span><span id="type"></span>
+        
+        <p>
+            <span class="choose_show"><img src="Assets/Images/choose_bg.png" cur="1"/></span>
+            <span class="type" type="1">停车费</span></p>
+        <p>
+            <span class="choose_show"><img src="Assets/Images/choose.png" cur="0"/></span>
+            <span class="type" type="0">物业管理费</span></p>
+      </div>-->
+      <div class="categories">
+          <span>您要缴费的类别:</span>
+          <span id="type">**</span>
+      </div>
+         <!--停车位 -->
+         <div class="place">
+             <span class="title">请选择您要缴费的房屋</span>
+         </div>
+      
+         <!-- <div class="money_flg">
+             <p>最后缴费期数</p>
+             <p><span id="lastPeriod">201512</span></p>
+         </div> -->
+         <div class="money_flg">
+             <p>每月应付款</p>
+             <p><span class="money">200</span>元</p>
+         </div>
+      <div class="clear"></div>
+          <!-- 缴费时长-->
+          <div class="date">
+                <span class="title">请选择您要缴费的时长</span>
+                <span class="choose_show" cuponId="1" months="1" cur="1"><img src="Assets/Images/choose_bg.png"/>一个月</span>
+                <span class="year_img" cuponId="2" months="3" cur="0"> 
+                  <img src="Assets/Images/choose.png"/>三个月
+                </span>
+                <span class="choose_show" cuponId="3" months="6" cur="0"><img src="Assets/Images/choose.png"/>六个月</span> 
+    </div>
+         <!--单价-->
+         <div class="carprice">
+             <p>合计：<span>0</span>元</p>
+
+         </div>
+         <!--支付方式-->
+         <div class="pay_style">
+             <h4>请选择支付方式</h4>
+             <p cur="1" type="0">
+                 <span class="mark">
+                     <img src="Assets/Images/pay_style02.png" />微信
+                 </span>
+                 <span class="choose_sure">
+                     <img src="Assets/Images/choose_bg.png" />
+                 </span>
+             </p>
+         </div>
+         <div id="read"><input type="checkbox" id="shop1" /><label for="shop1"> 我已同意并阅读</label><a>《支付条款》</a></div>
+         <div class="mask"></div>
+         
+     <div class="submit ok">
+             <a id="sub" onselectstart="return false" ontouchstart="return false" >确  定</a>
+       </div>
+    </div>
+        </div>
+    <div class="mask" style="z-index:999;"></div>
+    <div class="tan"><p>亲,还没有绑定房屋信息哦！是否现在绑定？</p><a id="ok">确定</a><a id="cancel">取消</a></div>
+    <div id="zhifu">
+        <p class="zhifu">支付条例</p><p class="zhifucontent">支付条款是对货款制度的货币、金额、方式、支付时间的规定。按照合同规定支付货款，是买方对卖方承担的基本义务。</p>
+        <a>确  定</a>
+    </div>
+    
+    <script src="Assets/Plugins/zepto/zepto.min.js?v=1.0"></script>
+    <script src="Assets/Plugins/zepto/ajax.js?v=1.0"></script>
+    <script src="Assets/Plugins/cookie/jquery.cookie.js?v=1.0"></script>
+    <script src="Assets/Scripts/comm.js?v=1.0"></script>
+    <script src="Assets/Model/pay_cost.js?v=1.0"></script>
+    <script>
+        Zepto(function ($) {
+            new payCost().payAdvances();
+            $("#read a").click(function () {
+                $(".mask").toggle();
+                $("#zhifu").toggle();
+                $("body").css("overflow", "hidden");
+            });
+            $("#zhifu a").click(function () {
+                $(".mask").toggle();
+                $("#zhifu").toggle();
+                $("body").css("overflow", "auto");
+
+            });
+            
+        })
+        
+    </script>
+
+</body>
+</html>

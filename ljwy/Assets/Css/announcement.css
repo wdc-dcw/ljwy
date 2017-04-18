@@ -1,0 +1,33 @@
+﻿body{background-color:#ededed;}
+.top span{width:2.30rem;}
+/*图*/
+.notice_banner img{width:100%;}
+
+/*整体*/
+.list{ margin-bottom:.80rem;}
+
+.singer_list{height:.30rem;  background-color:white;padding: 0 .13rem;}
+
+.singer_list .list_left{float:left; height: .30rem;line-height: .38rem;}
+.singer_list .list_left img{width:.18rem; height:.18rem; margin-top:.10rem;}
+.singer_list .list_left span{font-size:.14rem; color:#999999;}
+.singer_list .list_left a span{color:#ffba00; }
+.singer_list .list_left b{ font-weight:400; border-radius:1.00rem; width:.17rem; height:.17rem; background-color:red; color:white; display:inline-block;  text-align:center; line-height:.18rem; font-size:.12rem; margin-left:0.05rem;}
+.singer_list .list_right{float:right;}
+.singer_list .list_right img{width:0.09rem; margin-top:.10rem;}
+
+/*更多*/
+.list_right a{ color:red; display:inline-block;margin-top: .10rem;}
+.more_notice{ display:inline;}
+.more_notice a,.more_activity a{font-size: .12rem;}
+.more_activity{display: inline;}
+
+/*公告或活动列表*/
+.announcementList,.activityList{background-color:#fff;margin-bottom:0.01rem;padding-bottom:.10rem;}
+.announcement, .activity{ overflow:hidden;line-height:.20rem;width: 3.15rem;height: .20rem;overflow: hidden;}
+.announcement .list_title, .activity .list_title{float:left;}
+.announcement .list_title span, .activity .list_title span{font-size:.11rem; margin-left: .13rem;}
+.announcement .list_title span img, .activity .list_title span img{width:0.06rem;vertical-align: middle;margin:-0.02rem 0.05rem 0 0;}
+.announcement .list_release, .activity .list_release{float:right;}
+.announcement .list_release span, .activity .list_release span{font-size:.11rem; margin-right: .17rem;}
+	

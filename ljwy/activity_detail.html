@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" id="mobileHtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>社区活动</title>
+    <link href="Assets/Plugins/dropload/dropload.min.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/comm.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/activity_detail.css?v=1.0" rel="stylesheet" />
+</head>
+<body>
+    <!--头部-->
+    <div class="top">
+        <a id="pageBack">
+            <img src="Assets/Images/left.png" /></a>
+        <span>社区活动</span>
+    </div>
+    <div class="mask" style="z-index:999;"></div>
+    <div class="tan">
+        <p>评论要先去登录哦</p>
+        <a id="ok">确定</a><a id="cancel">取消</a>
+    </div>
+    <div class="simple"></div>    
+     <!--评论-->
+
+     <form id="formComment">
+    <div class="activity_main">
+       <div class="activityDetail">
+    
+        </div>
+        <!--评论内容-->
+       <div class="commentContent">
+           
+       </div>
+        
+         
+     </div>
+
+
+         <!--点评-->
+       <div class="comment">
+           <input  type="text" placeholder="请输入评论内容"  maxlength="500" class="formValidate" require="true" labelTxt="评论内容" id="comment_content"/>
+           <a id="submitBtn" onselectstart="" ontouchstart="">发表</a>
+       </div>
+   </form>
+
+    <script src="Assets/Plugins/zepto/zepto.min.js?v=1.0"></script>
+    <script src="Assets/Plugins/zepto/ajax.js?v=1.0"></script>
+    <script src="Assets/Plugins/dropload/dropload.min.js?v=1.0"></script>
+    <script src="Assets/Plugins/cookie/jquery.cookie.js?v=1.0"></script>
+    <script src="Assets/Scripts/smartFloat.js?v=1.0"></script>
+    <script src="Assets/Scripts/unix.js?v=1.0"></script>
+    <script src="Assets/Scripts/comm.js?v=1.0"></script>
+    
+    <!-- 社区活动详情-->
+    <script src="Assets/Model/activities.js?v=1.0"></script>
+    <script>
+        Zepto(function ($) {
+            $("input").on('focus', function () {
+                $("body").css("overflow", "hidden")
+            });
+            $("input").on('blur', function () {
+                $("body").css("overflow", "auto")
+            });
+            new activitie().activityDetails();
+            
+        })
+    </script>
+</body>
+</html>
+

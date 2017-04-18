@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<title>jQuery遍历之parent()方法</title>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<style type="text/css">
+		.left{
+			width: auto;
+			height: 400px;
+		}
+		.left div{
+			width: 350px;
+			height: 150px;
+			padding: 5px;
+			margin: 5px;
+			float: left;
+			border: 1px solid #ccc;
+			background: #bbffaa;
+		}
+
+		span{
+			color:blue;
+		}
+	</style>
+</head>
+
+<body>
+	<h2>parent方法</h2>
+	<div class="left first-div">
+		<div class="div">
+			<ul class="level-2">
+				<!-- A -->
+				<li class="item-a">A</li>
+				<!-- B-->
+				<li class="item-b">B
+					<ul class="level-3">
+						<li>item-1</li>
+						<li>item-2</li>
+						<li>item-3</li>
+					</ul>
+				</li>
+				<!-- C-->
+				<li class="item-c">C</li>
+			</ul>
+		</div>
+		<div class="div">
+			<ul class="level-2">
+				<!-- A -->
+				<li class="item-a">A</li>
+				<!-- B-->
+				<li class="item-b">B
+					<ul class="level-3">
+						<li>item-1</li>
+						<li>item-2</li>
+						<li>item-3</li>
+					</ul>
+				</li>
+				<!-- C-->
+				<li class="item-c">C</li>
+			</ul>
+		</div>
+	</div>
+	<button>点击:parent无参数</button>
+	<button>点击:parent传递选择器表达式</button>
+	
+	<script type="text/javascript">
+		$("button:first").on("click",function(){
+			//找到所有class="level-3"的ul,找到它的父元素li,并加上红色边框
+			$(".level-3").parent().css("border","2px solid red");
+		});
+	</script>
+	<script type="text/javascript">
+		$("button:last").on("click",function(){
+			//找到所有class="item-a"的父元素ul,然后筛选处最后一个,并加上蓝色边框
+			$(".item-a").parent(":last").css("border","1px solid blue");
+		});
+	</script>
+</body>

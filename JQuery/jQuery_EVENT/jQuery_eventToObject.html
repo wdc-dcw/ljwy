@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<title>jQuery事件对象的作用</title>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<style type="text/css">
+		.left div,.right div{
+			width: 500px;
+			height: 150px;
+			padding: 5px;
+			margin: 5px;
+			float: left;
+			border: 1px solid #ccc;
+		}
+
+		.left div{
+			background: #bbffaa;
+		}
+
+	</style>
+</head>
+
+<body>
+	<h3>事件委托，通过事件对象区别触发元素</h3>
+	<div class="left">
+		<div class="aaron">
+			<ul>
+				<li>点击：触发一</li>
+				<li>点击：触发二</li>
+				<li>点击：触发三</li>
+				<li>点击：触发四</li>
+			</ul>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		//多事件绑定一
+		$("ul").on('click',function(e){
+			alert("触发的元素内容是:"+e.target.textContent);
+		});
+	</script>
+</body>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:sec="http://www.springframework.org/schema/security" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+                  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                  http://www.springframework.org/schema/security
+                  http://www.springframework.org/schema/security/spring-security-3.0.xsd">
+
+
+    <bean id="preAuthenticationChecks" class="com.youthen.master.presentation.filter.MasterPreAuthenticationChecks" />
+
+    <bean id="postAuthenticationChecks" class="org.springframework.security.authentication.AccountStatusUserDetailsChecker" />
+
+    <bean id="daoAuthenticationProvider"
+        class="org.springframework.security.authentication.dao.DaoAuthenticationProvider">
+        <property name="userDetailsService" ref="userService" />
+        <property name="passwordEncoder" ref="passwordEncoder" />
+        <property name="preAuthenticationChecks" ref="preAuthenticationChecks" />
+        <property name="postAuthenticationChecks" ref="postAuthenticationChecks" />
+        <property name="hideUserNotFoundExceptions" value="false" />
+    </bean>
+
+    <sec:authentication-manager alias="authenticationManager">
+        <sec:authentication-provider ref="daoAuthenticationProvider" />
+    </sec:authentication-manager>
+ 
+    <bean id="youthenUsernamePasswordAuthenticationFilter"
+        class="com.youthen.master.presentation.filter.MasterUsernamePasswordAuthenticationFilter">
+        <property name="authenticationManager" ref="authenticationManager" />
+        <property name="authenticationFailureHandler" ref="failureHandler" />
+        <property name="authenticationSuccessHandler" ref="successHandler" />
+        <property name="sessionAuthenticationStrategy" ref="sas" />
+    </bean>
+
+    <bean id="userService" class="com.youthen.master.common.security.MasterUserDetailsManager">
+        <property name="authenticationManager" ref="authenticationManager" />
+        <property name="dataSource" ref="dataSource" />
+       <property name="usersByUsernameQuery"
+            value="SELECT
+                        A.USER_ID USER_ID,
+                        A.PASSWORD PASSWORD,
+                        A.COMPANY_CODE COMPANY_CODE,
+                        A.COMPANY_ID COMPANY_ID,
+                        A.DEPT_ID DEPT_ID,
+                        A.NAME NAME,
+                        A.EMAIL EMAIL,
+                        KBN.CODE STATUS,
+                        A.PASSWORD_ERROR_COUNT PWD_ERROR_COUNT,
+                        D.DEPARTMENT_NAME DEPTNM 
+                   FROM
+                        T_USER A , T_SISQP_KBN KBN,T_DEPARTMENT D
+                   WHERE  KBN.ID = A.STATUS 
+                   AND  A.DEPT_ID = D.DEPARTMENT_ID
+                   AND A.USER_ID = ?
+                   " /> 
+                   
+         <property name="authoritiesByUsernameQuery"
+            value="SELECT
+                       B.USER_ID AS USER_ID,
+                       B.ROLE_ID AS ROLE_ID,
+                       A.ROLE_CODE AS ROLE_CODE
+                       FROM
+                       T_ROLE A ,T_USER_ROLE B 
+                   WHERE
+                       A.ROLE_ID = B.ROLE_ID
+                       AND B.USER_ID = ?
+                  
+                   " /> 
+                   
+    </bean>
+
+    <bean id="loginUrlAuthenticationEntryPoint"
+        class="com.youthen.framework.common.security.AjaxLoginUrlAuthenticationEntryPoint">
+        <property name="loginFormUrl" value="/login.jsp" />
+    </bean>
+
+    <bean id="successHandler" class="com.youthen.master.presentation.filter.MasterAuthenticationSuccessHandler">
+        <property name="defaultTargetUrl" value="/lj-admin/index.action" />
+       <property name="passChangeRedirectUrl" value="/lj-admin/index.action" />
+       <!--  <property name="requestCache" ref="requestNotAjaxCache" /> -->
+    </bean>
+
+   <!--  <bean id="requestNotAjaxCache" class="com.youthen.master.presentation.filter.RequestNotAjaxCache"/> -->
+
+    <bean id="failureHandler"
+        class="org.springframework.security.web.authentication.ExceptionMappingAuthenticationFailureHandler">
+        <property name="exceptionMappings">
+            <map>
+            </map>
+        </property>
+        <property name="defaultFailureUrl" value="/login.jsp" />
+    </bean>
+
+    <sec:http auto-config="false" entry-point-ref="loginUrlAuthenticationEntryPoint">
+
+        <!-- struts config browser -->
+        <sec:intercept-url pattern="/config-browser/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+
+        <sec:intercept-url pattern="/images/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+        <sec:intercept-url pattern="/css/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+        <sec:intercept-url pattern="/javascript/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+        <sec:intercept-url pattern="/ws/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+         <sec:intercept-url pattern="/js/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+        <sec:intercept-url pattern="/taglib/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+        <sec:intercept-url pattern="/appInterfaceTest/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+
+       <sec:intercept-url pattern="/error.jsp" access="IS_AUTHENTICATED_ANONYMOUSLY" /> 
+        <sec:intercept-url pattern="/exception/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		
+        <sec:intercept-url pattern="/index.jsp" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+
+        <sec:intercept-url pattern="/login*.jsp" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+        <sec:intercept-url pattern="/j_spring_security_switch_user" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+        
+
+		
+        <sec:intercept-url pattern="/**/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+
+        <sec:intercept-url pattern="/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+
+        <sec:logout logout-success-url="/login.jsp" />
+        <sec:logout logout-success-url="/index.html" />
+
+        <sec:custom-filter position="FORM_LOGIN_FILTER" ref="youthenUsernamePasswordAuthenticationFilter" />
+        
+        <!-- <sec:custom-filter ref="concurrencyFilter"  position="CONCURRENT_SESSION_FILTER" />   -->
+		
+        <sec:access-denied-handler error-page="/403.jsp" />
+
+        <!-- <sec:request-cache ref="requestNotAjaxCache" /> -->
+
+    </sec:http>
+
+    <bean id="concurrencyFilter" class="org.springframework.security.web.session.ConcurrentSessionFilter">
+        <property name="sessionRegistry" ref="sessionRegistry" />
+        <property name="expiredUrl" value="/exception/concurrency.action" />
+    </bean>
+
+    <bean id="sas" class="org.springframework.security.web.authentication.session.ConcurrentSessionControlStrategy">
+        <constructor-arg name="sessionRegistry" ref="sessionRegistry" />
+        <property name="maximumSessions" value="1" />
+    </bean>
+
+    <bean id="sessionRegistry" class="org.springframework.security.core.session.SessionRegistryImpl" />
+
+</beans>

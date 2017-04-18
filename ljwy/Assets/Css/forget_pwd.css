@@ -1,0 +1,18 @@
+﻿body {background:url(../Images/mainbg.png) ; background-size:100%;}
+.tel{position:relative;  margin:.12rem 0 0 .22rem;}
+.first{margin-top:.43rem;}
+.tel img{position:absolute; top:.06rem; left:.12rem; width:.20rem;}
+.tel input{ border: none;border-radius: .12rem;font-size: .11rem;height: .30rem;width: 1.40rem;     padding: 0 .78rem 0 .58rem;box-shadow: 0rem .01rem .03rem -.01rem #8C8B85;}
+.tel input:focus{background-color:#f9e6e7;}
+/*.tel input:focus .massage{background-color:#f9e6e7;}*/
+/*.massage:focus input{background-color:#f9e6e7}*/
+.message .change input:focus{background-color:red;}
+.tel .change img{position:absolute; right:.35rem; left:auto; top:.05rem;}
+.tel .change .first_img{ display:none;}
+.tel .change .second_img{ display:none;}
+
+.tel .change a{position: absolute;top: .09rem;right: .33rem; font-size: .11rem; color:#808285;}
+
+.land a{width:2.76rem; height:.30rem; line-height:.30rem; color:#ff6a00; text-align:center; font-size:.12rem; display:block; margin:.34rem auto .12rem; border-radius:.12rem;background:-webkit-gradient(linear, 0 0, 0 bottom, from(#fdfcfb), to(#e0e0dd) );box-shadow: 0rem .01rem .03rem -.01rem #8C8B85;}
+
+.change input{position: absolute;top: 0;right: .22rem; width: 1.00rem; padding: 0; font-size: .10rem;color: #808285;background-color: white;box-shadow: none;} 

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<title>DOM内部插入prepend()与prependTo()</title>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<style type="text/css">
+		.aaron1{
+			border: 1px solid red;
+		}
+		.aaron1 p{
+			color:red;
+		}
+		.aaron2{
+			border: 1px solid blue;
+		}
+		.aaron2 p{
+			color:blue;
+		}
+	</style>
+</head>
+
+<body>
+	<h2>通过prepend和prependTo前置元素</h2>
+	<button id="btn1">点击通过jQuery的prepend前置元素</button>
+	<button id="btn2">点击通过jQuery的prependTo前置元素</button>
+	<div class="aaron1">
+		<p class="test1">测试prepend</p>
+	</div>
+	<div class="aaron2">
+		<p class="test2">测试prependTo</p>
+	</div>
+
+	<script type="text/javascript">
+		$("#btn1").on('click',function(){
+			//找到class="aaron1"的div节点
+			//然后通过prepend在内部的首位置添加一个新的p节点
+			$('.aaron1').prepend('<p>prepend增加的p元素</p>');
+		});
+	</script>
+	<script type="text/javascript">
+		$("#btn2").on('click',function(){
+			//找到class="aaron2"的div节点
+			//然后通过prependTo内部的首位置添加一个新的p节点
+			$('<p>prependTo增加的p元素</p>').prependTo($('.aaron2'));
+		});
+	</script>
+</body>

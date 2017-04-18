@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<title>jQuery选择器之类选择器</title>
+	<style type="text/css">
+		div{
+			width:100px;
+			height: 80px;
+			float:left;
+			padding: 5px;
+			margin: 5px;
+			background-color: #eeeeee;
+		}
+	</style>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+</head>
+<body>
+	<div class="aaron">
+		<p>class="aaron"</p>
+		<p>选中</p>
+	</div>
+	<div class="aaron">
+		<p>class="aaron"</p>
+		<p>选中</p>
+	</div>
+	<div class="imooc">
+		<p>class="imooc"</p>
+		<p>jQuery选中</p>
+	</div>
+	<div class="imooc">
+		<p>class="imooc"</p>
+		<p>jQuery选中</p>
+	</div>
+
+	<script type="text/javascript">
+		var divs=document.getElementsByClassName("aaron");
+		for (var i = 0; i <=divs.length; i++) {
+			divs[i].style.border="10px solid blue";
+		};
+	</script>
+
+	<script type="text/javascript">
+		$(".imooc").css('border','3px solid green');
+	</script>
+
+</body>
+</html>

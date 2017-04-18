@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<title>jQuery选择器之全选择器</title>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<style type="text/css">
+		div{
+			width: 100px;
+			height: 80px;
+			float: left;
+			padding: 5px;
+			margin:5px;
+			background-color: #eeeeee;
+		}
+	</style>
+</head>
+<body>
+	<div class="aaron">
+		<p>class="aaron"</p>
+		<p>选中</p>
+	</div>
+	<div class="aaron">
+		<p>class="aaron"</p>
+		<p>选中</p>
+	</div>
+	<div class="imooc">
+		<p>class="imooc"</p>
+		<p>jQuery选中</p>
+	</div>
+	<div class="imooc">
+		<p>class="imooc"</p>
+		<p>jQuery选中</p>
+	</div>
+
+	<script type="text/javascript">
+		var elements1=document.getElementsByTagName("*");
+	</script>
+
+	<script type="text/javascript">
+		var elements2=$("*");
+		if(elements1.length==elements2.length){
+			elements2.css('border','1px solid blue');
+		}
+	</script>
+</body>
+</html>

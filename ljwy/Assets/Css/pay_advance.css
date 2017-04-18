@@ -1,0 +1,68 @@
+/*头部*/
+.top span{width: 2.0rem; margin-left: .13rem;}
+
+/*整体*/
+body{ background:#ededed;}
+.list{padding-bottom:.10rem;margin-top:.01rem;background: white; }
+.list .content{ padding:.10rem 0 0 0;}
+.content img{ width:.17rem;}
+.content p{padding-left: .18rem;}
+
+
+/*缴费类别*/
+.categories{border-bottom:.01rem solid #ededed; padding:0 0 .18rem .12rem;}
+.categories span{display: inline-block; font-size:.14rem;}
+.categories .type{ color:#b3b3b3; padding:.10rem 0 0 .10rem;}
+
+/*缴费房屋*/
+.house{border-bottom:.01rem solid #ededed;padding:0 0 .18rem .12rem;display:none;}
+.house span{display: inline-block; font-size:.14rem;}
+.house .title{ padding-top:.10rem;}
+.house .type{ color:#b3b3b3;  padding:.10rem 0 0 .10rem;}
+
+.place{border-bottom:.01rem solid #ededed;padding:0 0 .18rem .12rem;}
+.place span{display: inline-block; font-size:.14rem;}
+.place .title{ padding-top:.10rem;}
+.place .type{ color:#b3b3b3;  padding:.10rem 0 0 .10rem;}
+/*缴费时长*/
+.date{border-bottom:.01rem solid #ededed;padding:0 0 .18rem .12rem;}
+.date span{display: inline-block; font-size:.14rem; padding-top:.10rem;}
+.date .title{ padding-top:.10rem;display: block;}
+.date .choose_show{ padding-left:.15rem; width:1.08rem; color:#b3b3b3;}
+.date span img{ padding-right:.10rem;}
+.date .year_img{padding-left: .40rem;color:#b3b3b3;}
+
+
+/*支付方式*/
+.pay_style{background-color:white;padding:.10rem .15rem 0rem .15rem;border-bottom: .01rem solid #e7e7e7;}
+.pay_style  h4{font-size:.14rem; font-weight:400;}
+
+.pay_style .mark{display:inline-block;line-height: .36rem;    font-size: .14rem;color: #999999;}
+.pay_style .mark img{width:.33rem; margin-right:.08rem;}
+.pay_style .choose_sure{float:right;}
+.pay_style .choose_sure img{width:.17rem;margin-top: .10rem;}
+
+
+/*确定按钮*/
+.submit{margin:.15rem 0 0 .15rem;}
+.submit a {margin-top: .2rem;}
+.ok{background-color: #f99e39;}
+.carprice{border-bottom:.01rem solid #ededed;background-color: #ededed;}
+.carprice p{line-height: .37rem;text-align: center;padding-left: 0;}
+.carprice span{color: #ff0000;}
+.top .pay {border: .01rem solid #ff9600;color: #ff9600;font-size: .14rem;border-radius: .05rem;display: inline-block;width: .40rem;height: .25rem;line-height: .25rem;text-align: center;    margin-top: .08rem;margin-right: .13rem;}
+.money_flg {overflow:hidden;    padding: .10rem 0; font-size:.14rem;  border-bottom:.01rem solid #ededed;}
+.money_flg p{ color:#000;}
+.money_flg p:last-child{margin-top:.05rem;color:#b3b3b3;}
+.money_flg p span{margin: 0  0 0 .18rem;}
+.money_flg .money{color:#ff0000;}
+.top a:last-child{padding-right:0;}
+.tan{height: 1.4rem;margin-top:-.7rem;}
+#read{background-color: white;padding: .10rem .15rem 0rem .15rem;}
+#shop1{width:.13rem;}
+#read a{color:red;}
+.mask{z-index:999;}
+#zhifu{width:3.2rem;height:2.95rem;background-color:#fff;position:fixed;bottom:0;left:0;display:none;z-index:999;}
+.zhifu{color:#999;line-height:.3rem;text-align:center;border-bottom:.01rem solid #e7e7e7;margin-bottom:.1rem;font-size:.14rem;}
+.zhifucontent{width:2.8rem;padding:0 .2rem;overflow-y:scroll;color:#999;font-size:.12rem;height:1.95rem;}
+#zhifu a{width:2.9rem;display:block;height:.4rem;background-color:#ff8600;margin:0.1rem auto 0;text-align:center;line-height:.4rem;color:#fff;font-size:.17rem;border-radius:.05rem;}

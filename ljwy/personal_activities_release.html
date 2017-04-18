@@ -1,0 +1,70 @@
+﻿<!doctype html>
+<html id="mobileHtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>活动发布</title>
+    <link href="Assets/Plugins/dropload/dropload.min.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/comm.css?v=1.0" rel="stylesheet" />
+    <!-- 活动发布-->
+    <link rel="stylesheet" type="text/css" href="Assets/Css/personal_activities_release.css?v=1.0">
+    
+</head>
+
+<body>
+   <!--头部-->
+    <div class="top">
+        <a href="personal_activities_list.html">
+            <img src="Assets/Images/left.png" /></a>
+        <span>活动发布</span>
+        <a href="my_activities.html" class="activity_history">历史</a>
+    </div>
+    <div class="simple"></div>
+    <!-- 整体-->
+    <form id="formPersonal">
+    <div class="list">
+       <div class="title">
+            <input type="text" id="title" placeholder="请输入标题" class="formValidate" require="true" labelTxt="标题" maxlength="20"/>
+       </div>
+        <div class="date">
+            <input type="date" id="startDate" placeholder="例如2016-02-09" format="date" class="formValidate" require="true" labelTxt="开始时间" maxlength="10"/>&nbsp;<label id="zhi">至</label>&nbsp;<input type="date" id="endDate" placeholder="例如2016-02-15" format="date" class="formValidate" require="true" labelTxt="结束时间" maxlength="10"/>
+       </div>
+       <div class="number_activities">
+            <input type="text" id="planNum" placeholder="请输入活动人数" format="intege1" class="formValidate" require="true" labelTxt="活动人数" maxlength="4"/>
+             
+       </div>
+       <div class="address">
+           <input type="text" id="place"  placeholder="请输入活动地点" class="formValidate" require="true" labelTxt="活动地点" maxlength="13"/>
+       </div>
+       
+        <div class="images"> 
+        <a href="javascript:;" id="browse"><img src="Assets/Images/repairs_img02.png" /></a> 
+      </div>
+      <div id="Bigimg">
+        <img src="" />
+    </div>
+         <div class="content">
+           <textarea placeholder="请输入您要发布的内容" id="content" class="formValidate" require="true" labelTxt="内容" maxlength="300"></textarea>
+         </div>
+         
+         <div class="submit">
+             <a onselectstart="" ontouchstart="" id="sub">发  布</a>
+       </div>
+    </div>
+    </form>
+    
+     <script src="Assets/Plugins/zepto/zepto.min.js?v=1.0"></script>
+    <script src="Assets/Plugins/zepto/ajax.js?v=1.0"></script>
+    <script src="Assets/Plugins/cookie/jquery.cookie.js?v=1.0"></script>
+    <script src="Assets/Scripts/comm.js?v=1.0"></script>
+    <script src="Assets/Plugins/plupload/plupload.full.min.js?v=1.0"></script>
+    <script src="Assets/Model/personal_activities.js?v=1.0"></script>
+    <script>
+        Zepto(function ($) {
+          new personal_activities().add_activity();
+        })
+    </script>
+</body>
+</html>

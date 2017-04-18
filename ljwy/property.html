@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" id="mobileHtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>物业缴费</title>
+    <link href="Assets/Plugins/dropload/dropload.min.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/comm.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/property.css?v=1.0" rel="stylesheet" />
+</head>
+<body>
+    <!--头部-->
+    <div class="top">
+        <a class="pageBack fanhui">
+            <img src="Assets/Images/left.png" /></a>
+        <span></span>
+    </div>
+    <div class="simple"></div>
+    <div class="success">
+        <img src="Assets/Images/succes.png" id="succes" />
+        <img src="Assets/Images/failer.png" id="failer" />
+        <img src="Assets/Images/zhisad.png" id="zhisad" />
+        <img src="Assets/Images/zhisucceed.png" id="zhisucceed" />
+    </div>
+    <div class="submit">
+        <a class="pageBack fanhui">返回</a>
+    </div>
+ <script src="Assets/Plugins/zepto/zepto.min.js?v=1.0"></script>
+    <script src="Assets/Plugins/zepto/ajax.js?v=1.0?v=1.0"></script>
+    <script src="Assets/Plugins/cookie/jquery.cookie.js?v=1.0"></script>
+    <script src="Assets/Scripts/comm.js?v=1.0"></script>
+    <script>
+        Zepto(function ($) {
+            var paramsJson = {
+                orderNo: GetQueryString("OrderId")
+            }
+            var data = {
+                secretKey: "mobileSecretKey1234567890",
+                opt: "getPayStatus",
+                params: JSON.stringify(paramsJson)
+            }
+            $.post(interfaceApi, data, function (result) {
+                var result = JSON.parse(result);
+                if (result.messageCode == 1) {
+                    if (result.resultObject[0] == 1) {
+                        $(".success img").hide();
+                        
+                        if (result.resultObject[1] == 0) {
+                            $("#succes").show();
+                            $.cookie("property", "tenement.html");
+                            $(".top span").text("物业管理费");
+                            $(".fanhui").click(function () {
+                                location.href = $.cookie("property");
+                            });
+                        }
+                        else if (result.resultObject[1] == 1) {
+                            $("#succes").show();
+                            $.cookie("property", "tenement.html");
+                            $(".top span").text("车位管理费");
+                            $(".fanhui").click(function () {
+                                location.href = $.cookie("property");
+                            });
+                        }
+                        else if (result.resultObject[1] == 2) {
+                            $("#zhisucceed").show();
+                            $.cookie("property", "myorder.html");
+                            $(".top span").text("购物");
+                            $(".fanhui").click(function () {
+                                location.href = $.cookie("property");
+                            });
+                        }
+                    }
+                    else {
+                        $(".success img").hide();
+                        if (result.resultObject[1] == 0) {
+                            $("#failer").show();
+                            $(".top span").text("物业管理费");
+                            $(".fanhui").click(function () {
+                                location.href = "tenement.html";
+                            });
+                        }
+                        else if (result.resultObject[1] == 1) {
+                            $("#failer").show();
+                            $(".top span").text("车位管理费");
+                            $(".fanhui").click(function () {
+                                location.href = "tenement.html";
+                            });
+                        }
+                        else if (result.resultObject[1] == 2) {
+                            $("#zhisad").show();
+                            $(".top span").text("购物");
+                            $(".fanhui").click(function () {
+                                location.href = "myorder.html";
+                            });
+                        }
+                    }
+                }
+                else {
+                    $(".success img").hide();
+                    if (result.resultObject[1] == 0) {
+                        $("#failer").show();
+                        $(".top span").text("物业管理费");
+                        $(".fanhui").click(function () {
+                            location.href = "tenement.html";
+                        });
+                    }
+                    else if (result.resultObject[1] == 1) {
+                        $("#failer").show();
+                        $(".top span").text("车位管理费");
+                        $(".fanhui").click(function () {
+                            location.href = "tenement.html";
+                        });
+                    }
+                    else if (result.resultObject[1] == 2) {
+                        $("#zhisad").show();
+                        $(".top span").text("购物");
+                        $(".fanhui").click(function () {
+                            location.href = "myorder.html";
+                        });
+                    }
+                }
+            });
+        })
+    </script>
+</body>
+</html>

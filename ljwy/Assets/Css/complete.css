@@ -1,0 +1,57 @@
+﻿/*注册和忘记密码汉字*/
+.register_forgot{width:2.90rem;height:.40rem;}
+.register a{font-size:.14rem;color:#b3b3b3;float:left;}
+.forgot_password a{font-size:.14rem;color:#b3b3b3;float:right;}
+
+
+/*头部*/
+.top span{width: 2.30rem;}
+
+/*登录*/
+.login_way{line-height:0;}
+.login_way p{font-size:.14rem;color:#b3b3b3;text-align:center;}
+.login_way p span{padding: 0 .05rem 0 .05rem;}
+#formLogin  .iconn{display:inline-block; width:.25rem;}
+#formLogin  .iconn img, #formLogin  .rown img{width:100%; }
+#formLogin  .rown{display: inline-block;width: .25rem;right: .07rem;font-size:0.14rem;vertical-align:middle;line-height:0.25rem}
+#formLogin .rown img{display:none;}
+
+/*登录方式图标*/
+.list .login_choose{margin-top: 1.31rem;}
+.icon{padding-top:.16rem;}
+.icon a img {width:.38rem;}
+.icon_weibo{margin-left:.35rem;display:inline;}
+.icon_qq{margin-left:.48rem; display:inline;}
+.icon_weichat{margin-left:.46rem; display:inline;}
+
+
+/*注册*/
+body{ background:#ededed;}
+.list{padding: .10rem .15rem 0 .15rem; margin-bottom:.80rem;}
+.list input{padding-left:.4rem; height:.30rem; width:2.15rem; border:0;background-repeat:no-repeat;background-size:9%;background-position:2% center;    font-size: .14rem; }
+.formValidate{border-radius:.05rem;}
+#formRegister  .iconn{display:inline-block; width:.25rem;background: #fff;margin-right: -.06rem; padding: .095rem 0 .05rem .03rem; border-top-left-radius: .05rem;border-bottom-left-radius: .05rem;}
+#formRegister  .iconn img, #formRegister  .rown img{width:100%; }
+#formRegister  .rown{display: inline-block;width: .25rem;position: absolute;top: .08rem;right: .07rem;font-size:.14rem}
+#formRegister .rown img{display:none;}
+
+
+
+/*用户协议*/
+.agreement span{display: inline-block;}
+.agreement img{width:.14rem;padding-top: .03rem;}
+.aggree{ font-size:.12rem;}
+.agreement a{ font-size:.12rem; color:#6CF;}
+
+/*输入框和a标签*/
+.list .verify input{width:1.70rem;}
+.list div{margin-top: .08rem;position: relative;}
+.list .tel{ margin-top:.08rem; position: relative;background-color:#fff;line-height:0.4rem;vertical-align:middle;border-radius:0.05rem}
+.list .pwd{ margin-top:.08rem; position: relative;background-color:#fff;line-height:0.4rem;vertical-align:middle;border-radius:0.05rem}
+.list .again_pwd{ margin-top:.08rem; position: relative;background-color:#fff;line-height:0.4rem;vertical-align:middle;border-radius:0.05rem}
+.verify input{height: .40rem;}
+.list .verify a{border-radius: .05rem; display: inline-block; width: .95rem; background-color: #ff8600; height: .40rem; line-height: .40rem; text-align: center; color: white; font-size: .14rem; margin-left: .05rem;}
+.verify input#verifyCode{padding-left: .2rem;}
+
+ 
+.list .verify .get_code{border-radius: .05rem;display: inline-block;width: .9rem;background-color: #ff8600;height: .40rem; line-height: .40rem;text-align: center;color: white;font-size: .13rem;margin-left: .05rem;border:0;padding-left: 0rem;}

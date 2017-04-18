@@ -1,0 +1,84 @@
+/**/
+body{background: #ededed}
+.main{margin: .50rem 0;}
+.userimg{display: inline-block;}
+.imgs{border: .02rem solid #ff8600;border-radius: 1.00rem;width: .60rem;height: .60rem;float: left; margin-left: .15rem;}
+.imgs img{width: .60rem;height: .60rem;border-radius: 1.00rem;}
+.score{float: right;margin-left: .50rem;    margin-top: .05rem;}
+.score p{margin-top: .05rem;}
+
+.userinfo{margin-top: .01rem;background: white;}
+.userinfo p{margin-left: .15rem;}
+.userinfo p input {width: 1.85rem;height: .36rem;line-height: .37rem;font-size: .14rem;padding-left: .15rem;margin: .08rem .05rem 0 .15rem;border-radius: .04rem; border: 0;}
+
+.room{margin-top: .01rem;background: white;padding: .1rem 0;}
+.room div img{padding-left: .08rem;padding-left: .13rem;}
+.roombuding{float: left;}
+.roominput{margin-left: .15rem;}
+.address{font-size:0.12rem;padding-right: 0.05rem;}
+.roominput span input{width: 0.7rem;height: .33rem;border: 0;-padding-left: .10rem;border: .01rem solid #bcb4b4;border-radius: .05rem;}
+.secend_main{margin-left: .16rem;}
+.last a{-margin-left: .06rem;
+		-border: .01rem solid #ff9600;
+	    color: #fff;
+	    background: #ff9600;
+	    font-size: .14rem;
+	    border-radius: .05rem;
+	    display: inline-block;
+	    width: .40rem;
+	    height: .25rem;
+	    line-height: .25rem;
+	    text-align: center;
+	    margin-top: .08rem;
+	    margin-left: 0.005rem;}
+.lasts a{-margin-left: .06rem;
+	    -border: .01rem solid #ff9600;
+	    color: #fff;
+	    background: #ff9600;
+	    font-size: .14rem;
+	    border-radius: .05rem;
+	    display: inline-block;
+	    width: .40rem;
+	    height: .25rem;
+	    line-height: .25rem;
+	    text-align: center;
+	    margin-top: .08rem;
+	    margin-left: 0.005rem;}
+.parkNum{margin-left: .29rem;}
+
+.roomNumber{padding-left: .15rem;font-size:0.12rem;}
+
+.car{margin-top: .01rem;background: white;padding: .1rem 0;}
+.car div img{padding-left: .13rem;}
+.carnum{float: left;}
+.carinput{margin-left: .15rem;}
+.carinput span input{width: 1.0rem;height: .34rem;-padding-left: .10rem;border: .01rem solid #bcb4b4;border-radius: .05rem;}
+.carNumber{padding-left: .15rem;}
+.room_num{line-height: .32rem;}
+.down{width: .15rem;padding: .08rem;margin-left: .60rem;}
+.post_car{line-height: .32rem;}
+.post_car a{float: right;margin-right: 0.3rem;}
+.parknum,.roomnum{float: right;margin-right: 0.16rem;width: 0.9rem;}
+.delete{border: 0rem solid #ff8600; width: .17rem;height:.17rem;}
+#sumscore{color:red;}
+#todayscore{color: red;}
+.room_num a{background: #ff9600;
+			color: #fff;
+			font-size: .14rem;
+			border-radius: .05rem;
+			display: inline-block;
+			width: .40rem;
+			height: .25rem;
+			line-height: .25rem;
+			text-align: center;
+			margin-right: 0.24rem;}
+.car_color a{background: #ff9600;
+			 font-size: .14rem;
+		     color: #fff; 
+		     border-radius: .05rem;
+		     display: inline-block;
+		     width: .40rem;
+		     height: .25rem;
+		     line-height: .25rem;
+		     text-align: center;
+		     margin-right: 0.24rem;}

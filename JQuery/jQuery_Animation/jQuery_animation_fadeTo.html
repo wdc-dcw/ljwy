@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<title>jQuery中淡入效果fadeTo</title>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<style type="text/css">
+		p{
+			color: red;
+		}
+
+	</style>
+</head>
+
+<body>
+	<h2>fadeTo</h2>
+	<p>测试文字透明度效果</p>
+	<p>慕课网，专注分享</p>
+	透明度的设置效果:
+	<select id="animation">
+		<option value="1">fadeTo("slow",0.5)</option>
+		<option value="2">fadeTo(1000,0.2)</option>
+		<option value="3">fadeTo(1000,0.9,complete)</option>
+	</select>
+	<input id="btnFadeSwitch" type="button" value="点击切换显示/隐藏"/>
+	<script type="text/javascript">
+		//【切换显示/隐藏】效果按钮
+		$("#btnFadeSwitch").on('click',function(){
+			var v=$("#animation").val();
+			if(v=="1"){
+				$("p").fadeTo("slow",0.5);
+			}else if(v=="2"){
+				$("p").fadeTo(1000,0.2);
+			}else{
+				$("p:first").fadeTo(1000,0.9,function(){
+					$("p:last").fadeTo(1000,0.4);
+				});
+			}
+			
+		});
+	</script>
+
+</body>

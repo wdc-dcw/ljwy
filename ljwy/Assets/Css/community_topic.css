@@ -1,0 +1,26 @@
+﻿/*头部*/
+.top span{width: 1.78rem;}
+
+/*整体*/
+body{ background:#ededed;}
+
+/*话题详情*/
+.list{background-color:white;overflow: hidden;margin-top: .01rem;}
+.list .topic{border-bottom: .01rem solid #f1f1f1; overflow:hidden ;width:3.20rem;}
+.topic{ padding:.15rem;}
+.topic_img{ float:left;}
+.topic_img img {
+        width:.50rem;
+        height:.50rem;
+       border-radius: 1.00rem;
+    }
+.topic_content{float:left;}
+.topic_content .title{ width:2.31rem; font-size:.12rem;padding-left: .10rem;text-overflow: ellipsis;white-space: nowrap;display: inline-block;overflow: hidden;}
+.topic_content p span{display:inline-block; color:#949494; font-size:.10rem;}
+.topic_content .nickname{padding: .15rem .60rem 0 .10rem;}
+.topic .topic_img a{display:inline-block;}
+.top a:first-child{ padding: 0 .26rem 0 0;}
+.top a:last-child{padding-right: 0;}
+.topic_content p{width:2.4rem;}
+.createtime{float:right;margin-top:.16rem;}
+.add_topic{border: .01rem solid #ff9600;color: #ff9600;font-size: .14rem;border-radius: .05rem;display: inline-block; width: .40rem;height: .25rem;line-height: .25rem;text-align: center;margin-top: .08rem;margin-right: .13rem;}

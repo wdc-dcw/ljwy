@@ -1,0 +1,76 @@
+﻿<!doctype html>
+<html id="mobileHtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>我要投诉</title>
+    <link href="Assets/Plugins/dropload/dropload.min.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/comm.css?v=1.0" rel="stylesheet" />
+    <!-- 我要投诉-->
+    <link rel="stylesheet" type="text/css" href="Assets/Css/i_complaint.css?v=1.0">
+    
+</head>
+
+<body>
+
+<!--头部-->
+    <div class="top">
+        <a href="index.html">
+            <img src="Assets/Images/left.png" /></a>
+        <span>业主投诉</span>
+        <a class="pay" href="owner_complaints.html">历史</a> 
+    </div>
+    <div class="simple"></div>
+    <!-- 整体 -->
+    <div class="emergency">
+        <p>物业服务电话:  <a class="phone" href="tel:50281104"><img src="Assets/Images/tel.png">50281104</a></p>
+    </div>
+    <form id="formComplaint" name="forms">
+    <div class="list">
+      <div class="title">
+        <input type="text" class="formValidate" id="title" placeholder="请输入标题" require="true" labelTxt="投诉标题" maxlength="15"/>
+      </div>
+      
+      <div class="content">
+         <textarea placeholder="请输入投诉内容" class="formValidate" id="content" require="true" labelTxt="投诉内容" maxlength="500"></textarea>
+      </div>
+      
+      <!-- 验证码 -->
+      <div class="code">
+            <span class="import">*</span>
+            <span>验证码</span>
+          <input type="text" name="verifyCode" class="formValidate" require="true" format="num1" maxlength="4" labelTxt="验证码" id="verifyCode" placeholder="请输入验证码"/>
+            <div class="imgVerifyCode"></div> 
+            <a id="change">看不清?</a>
+        </div>
+          <div class="images">
+            <a id="browse"><img src="Assets/Images/i_complaint_02.png" /></a>
+         </div>
+        <div id="Bigimg">
+            <img src="" />
+        </div>
+        <div class="submit">
+            <a id="sub" onselectstart="" ontouchstart="">提  交</a>
+        </div>
+   </div>
+   </form>  
+
+         
+
+    
+     <script src="Assets/Plugins/zepto/zepto.min.js?v=1.0"></script>
+    <script src="Assets/Plugins/zepto/ajax.js?v=1.0"></script>
+    <script src="Assets/Plugins/cookie/jquery.cookie.js?v=1.0"></script>
+    <script src="Assets/Scripts/comm.js?v=1.0"></script>
+    <script src="Assets/Plugins/plupload/plupload.full.min.js?v=1.0"></script>
+    <script src="Assets/Model/complaints.js?v=1.0"></script>
+    <script>
+        Zepto(function ($) {
+           
+            new complaint().i_complaint();
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+body { background:#ededed;}
+/*头部*/
+.list{overflow:hidden;}
+.top span{width:1.78rem;}
+.top a:first-child{ padding: 0 .26rem 0 0;}
+.top a:last-child{padding-right: 0;}
+.top .pay {border: .01rem solid #ff9600;color: #ff9600;font-size: .14rem;border-radius: .05rem;display: inline-block; width: .40rem;height: .25rem;line-height: .25rem;text-align: center;margin-top: .08rem;margin-right: .13rem;}
+.top .pay img {width: .20rem;margin-top: .07rem;float: right;}
+.top .pay_a{font-size: .14rem;border-radius: .05rem;display: inline-block;width: .40rem; height: .25rem;line-height: .25rem;text-align: center;}
+.top .pay_a img {width: .20rem;margin-top: .07rem;float: right;}
+/*时间选择*/
+.choose_date{margin: 0rem 0rem 0rem .15rem;}
+.choose_date input{width:.57rem; height:.31rem; border-radius:.05rem; border:0; text-align:center; line-height:.31rem;float:left;}
+.choose_date span{margin:.08rem;}
+.choose_date .year::-webkit-input-placeholder,textarea::-webkit-input-placeholder {color: black; font-size:.14rem;}
+.choose_date .day{width:.88rem;}
+.choose_detail_01 a{line-height:.25rem;}
+/*list中的div*/
+.content_window div{ padding:.15rem .15rem;}
+/*内容框*/
+.content_window{background:#fff;}
+/*标题*/
+/*.titles .heading{text-overflow: ellipsis;white-space: nowrap;}*/
+/*图片*/
+.imgs{width: .60rem; float:left; padding:.15rem .15rem 0 .15rem;}
+.imgs img{ width:.74rem; height:.74rem;}
+.state01 , .state02{ float:right;}
+.state01{ color:#45ae38;margin-bottom:.26rem;}
+.state02{ color:#42b035; margin-right: .05rem;}
+.content_window{font-size:.12rem; overflow:hidden; }
+.content{ margin-top:-.20rem;}
+.content p{ color:#a5a5a5; margin-left:.90rem;text-overflow: ellipsis;white-space: nowrap;height: 0.16rem;overflow: hidden;}
+.content p.time{margin: .15rem 0 0 .90rem;font-size:.12rem;}
+.content_window .titles .heading{ margin-left: .15rem;text-overflow: ellipsis;white-space: nowrap;width: 1.5rem;display: inline-block;overflow: hidden;}
+
+
+
+/*修改顶部*/
+.choose{display:block}
+.choose_01{margin: .15rem auto; display: inline-block;}
+.choose_01 span{margin: .08rem; display: inline-block;}
+select {height: .38rem;background-color: white;border-radius: .04rem;text-align: center; position: relative;border: 0;text-align: center; display: inline-block;}
+select option{text-align:center;}
+select#year{padding:0 .05rem 0 .11rem;}
+select#month{padding:0 .05rem 0 .11rem;}
+select#state{padding:0 .05rem 0 .11rem;}
+.content .repeal{float: right; margin-top: .15rem;}
+.relist{position:relative;}
+.relist p.che,.relist p.delete{position:absolute;bottom:.15rem;right:.15rem;}
+.relist p.che span,.relist p.delete span{float:right;padding: .04rem .10rem .05rem;background-color: #ff9600;border-radius: .05rem;color: #fff;font-size:.12rem;}
+
+.tan p,.tan1 p{ margin: 0rem .10rem .2rem;}

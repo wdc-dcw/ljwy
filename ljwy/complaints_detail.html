@@ -1,0 +1,93 @@
+﻿<!doctype html>
+<html id="mobileHtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>投诉详情</title>
+    <link href="Assets/Plugins/dropload/dropload.min.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/comm.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/report_details.css?v=1.0" rel="stylesheet" />
+</head>
+<body>
+    <!--头部-->
+    <div class="top">
+        <a href="owner_complaints.html">
+            <img src="Assets/Images/left.png" /></a>
+        <span>投诉详情</span>
+        <a class="pay">撤销</a>
+    </div>
+    <div class="simple"></div>
+    <div class="mask" style="z-index:999;"></div>
+    <div class="tan">
+        <img src="Assets/Images/revoke.png">
+        <p>确定撤销这条信息吗？</p>
+        <a id="ok">确定</a><a id="cancel">取消</a>
+    </div>
+    <!--中部-->
+    <form id="formComplaintDetail">
+    <div class="list">
+        <!--图片-->
+        <div class="detail"></div>
+
+        <div class="evaluate first" onselectstart="" ontouchstart="">
+            <div class="choose" id="servie">
+                <span class="choose_describe">服务态度:</span>
+                <span class="startnum">
+                    <img src="Assets/Images/unlight.png" data-id="1" />
+                    <img src="Assets/Images/unlight.png" data-id="2" />
+                    <img src="Assets/Images/unlight.png" data-id="3" />
+                    <img src="Assets/Images/unlight.png" data-id="4" />
+                    <img src="Assets/Images/unlight.png" data-id="5" />
+                </span>
+                <span class="stotal">0星</span>
+            </div>
+            <div class="choose" id="speed">
+                <span class="choose_describe">处理速度:</span>
+                <span class="startnum">
+                    <img src="Assets/Images/unlight.png" data-id="1" />
+                    <img src="Assets/Images/unlight.png" data-id="2" />
+                    <img src="Assets/Images/unlight.png" data-id="3" />
+                    <img src="Assets/Images/unlight.png" data-id="4" />
+                    <img src="Assets/Images/unlight.png" data-id="5" />
+                </span>
+                <span class="stotal">0星</span>
+            </div>
+        </div>
+
+        <!--报修内容-->
+        <div class="repair_content"style="background:#fff;border-radius:.05rem;margin-left:.15rem;width:2.86rem;border:0;min-height:1rem;">
+            <textarea placeholder="请输入对本次投诉处理的评价" id="content" style="resize:none" maxlength="150" class="formValidate" require="true" labelTxt="对本次投诉的评价哦，亲"></textarea>
+        </div>
+        <!--验证码-->
+          <div class="code">
+            <span class="import">*</span>
+            <span>验证码</span>
+            <input type="text" name="verifyCode" class="formValidate" require="true"  labelTxt="验证码" format="num1" maxlength="4" id="verifyCode" placeholder="请输入验证码"/>
+            <div class="imgVerifyCode"></div> 
+            <a id="change">看不清?</a>
+       </div>
+        <div class="submit">
+            <a id="submitBtn">提交</a>
+        </div>
+
+    </div>
+    </form>
+
+    <div id="Bigimg">
+        <img src="" />
+    </div>
+    <script src="Assets/Plugins/zepto/zepto.min.js?v=1.0"></script>
+    <script src="Assets/Plugins/zepto/ajax.js?v=1.0"></script>
+    <script src="Assets/Plugins/cookie/jquery.cookie.js?v=1.0"></script> 
+    <script src="Assets/Scripts/comm.js?v=1.0"></script>
+    <script src="Assets/Model/complaints_list.js?v=1.0"></script>
+    <script>
+        Zepto(function ($) {
+            
+            new complaints().complaints_detail();
+        })
+    </script>
+</body>
+</html>

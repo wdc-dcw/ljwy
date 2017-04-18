@@ -1,0 +1,15 @@
+body{background-color:#ededed;}
+.top span{width:2.30rem;}
+
+.community_list{background-color:white;margin: .10rem;border-radius: .05rem;}
+.community_list .banner a{display:block;}
+.community_list .banner a img{width:100%;}
+.community_list .detail{padding:.05rem .15rem;}
+.community_list .detail p{line-height:.25rem;}
+.community_list .detail p:first-child{font-size:.14rem; color:#000;}
+.community_list .detail p:last-child{font-size:.13rem; color:#c0c0c0;}
+.com{margin:.01rem 0 .50rem 0;}
+.banner{position:relative;}
+.banner .zhuangtai_style{width:.58rem; line-height:.24rem; height:.24rem; display:block; text-align:center; color:#999999;position:absolute;top:.12rem; right:.12rem; border-radius:.17rem; font-size:.11rem; background-color:rgba(255, 255, 255, 0.8);}
+.banner .style1{color:#366bcd;}
+#bt {padding: .10rem 0 .10rem .15rem;font-size: .16rem;}

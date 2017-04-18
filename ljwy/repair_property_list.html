@@ -1,0 +1,141 @@
+﻿<!doctype html>
+<html id="mobileHtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>物业报修</title>
+    <link href="Assets/Plugins/dropload/dropload.min.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/comm.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/repair_property_list.css?v=1.0" rel="stylesheet" />
+</head>
+<body>
+    <!--头部-->
+    <div class="top">
+        <a id="pageBack">
+            <img src="Assets/Images/left.png" />
+        </a>
+        <span>物业报修</span>
+        <a class="pay" href="repair_property_add.html">报修</a>
+    </div>
+    <div class="simple"></div>
+
+    <!--中部-->
+    <div class="list">
+        <!--选择时间-->
+<!--         <div class="choose_date">
+            <div class="choose_01">
+                <select id="year">
+                    <option value="" selected="selected">全部</option>
+                    <option value="2010">2010</option>
+                    <option value="2011">2011</option>
+                    <option value="2012">2012</option>
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                </select>
+                <span>年</span>
+                <select id="month">
+                    <option value="" selected="selected">全部</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="7">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <span>月</span>
+                <select id="state">
+                    <option value="" selected="selected" >全部</option>
+                    <option value="0">已报修</option>
+                    <option value="1">处理中</option>
+                    <option value="2">已处理</option>
+                    <option value="3">已撤销</option>
+                </select>
+            </div>
+        </div> -->
+
+    <div class="repairs_list"></div>
+    <div class="nullimg">
+    <img src="Assets/Images/payment.png" />
+    <p>亲~您还没有报修记录哦</p>
+    </div>
+        <div id="backtop"><a href="#"><img src="Assets/Images/backtop.png" /></a></div>
+        
+    <!--底部-->
+    <!-- <div class="footer">
+        <a href="index.html">
+            <div>
+                <img src="Assets/Images/footer_01.png" /><p>首页</p>
+            </div>
+        </a>
+        <a href="recommend.html">
+            <div>
+                <img src="Assets/Images/footer_03.png" /><p>推荐</p>
+            </div>
+        </a>
+        <a href="javascript:;">
+            <div>
+                <img src="Assets/Images/footer_02.png" /><p>黄页</p>
+            </div>
+        </a>
+        <div id="newMsgCnt">
+            <a href="singer_center.html">
+                <div>
+                    <img src="Assets/Images/footerbg_04.png" /><p style="color:#ff8600;">个人</p>
+                </div>
+            </a>
+        </div>
+    </div> -->
+    </div>
+    <div id="backtop" style="z-index:999"><a href="#"><img src="Assets/Images/backtop.png" style="z-index:990" /></a></div>
+    <div class="mask" style="z-index:999;"></div>
+    <div class="tan">
+        <img src="Assets/Images/revoke.png">
+        <p>确定撤销这条信息吗？</p>
+        <a id="ok">确定</a><a id="cancel">取消</a>
+    </div>
+    <div class="mask1" style="z-index:999;"></div>
+    <div class="tan1">
+        <img src="Assets/Images/revoke.png">
+        <p>确定删除这条报修记录吗？</p>
+        <a id="ok1">确定</a><a id="cancel1">取消</a>
+    </div>
+    <script src="Assets/Plugins/zepto/zepto.min.js?v=1.0"></script>
+    <script src="Assets/Plugins/zepto/ajax.js?v=1.0"></script>
+    <script src="Assets/Plugins/cookie/jquery.cookie.js?v=1.0"></script>
+    <script src="Assets/Scripts/unix.js?v=1.0"></script>
+    <script src="Assets/Scripts/comm.js?v=1.0"></script>
+    <script src="Assets/Model/repair_property.js?v=1.0"></script>
+    <script>
+        window.onscroll = function () {
+            var t = document.documentElement.scrollTop || document.body.scrollTop;
+            var top_div = document.getElementById("backtop");
+            if (t >= 5) {
+                top_div.style.display = "inline";
+            } else {
+                top_div.style.display = "none";
+            }
+        }
+        Zepto(function ($) {
+            var isCookie = JSON.parse($.cookie("IsrepairCookie"));
+            if (isCookie == null) { getBomBbox("↑上拉加载更多"); $.cookie("IsrepairCookie", 1, { expires: 3650, path: "/" }); }
+            $('#backtop img').click(function () {
+                $('body,html').animate({ scrollTop: 0 }, 200);
+            });
+            new repair().repair_property_list();
+            information();
+        })
+        
+
+    </script>
+</body>
+</html>

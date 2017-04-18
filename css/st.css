@@ -1,0 +1,32 @@
+/*reset*/
+body {
+	font-family: "microsoft yahei", "΢���ź�";
+}
+
+body,ul,li,ol,img {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+.example ol {
+	position: absolute;
+	height: 20px;
+	bottom:0;
+	right: 0;
+}
+
+.example ol li {
+	float: left;
+	width: 10px;
+	height: 10px;
+	margin: 5px;
+	background: #fff;
+}
+
+.example ol li.seleted {
+	background: #1AA4CA;
+}

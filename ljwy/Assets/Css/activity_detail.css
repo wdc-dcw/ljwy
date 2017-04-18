@@ -1,0 +1,35 @@
+body{background-color:#ededed;}
+.top span{width:2.3rem;}
+
+.title{width:2.9rem; padding:0.05rem 0.15rem;background-color:white;}
+.title p{line-height:0.25rem;}
+.title p:first-child{font-size:0.16rem; color:#000;}
+.title p:last-child{font-size:0.11rem; color:#c0c0c0;}
+#formComment{border-top: 0.01rem solid #ededed;}
+.activity_main{background-color:white;}
+.activityDetail{border-bottom: 0.01rem solid #ededed;}
+ .banner a{display:block;}
+ .banner p img{width:100%;}
+ .banner p{width:2.9rem; margin:0rem auto; line-height:0.20rem; font-size:0.14rem;}
+ .banner_child {padding:0 0.15rem 0.05rem 0.15rem; border-bottom:0.01rem solid #dddddd;}
+ .banner_child img{width:1.45rem; }
+ .banner_child p{width:2.90rem; margin:0rem auto; line-height:0.20rem; font-size:0.12rem;}
+ /*∆¿¬€*/
+ .tourist {overflow:hidden; padding:0.05rem 0.15rem;}
+ .tourist .tour_pho {float:left;}
+ .tourist .tour_pho  img{width:0.43rem; height:0.43rem; border-radius:1.00rem;}
+ .tourist .name{float:left; width:2.47rem;}
+ .tourist .name p{}
+.tourist .name p a:first-child{color:#366bcd; font-size:0.13rem;margin-left:0.10rem;}
+.tourist .name p a:last-child{color:#929292; font-size:0.12rem; float:right;line-height: 0.21rem}
+.tourist .name .centent{color:#3a3a3a; font-size:0.13rem; margin:0.05rem 0 0 0.10rem;}
+.tourist .name .time{color:#929292; font-size:0.13rem;margin:0.05rem 0 0rem 0.10rem;}
+
+/*µ„∆¿*/
+.comment{ padding:0.15rem;position:fixed;bottom:0;left:0;background-color:#ededed;}
+.comment input{width:2.00rem; border-radius:0.06rem; border:0; height:0.37rem; padding-left:0.16rem;}
+.comment a{width:0.63rem; height:0.37rem; line-height:0.37rem; text-align:center; display:inline-block; color:white; font-size:0.13rem; background-color:#ff8600; border-radius:0.06rem; margin-left:0.06rem; }
+.commentContent{margin-bottom:0.70rem;}
+.tan{height: 1.2rem;margin-top: -.6rem;}
+
+

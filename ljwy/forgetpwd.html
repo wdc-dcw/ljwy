@@ -1,0 +1,149 @@
+﻿  <!doctype html>
+  <html id="mobileHtml">
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>忘记密码</title>
+    <link href="Assets/Plugins/dropload/dropload.min.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/comm.css?v=1.0" rel="stylesheet" />
+     <link href="Assets/Css/pwd.css?v=1.0" rel="stylesheet" />
+  </head>
+  <body>
+   <!--头部-->
+    <div class="top">
+        <a href="login.html">
+            <img src="Assets/Images/left.png" /></a>
+        <span>忘记密码</span>
+    </div>
+      <div class="simple"></div>
+    <!--整体-->
+
+    <form id="formForget">
+      <div class="list">
+        <div class="tel" >
+            <input type="text" style="background:url(Assets/Images/loginn_01.png) no-repeat 0.1rem center;background-size:9%;" class="formValidate" require="true" labelTxt="手机号码" format="mobile" maxlength="11" placeholder="请输入手机号码" id="mobile"/>   
+            <a class="rown"><img src="Assets/Images/loginn_02.png" style="display:none;" /></a>     
+        </div>
+        <div class="verify" >
+            <input type="text"  placeholder="请输入验证码" class="formValidate" maxlength="4" require="true" format="num1" labelTxt="验证码" id="verifyCode"/><input type="button" id="verify" value="获取验证码" class="get_code" />
+            <input type="hidden" id="hideverifyCode" verifyCode=""/>         
+        </div>
+      
+        <div class="new_pwd">
+            <input type="password" style="background:url(Assets/Images/loginn_03.png) no-repeat 0.1rem center;background-size:9%;" maxlength="20" class="formValidate" require="true" labelTxt="新密码" placeholder="请设置新密码" id="pwd1"/>
+            <a class="rown"><img src="Assets/Images/loginn_02.png" style="display:none;" /></a>     
+           </div>
+           
+           <div class="again_new-pwd">
+            <input type="password" style="background:url(Assets/Images/loginn_03.png) no-repeat 0.1rem center;background-size:9%;" maxlength="20" class="formValidate" require="true" labelTxt="确认密码" placeholder="再次输入新密码" id="pwd2" />
+               <a class="rown"><img src="Assets/Images/loginn_02.png" style="display:none;" /></a>     
+
+           </div>
+           
+           <div class="submit">
+              <a id="sum">提交</a> 
+           </div>
+        </div>
+
+    </form>
+  
+   <!--底部-->
+    <div class="footer">
+        <a href="index.html">
+            <div>
+                <img src="Assets/Images/footer_01.png" /><p>首页</p>
+            </div>
+        </a>
+        <a href="recommend.html">
+            <div>
+                <img src="Assets/Images/footer_03.png" /><p>推荐</p>
+            </div>
+        </a>
+        <a href="community_page.html">
+            <div>
+                <img src="Assets/Images/footer_02.png" /><p>黄页</p>
+            </div>
+        </a>
+        <a href="singer_center.html">
+            <div>
+                <img src="Assets/Images/footer_04bg.png" /><p>个人</p>
+            </div>
+        </a>
+    </div>
+
+  
+  
+    
+    
+    <script src="Assets/Plugins/zepto/zepto.min.js?v=1.0"></script>
+    <script src="Assets/Plugins/zepto/ajax.js?v=1.0"></script>
+    <script src="Assets/Plugins/cookie/jquery.cookie.js?v=1.0"></script>
+    
+    <script src="Assets/Scripts/comm.js?v=1.0"></script>
+      <script src="Assets/Model/user.js?v=1.0"></script>
+      <script src="Assets/Scripts/check.js?v=1.0"></script>
+    <script>
+        Zepto(function ($) {
+            
+            new user().forgetpwd();
+            //information();
+        })
+    
+    
+    </script>
+    
+     <!--获取短信验证码倒计时-->
+    <script type="text/javascript">
+    var wait=60;
+    document.getElementById("verify").disabled = false;   
+    function time(o) {
+      if (wait == 0) {
+        o.removeAttribute("disabled");           
+        o.value="获取验证码";
+        wait = 60;
+      } else {
+        o.setAttribute("disabled", true);
+        o.value="重新发送(" + wait +"s)";
+        wait--;
+        setTimeout(function() {
+          time(o)
+        },
+        1000)
+      }
+    }
+
+    if ($("#mobile").val() != "") { $(this).parent().children().find(".rown img").css("display", "block"); }
+    $("#mobile").keyup(function (event) {
+        if ($("#mobile").val() != "") {
+            $(this).parent().children().find(".rown img").css("display", "block");
+        }
+        else {
+            $(this).parent().children().find(".rown img").css("display", "none");
+        }
+    });
+    $(".new_pwd").keyup(function () {
+        if ($("#pwd1").val() != "") {
+            $(this).find(".rown img").css("display", "block");
+        }
+        else {
+            $(this).find(".rown img").css("display", "none");
+        }
+    });
+    $(".again_new-pwd").keyup(function () {
+        if ($("#pwd2").val() != "") {
+            $(this).find(".rown img").css("display", "block");
+        }
+        else {
+            $(this).find(".rown img").css("display", "none");
+        }
+    });
+    $(".rown img").click(function () {
+        $(this).parent().parent().find("input").val("");
+        $(this).hide();
+    });
+
+  </script> 
+  </body>
+  </html>

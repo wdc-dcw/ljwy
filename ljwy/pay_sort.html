@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" id="mobileHtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>生活缴费</title>
+    <link href="Assets/Plugins/dropload/dropload.min.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/comm.css?v=1.0" rel="stylesheet" />
+    <link href="Assets/Css/pay_sort.css?v=1.0" rel="stylesheet" />
+</head>
+<body>
+    <!--头部-->
+    <div class="top">
+        <a id="pageBack">
+            <img src="Assets/Images/left.png" /></a>
+        <span>生活缴费</span>
+    </div>
+    <div class="simple"></div>
+    <div class="banner">
+       <img src="Assets/Images/payments.png" />
+    </div>
+    <div class="communities">
+
+    <a href="pay_advance.html?type=0">
+        <div class="server">
+            <div class="server_left">
+                <img src="Assets/Images/wy.png" />物业管理费
+            </div>
+            <div class="server_right">
+                <img src="Assets/Images/right.png" />
+            </div>
+        </div>
+    </a>
+    <!--<a href="pay_advance.html?type=1">
+        <div class="server">
+            <div class="server_left">
+                <img src="Assets/Images/tc.png" />车位管理费
+            </div>
+            <div class="server_right">
+                <img src="Assets/Images/right.png" />
+            </div>
+        </div>
+    </a>
+    <a href="javascript:;">
+        <div class="server">
+            <div class="server_left">
+                <img src="Assets/Images/s_1.png" />水费
+            </div>
+            <div class="server_right">
+                <img src="Assets/Images/right.png" />
+            </div>
+        </div>
+    </a>
+    <a href="javascript:;">
+        <div class="server">
+            <div class="server_left">
+                <img src="Assets/Images/d_1.png" />电费
+            </div>
+            <div class="server_right">
+                <img src="Assets/Images/right.png" />
+            </div>
+        </div>
+    </a>
+    <a href="javascript:;">
+        <div class="server">
+            <div class="server_left">
+                <img src="Assets/Images/rq_1.png" />燃气费
+            </div>
+            <div class="server_right">
+                <img src="Assets/Images/right.png" />
+            </div>
+        </div>
+    </a>-->
+    </div>
+      <!--底部-->
+    <div class="footer">
+         <a href="index.html">
+            <div>
+                <img src="Assets/Images/footer_01.png" /><p>首页</p>
+            </div>
+        </a>
+        <a href="recommend.html">
+            <div>
+                <img src="Assets/Images/footer_03.png" /><p>推荐</p>
+            </div>
+        </a>
+        <a href="community_page.html">
+            <div>
+                <img src="Assets/Images/footer_02.png" /><p>黄页</p>
+            </div>
+        </a>
+            <a href="singer_center.html" id="newMsgCnt">
+                <div>
+                    <img src="Assets/Images/footer_04bg.png" /><p>个人</p>
+                </div>
+            </a>
+    </div>
+    <script src="Assets/Plugins/zepto/zepto.min.js?v=1.0"></script>
+    <script src="Assets/Plugins/zepto/ajax.js?v=1.0"></script>
+    <script src="Assets/Plugins/cookie/jquery.cookie.js?v=1.0"></script>
+    <script src="Assets/Scripts/comm.js?v=1.0"></script>
+    <script>
+        Zepto(function ($) {
+            isLogin();
+            information();
+        })
+    </script>
+</body>
+</html>

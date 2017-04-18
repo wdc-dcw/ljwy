@@ -1,0 +1,13 @@
+﻿body {background-color:#ededed;}
+.list{margin-top:.01rem;}
+.list p{font-size:.14rem;color:#999;padding-left:.2rem;line-height:.3rem;}
+.list input{width: 2.7rem; height: .4rem; margin-top: .01rem;background-color: #fff;border: 0;padding-left: .2rem;margin: .025rem .15rem;border-radius: .05rem;font-size: .14rem;}
+.check{margin-top:.01rem;}
+.check p.moren{padding:.11rem .2rem;color:#000;font-size:.14rem;position:inherit;}
+.check p.moren span img{width:.17rem;margin-right:.05rem}
+input[type="checkbox"]{width:.15rem;height:.15rem;}
+#save{width: 2.9rem;display: block;height: .4rem;background-color: #ff8600;margin: 0rem auto;text-align: center;line-height: .4rem;color: #fff;font-size: .17rem;border-radius: .05rem;}
+#delete{border: .01rem solid #ff9600;color: #ff9600;font-size: .14rem;border-radius: .05rem;display: inline-block;width: .40rem;height: .25rem;line-height: .25rem;text-align: center;margin-top: .08rem;margin-right: .13rem;}
+.top span{width:2.13rem;}
+.top a:last-child{padding-right:0;}
+ .tan p,.tan1 p{ margin: 0rem .10rem .2rem;}

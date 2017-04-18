@@ -1,0 +1,88 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<title>物业报修</title>
+<link href="Assets/Plugins/dropload/dropload.min.css" rel="stylesheet" />
+<link href="Assets/Css/comm.css" rel="stylesheet" />
+<link href="Assets/Css/repair_property.css" rel="stylesheet" />
+</head>
+<body>
+<!--头部-->
+<div class="top">
+     <a href="index.html"> 
+    <img src="Assets/Images/left.png" /></a> 
+    <span>物业报修</span><a class="pay" href="repair_property_list.html">历史</a> 
+</div>
+
+<!--整体-->
+    <div class="emergency">
+        <p>物业服务电话:<a class="phone" href="tel:13855555555">13855555555</a></p>
+    </div>
+<form id="formRepair" name="form">
+<div class="list"> 
+  <!--单元代码-->
+  <div class="basic_Info">
+    <div class="username">
+        <span>联系人&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="text" class="formValidate" placeholder="请输入用户名" id="contacter" require="true" labelTxt="报修人"/>
+    </div>
+    
+    <div class="link_tel">
+        <span>联系电话&nbsp;&nbsp;</span><input type="text" class="formValidate" placeholder="请输入联系电话" id="tel" require="true" labelTxt="联系电话" />
+    </div>
+  </div>
+  <!--房屋选择-->  
+  <div class="room_choose" > 
+  <span class="squear">选择您要报修的房屋</span>
+      <div id="choose">
+
+      </div>
+
+  </div>
+  <!--报修内容-->
+    <div class="repair_goods" id="goods">
+        <input class="formValidate" type="text" placeholder="请输入报修物品" id="repairObject" require="true" labelTxt="报修物品"/>
+    </div>
+  <div class="repair_content">
+    <textarea class="formValidate" placeholder="请输入报修内容" id="content" require="true" labelTxt="报修内容"></textarea>
+  </div>
+  <!-- 验证码 -->
+<!--验证码-->
+        <div class="code">
+            <span class="import">*</span>
+            <span>验证码</span>
+            <input type="text" name="verifyCode" class="formValidate" require="true" format="num1" onblur="preCheck('formRepair')" labelTxt="验证码" id="verifyCode" placeholder="请输入验证码" onblur="preCheck('formRepair')"/>
+            <div class="imgVerifyCode"></div> 
+            <a id="change">看不清?</a>
+        </div>
+       
+  <!--图片-->
+  <div class="images"> 
+  <a href="javascript:;" id="browse"><img src="Assets/Images/repairs_img02.png" /></a> </div>
+  
+  
+  <div class="submit"> 
+    <a>提&nbsp;交</a> 
+  </div>
+</div>
+</form>
+
+<script src="Assets/Plugins/zepto/zepto.min.js"></script> 
+<script src="Assets/Plugins/zepto/ajax.js"></script> 
+<script src="Assets/Plugins/cookie/jquery.cookie.js"></script> 
+<script src="Assets/Scripts/comm.js"></script> 
+<script src="Assets/Plugins/plupload/plupload.full.min.js"></script>
+<script src="Assets/Model/report.js"></script>
+<script>
+        Zepto(function ($) {
+            refreshViewport();
+            new report().addReport();
+      
+      
+        })
+</script>
+</body>
+</html>

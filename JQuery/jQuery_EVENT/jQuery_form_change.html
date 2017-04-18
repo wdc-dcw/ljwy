@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<title>jQuery表单事件之change事件</title>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<style type="text/css">
+		.left div,.right div{
+			width: 100%;
+			padding: 5px;
+			margin: 5px;
+			float: left;
+			border: 1px solid #ccc;
+		}
+
+		.left div{
+			background: #bbffaa;
+		}
+
+		.right div{
+			background: yellow;
+		}
+
+	</style>
+</head>
+
+<body>
+	<h2>input、select、textarea</h2>
+	<div class="left">
+		<div class="aaron1">
+			input:<input class="target1" type="text" value="监听value值的改变"/>
+		</div>
+		<div class="aaron2">
+			<select class="target2">
+				select:<option value="Option1" selected="selected">Option1</option>
+				<option value="Option2">Option2</option>	
+			</select>
+		</div>
+		<div class="aaron3">
+			textarea:<textarea class="target3" rows="3" cols="20">多行的文本输入框</textarea>
+		</div>
+	</div>
+	输出结果:
+	<div id="result"></div>
+	<script type="text/javascript">
+		//监听input值的改变
+		$(".target1").change(function(e){
+			$("#result").html(e.target.value);
+		});
+
+		//监听select值的改变
+		$(".target2").change(function(e){
+			$("#result").html(e.target.value);
+		});
+
+		//监听textarea值的改变
+		$(".target3").change(function(e){
+			$("#result").html(e.target.value);
+		});
+	</script>
+</body>
